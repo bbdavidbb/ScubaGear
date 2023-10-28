@@ -55,9 +55,9 @@ toggling the policy from **Report-only** to **On**. The policy will only be enfo
 This section provides policies that reduce security risks related to legacy authentication protocols that do not support multifactor authentication (MFA).
 
 ### Policies
-#### MS.AAD.1.1v1
+#### MS.AAD.1.1v0.1
 Legacy authentication SHALL be blocked.
-<!--Policy: MS.AAD.1.1v1; Criticality: SHALL -->
+<!--Policy: MS.AAD.1.1v0.1; Criticality: SHALL -->
 - _Rationale:_ The security risk of allowing legacy authentication protocols is they do not support multi-factor authentication (MFA). By blocking legacy protocols the impact of user credential theft is minimized.
 - _Last modified:_ June 2023
 
@@ -73,7 +73,7 @@ Legacy authentication SHALL be blocked.
 
 ### Implementation
 
-#### MS.AAD.1.1v1 instructions:
+#### MS.AAD.1.1v0.1 instructions:
 
 1.  Before blocking legacy authentication across the entire application
 base, follow [these instructions](https://learn.microsoft.com/en-us/azure/active-directory/conditional-access/block-legacy-authentication#identify-legacy-authentication-use) to determine if any of the agency’s existing applications are presently using legacy authentication.
@@ -89,25 +89,25 @@ This section provides policies that reduce security risks related to user accoun
 - _Note:_ The term ["high risk"](https://learn.microsoft.com/en-us/azure/active-directory/identity-protection/concept-identity-protection-risks) in the context of this section denotes the risk level applied by the AAD Identity Protection service to a user account or sign-in event. See the Resources section for a link to a detailed description of AAD Identity Protection risk and the factors comprising it.
 
 ### Policies
-#### MS.AAD.2.1v1
+#### MS.AAD.2.1v0.1
 Users detected as high risk SHALL be blocked.
 
-<!--Policy: MS.AAD.2.1v1; Criticality: SHALL -->
+<!--Policy: MS.AAD.2.1v0.1; Criticality: SHALL -->
 - _Rationale:_ By blocking users determined as high risk, compromised accounts can be prevented from accessing the tenant.
 - _Last modified:_ June 2023
 - _Note:_ Users who are determined as high risk by AAD Identity Protection can be blocked from accessing the system via an AAD Conditional Access policy. A high risk user will be blocked until an administrator remediates their account.
 
-#### MS.AAD.2.2v1
+#### MS.AAD.2.2v0.1
 A notification SHOULD be sent to the administrator when high-risk users are detected.
 
-<!--Policy: MS.AAD.2.2v1; Criticality: SHOULD -->
+<!--Policy: MS.AAD.2.2v0.1; Criticality: SHOULD -->
 - _Rationale:_ By alerting an administrator when high risk detections are made, the admin can monitor the event and remediate the risk. This helps the organization proactively respond to cyber intrusions as they occur.
 - _Last modified:_ June 2023
 
-#### MS.AAD.2.3v1
+#### MS.AAD.2.3v0.1
 Sign-ins detected as high risk SHALL be blocked.
 
-<!--Policy: MS.AAD.2.3v1; Criticality: SHALL -->
+<!--Policy: MS.AAD.2.3v0.1; Criticality: SHALL -->
 - _Rationale:_ By blocking sign-ins categorized as high risk, compromised accounts can be prevented from accessing the tenant.
 - _Last modified:_ June 2023
 
@@ -126,7 +126,7 @@ Sign-ins detected as high risk SHALL be blocked.
 
 ### Implementation
 
-####  MS.AAD.2.1v1 instructions:
+####  MS.AAD.2.1v0.1 instructions:
 
 1.  Create a conditional access policy blocking users categorized as high risk by the Identity Protection service. Configure the following policy settings in the new conditional access policy as per the values below:
 
@@ -140,11 +140,11 @@ Sign-ins detected as high risk SHALL be blocked.
   Access controls > Grant > <b>Block Access</b>
 </pre>
 
-#### MS.AAD.2.2v1 instructions:
+#### MS.AAD.2.2v0.1 instructions:
 
 1.  Follow the instructions in the [Configure users at risk detected alerts](https://learn.microsoft.com/en-us/azure/active-directory/identity-protection/howto-identity-protection-configure-notifications#configure-users-at-risk-detected-alerts) section to configure Azure AD Identity Protection to email a regularly monitored security mailbox when a user account is determined to be high risk.
 
-#### MS.AAD.2.3v1 instructions:
+#### MS.AAD.2.3v0.1 instructions:
 
 1.  Create a conditional access policy blocking sign-ins determined to be high risk by the Identity Protection service. Configure the following policy settings in the new conditional access policy as per the values below:
 
@@ -162,7 +162,7 @@ Sign-ins detected as high risk SHALL be blocked.
 
 This section provides policies that help reduce security risks related to user authentication and registration.
 
-Per [OMB memorandum M-22-09](https://www.whitehouse.gov/wp-content/uploads/2022/01/M-22-09.pdf), MFA is required and it must be phishing-resistant. Since there may be gaps in enforcing phishing-resistant MFA for all users for various reasons, we provide additional backup security policies to mitigate the risks associated with lesser forms of MFA. One example of this is policy MS.AAD.3.2v1 below which enforces MFA but does not stipulate the specific MFA method. That said, phishing-resistant MFA is the overarching requirement.
+Per [OMB memorandum M-22-09](https://www.whitehouse.gov/wp-content/uploads/2022/01/M-22-09.pdf), MFA is required and it must be phishing-resistant. Since there may be gaps in enforcing phishing-resistant MFA for all users for various reasons, we provide additional backup security policies to mitigate the risks associated with lesser forms of MFA. One example of this is policy MS.AAD.3.2v0.1 below which enforces MFA but does not stipulate the specific MFA method. That said, phishing-resistant MFA is the overarching requirement.
 
 <img src="/images/aad-mfa.png"
 alt="Weak MFA (SMS/Voice) Stronger MFA (Push Notifications, Software OTP, Hardware Token OTP) Strongest MFA (FIDO2, PIV, Windows Hello)" />
@@ -170,7 +170,7 @@ alt="Weak MFA (SMS/Voice) Stronger MFA (Push Notifications, Software OTP, Hardwa
 Figure 1: Depiction of MFA methods from weakest to strongest. _Adapted from [MS Build Page](https://learn.microsoft.com/en-us/azure/active-directory/authentication/concept-authentication-methods)_
 
 ### Policies
-#### MS.AAD.3.1v1
+#### MS.AAD.3.1v0.1
 Phishing-resistant MFA SHALL be enforced for all users.
 
 **Preferred phishing-resistant methods**
@@ -181,60 +181,60 @@ The methods **AAD Certificate-Based Authentication (CBA)**, **FIDO2 Security Key
 
 The **Federal PIV card (federated from agency on-premises Active Directory Federation Services or other identity provider)** option, although technically phishing-resistant presents significant risks if the on-premises authentication infrastructure (e.g., Active Directory Federation Services) is compromised. Therefore, federated PIV is not a preferred option and agencies should migrate to the options listed in the preferred section above. If an agency does use an on-premises PIV authentication and federate to AAD, reference the [guidance at this link](https://playbooks.idmanagement.gov/piv/network/group/) to enforce PIV logon via AD group policy.
 
-<!--Policy: MS.AAD.3.1v1; Criticality: SHALL -->
+<!--Policy: MS.AAD.3.1v0.1; Criticality: SHALL -->
 - _Rationale:_ Allowing weaker forms of MFA does not protect against sophisticated phishing attacks. By enforcing methods resistant to phishing, those risks are minimized.
 - _Last modified:_ June 2023
 
-#### MS.AAD.3.2v1
+#### MS.AAD.3.2v0.1
 If phishing-resistant MFA has not been enforced, an alternative MFA method SHALL be enforced for all users.
 
-<!--Policy: MS.AAD.3.2v1; Criticality: SHALL -->
+<!--Policy: MS.AAD.3.2v0.1; Criticality: SHALL -->
 - _Rationale:_ This is a stopgap security policy to help protect the tenant if phishing-resistant MFA has not been enforced. This policy requires that MFA is enforced, thus reducing the risks of single form authentication.
 - _Last modified:_ June 2023
 - _Note:_ If a conditional access policy has been created enforcing phishing-resistant MFA, then this policy is not necessary. This policy does not dictate the specific MFA method.
 
-#### MS.AAD.3.3v1
+#### MS.AAD.3.3v0.1
 If phishing-resistant MFA has not been enforced and Microsoft Authenticator is enabled, it SHALL be configured to show login context information.
 
-<!--Policy: MS.AAD.3.3v1; Criticality: SHALL -->
+<!--Policy: MS.AAD.3.3v0.1; Criticality: SHALL -->
 - _Rationale:_ This is a stopgap security policy to help protect the tenant if phishing-resistant MFA has not been enforced and Microsoft Authenticator is being used. This policy helps improve the security of Microsoft Authenticator by showing the user context information, which helps reduce MFA phishing compromises.
 - _Last modified:_ June 2023
 
-#### MS.AAD.3.4v1
+#### MS.AAD.3.4v0.1
 The Authentication Methods Manage Migration feature SHALL be set to Migration Complete.
 
-<!--Policy: MS.AAD.3.4v1; Criticality: SHALL -->
+<!--Policy: MS.AAD.3.4v0.1; Criticality: SHALL -->
 - _Rationale:_ By configuring the Manage Migration feature to Migration Complete, we ensure the tenant has disabled the legacy authentication methods screen. The MFA and Self-Service Password Reset (SSPR) authentication methods are both managed from a central admin page, thereby reducing administrative complexity and
 the chances of security misconfigurations.
 - _Last modified:_ June 2023
 
-#### MS.AAD.3.5v1
+#### MS.AAD.3.5v0.1
 The authentication methods SMS, Voice Call, and Email One-Time Passcode (OTP) SHALL be disabled.
 
-<!--Policy: MS.AAD.3.5v1; Criticality: SHALL -->
+<!--Policy: MS.AAD.3.5v0.1; Criticality: SHALL -->
 - _Rationale:_ This policy helps reduce the possibility for users to  register and authenticate with the weakest authenticators, forcing users to use stronger MFA methods.
 - _Last modified:_ June 2023
 - _Note:_ This policy is only applicable if the tenant has their Manage Migration feature set to Migration Complete.
 
-#### MS.AAD.3.6v1
+#### MS.AAD.3.6v0.1
 Phishing-resistant MFA SHALL be required for highly privileged roles.
 
-<!--Policy: MS.AAD.3.6v1; Criticality: SHALL -->
+<!--Policy: MS.AAD.3.6v0.1; Criticality: SHALL -->
 - _Rationale:_ This is a backup security policy to help protect privileged access to the tenant if the conditional access policy, which requires MFA for all users, is disabled or misconfigured.
 - _Last modified:_ June 2023
 - _Note:_ Refer to the Highly Privileged Roles section at the top of this document for a reference list of roles considered highly privileged.
 
-#### MS.AAD.3.7v1
+#### MS.AAD.3.7v0.1
 Managed devices SHOULD be required for authentication.
 
-<!--Policy: MS.AAD.3.7v1; Criticality: SHOULD -->
+<!--Policy: MS.AAD.3.7v0.1; Criticality: SHOULD -->
 - _Rationale:_ The security risk of an adversary authenticating to the tenant from their own device is reduced by requiring a managed device to authenticate. Managed devices are under the provisioning and control of the agency. [OMB-22-09] (https://www.whitehouse.gov/wp-content/uploads/2022/01/M-22-09.pdf) specifically states, "When authorizing users to access resources, agencies must consider at least one device-level signal alongside identity information about the authenticated user."
 - _Last modified:_ June 2023
 
-#### MS.AAD.3.8v1
+#### MS.AAD.3.8v0.1
 Managed Devices SHOULD be required to register MFA.
 
-<!--Policy: MS.AAD.3.8v1; Criticality: SHOULD -->
+<!--Policy: MS.AAD.3.8v0.1; Criticality: SHOULD -->
 - _Rationale:_ The security risk of an adversary using stolen user credentials and then registering their own MFA devices to access the tenant is reduced by requiring a managed device to perform registration actions. Thus, the adversary cannot perform the registration from their own unmanaged device, as managed devices are under the provisioning and control of the agency.
 - _Last modified:_ June 2023
 
@@ -258,7 +258,7 @@ Managed Devices SHOULD be required to register MFA.
 
 ### Implementation
 
-#### MS.AAD.3.1v1 instructions:
+#### MS.AAD.3.1v0.1 instructions:
 
 1. Create a conditional access policy enforcing phishing-resistant MFA for all users.  Configure the following policy settings in the new conditional access policy, per the values below:
 
@@ -270,7 +270,7 @@ Managed Devices SHOULD be required to register MFA.
   Access controls > Grant > Grant Access > Require authentication strength > <b>Phishing-resistant MFA</b>
 </pre>
 
-#### MS.AAD.3.2v1 instructions:
+#### MS.AAD.3.2v0.1 instructions:
 
 1. If phishing-resistant MFA has not been enforced for all users yet, create a conditional access policy that enforces MFA but does not dictate the MFA method.  Configure the following policy settings in the new conditional access policy as per the values below:
 
@@ -282,7 +282,7 @@ Managed Devices SHOULD be required to register MFA.
   Access controls > Grant > Grant Access > <b>Require multifactor authentication</b>
 </pre>
 
-#### MS.AAD.3.3v1 instructions:
+#### MS.AAD.3.3v0.1 instructions:
 If phishing-resistant MFA has not been deployed yet and Microsoft Authenticator is in use, configure Authenticator to display context information to users when they login.
 
 1. In **Azure Active Directory**, click **Security > Authentication methods > Microsoft Authenticator**.
@@ -293,15 +293,15 @@ If phishing-resistant MFA has not been deployed yet and Microsoft Authenticator 
 6. Select **Save**
 
 
-#### MS.AAD.3.4v1 instructions:
+#### MS.AAD.3.4v0.1 instructions:
 1. Go through the process of migrating from the legacy AAD MFA and Self-Service Password Reset (SSPR) administration pages to the new unified Authentication Methods policy page. Follow [these instructions ](https://learn.microsoft.com/en-us/azure/active-directory/authentication/how-to-authentication-methods-manage).
 2. Once ready to finish the migration, follow [these instructions ](https://learn.microsoft.com/en-us/azure/active-directory/authentication/how-to-authentication-methods-manage#finish-the-migration) and set the **Manage Migration** option to **Migration Complete**.
 
-#### MS.AAD.3.5v1 instructions:
+#### MS.AAD.3.5v0.1 instructions:
 1. In **Azure Active Directory**, click **Security > Authentication methods**
 2. Click on the **SMS**, **Voice Call**, and **Email OTP** authentication methods and disable each of them. Their statuses should be **Enabled > No** on the **Authentication methods > Policies** page.
 
-#### MS.AAD.3.6v1 instructions:
+#### MS.AAD.3.6v0.1 instructions:
 
 1. Create a conditional access policy enforcing phishing-resistant MFA for highly privileged roles.  Configure the following policy settings in the new conditional access policy, per the values below:
 
@@ -313,7 +313,7 @@ If phishing-resistant MFA has not been deployed yet and Microsoft Authenticator 
   Access controls > Grant > Grant Access > Require authentication strength > <b>Phishing-resistant MFA</b>
 </pre>
 
-#### MS.AAD.3.7v1 instructions:
+#### MS.AAD.3.7v0.1 instructions:
 
 1. Create a conditional access policy requiring a user's device to be either hybrid Azure AD joined or compliant during authentication. Configure the following policy settings in the new conditional access policy, per the values below:
 
@@ -325,7 +325,7 @@ If phishing-resistant MFA has not been deployed yet and Microsoft Authenticator 
   Access controls > Grant > Grant Access > <b>Require device to be marked as compliant</b> and <b>Require Hybrid Azure AD joined device</b> > For multiple controls > <b>Require one of the selected controls</b>
 </pre>
 
-#### MS.AAD.3.8v1 instructions:
+#### MS.AAD.3.8v0.1 instructions:
 
 1. Create a conditional access policy requiring a user to be on a managed device when registering for MFA. Configure the following policy settings in the new conditional access policy, per the values below:
 
@@ -342,10 +342,10 @@ If phishing-resistant MFA has not been deployed yet and Microsoft Authenticator 
 This section provides policies to reduce security risks related to the lack of security logs, which hampers security visibility.
 
 ### Policies
-#### MS.AAD.4.1v1
+#### MS.AAD.4.1v0.1
 Security logs SHALL be sent to the agency's Security Operations Center for monitoring.
 
-<!--Policy: MS.AAD.4.1v1; Criticality: SHALL -->
+<!--Policy: MS.AAD.4.1v0.1; Criticality: SHALL -->
 - _Rationale:_ The security risk of not having visibility into cyber attacks is reduced by collecting the logs into the agency's centralized security detection infrastructure. Thus, security events can be audited, queried, and available for incident response.
 - _Last modified:_ June 2023
 - _Note:_ The following logs (configured in Azure AD diagnostic settings), are required: `AuditLogs, SignInLogs, RiskyUsers, UserRiskEvents, NonInteractiveUserSignInLogs, ServicePrincipalSignInLogs, ADFSSignInLogs, RiskyServicePrincipals, ServicePrincipalRiskEvents, EnrichedOffice365AuditLogs, MicrosoftGraphActivityLogs`. If managed identities are used for Azure resources, also send the `ManagedIdentitySignInLogs` log type. If the Azure AD Provisioning Service is used to provision users to Software as a Service (SaaS) apps or other systems, also send the `ProvisioningLogs` log type.
@@ -368,7 +368,7 @@ Security logs SHALL be sent to the agency's Security Operations Center for monit
 
 ### Implementation
 
-#### MS.AAD.4.1v1 instructions:
+#### MS.AAD.4.1v0.1 instructions:
 
 [Follow these instructions](https://learn.microsoft.com/en-us/azure/active-directory/reports-monitoring/quickstart-azure-monitor-route-logs-to-storage-account)
 to configure sending the logs to an Azure storage account:
@@ -389,31 +389,31 @@ to configure sending the logs to an Azure storage account:
 This section provides policies that help reduce security risks related to non-privileged users adding malicious applications or service principals to the tenant. Malicious applications can perform many of the same operations as interactive users and can access data "on behalf of" compromised users. These policies apply to custom-developed applications and applications published by third-party vendors.
 
 ### Policies
-#### MS.AAD.5.1v1
+#### MS.AAD.5.1v0.1
 Only administrators SHALL be allowed to register applications.
 
-<!--Policy: MS.AAD.5.1v1; Criticality: SHALL -->
+<!--Policy: MS.AAD.5.1v0.1; Criticality: SHALL -->
 - _Rationale:_ Application access to the tenant presents a heightened security risk compared to interactive user access, because applications are typically not subject to critical security protections such as MFA policies and others. Ensuring only specific privileged users can register applications reduces the risks of unauthorized users installing malicious applications into the tenant.
 - _Last modified:_ June 2023
 
-#### MS.AAD.5.2v1
+#### MS.AAD.5.2v0.1
 Only administrators SHALL be allowed to consent to applications.
 
-<!--Policy: MS.AAD.5.2v1; Criticality: SHALL -->
+<!--Policy: MS.AAD.5.2v0.1; Criticality: SHALL -->
 - _Rationale:_ Ensuring only specific privileged users can consent to applications reduces the risks of users giving insecure applications access to their data via [consent grant attacks](https://learn.microsoft.com/en-us/microsoft-365/security/office-365-security/detect-and-remediate-illicit-consent-grants?view=o365-worldwide).
 - _Last modified:_ June 2023
 
-#### MS.AAD.5.3v1
+#### MS.AAD.5.3v0.1
 An admin consent workflow SHALL be configured for applications.
 
-<!--Policy: MS.AAD.5.3v1; Criticality: SHALL -->
+<!--Policy: MS.AAD.5.3v0.1; Criticality: SHALL -->
 - _Rationale:_ Configuring an admin consent workflow reduces the risk of the previous policy by setting up a process for users to securely request access to applications necessary for business purposes. Administrators have the opportunity to review the permissions requested by new applications and approve or deny access based on a risk assessment.
 - _Last modified:_ June 2023
 
-#### MS.AAD.5.4v1
+#### MS.AAD.5.4v0.1
 Group owners SHALL NOT be allowed to consent to applications.
 
-<!--Policy: MS.AAD.5.4v1; Criticality: SHALL -->
+<!--Policy: MS.AAD.5.4v0.1; Criticality: SHALL -->
 - _Rationale:_ In M365 group and team owners can consent to applications accessing data in the tenant. By requiring consent requests to go through an approval consent workflow, the risks of exposure to malicious applications is reduced.
 - _Last modified:_ June 2023
 
@@ -434,7 +434,7 @@ Group owners SHALL NOT be allowed to consent to applications.
 
 ### Implementation
 
-#### MS.AAD.5.1v1 instructions:
+#### MS.AAD.5.1v0.1 instructions:
 
 1.  In **Azure Active Directory**, under **Manage**, select **Users**.
 
@@ -444,7 +444,7 @@ Group owners SHALL NOT be allowed to consent to applications.
 
 4. Click **Save**.
 
-#### MS.AAD.5.2v1 instructions:
+#### MS.AAD.5.2v0.1 instructions:
 
 1.  In **Azure Active Directory** under **Manage**, select **Enterprise Applications.**
 
@@ -454,7 +454,7 @@ Group owners SHALL NOT be allowed to consent to applications.
 
 4. Click **Save**.
 
-#### MS.AAD.5.3v1 instructions:
+#### MS.AAD.5.3v0.1 instructions:
 
 1.  In **Azure Active Directory** create a new Azure AD Group that contains admin users responsible for reviewing and adjudicating application consent requests. Users in this group will be notified when users request consent for new applications.
 
@@ -468,7 +468,7 @@ Group owners SHALL NOT be allowed to consent to applications.
 
 6. Click **Save**.
 
-#### MS.AAD.5.4v1 instructions:
+#### MS.AAD.5.4v0.1 instructions:
 
 1.  In **Azure Active Directory** under **Manage**, select **Enterprise Applications.**
 
@@ -483,10 +483,10 @@ Group owners SHALL NOT be allowed to consent to applications.
 This section provides policies that reduce security risks associated with legacy password practices.
 
 ### Policies
-#### MS.AAD.6.1v1
+#### MS.AAD.6.1v0.1
 User passwords SHALL NOT expire.
 
-<!--Policy: MS.AAD.6.1v1; Criticality: SHALL -->
+<!--Policy: MS.AAD.6.1v0.1; Criticality: SHALL -->
 - _Rationale:_ At a minimum, the National Institute of Standards & Technology (NIST), the Office of Management and Budget (OMB), and Microsoft have published guidance indicating mandated periodic password changes make user accounts less secure. OMB-22-09 states, "Password policies must not require use of special characters or regular rotation."
 - _Last modified:_ June 2023
 
@@ -506,7 +506,7 @@ User passwords SHALL NOT expire.
 
 ### Implementation
 
-#### MS.AAD.6.1v1 instructions:
+#### MS.AAD.6.1v0.1 instructions:
 
 1. [Follow the instructions at this link](https://learn.microsoft.com/en-us/microsoft-365/admin/manage/set-password-expiration-policy?view=o365-worldwide#set-password-expiration-policy) and configure the **Password expiration policy** to **Set passwords to never expire**.
 
@@ -519,68 +519,68 @@ Refer to the Highly Privileged Roles section at the top of this document for a r
 Some of the policy implementations in this section reference specific features of the AAD Privileged Identity Management (PIM) service which provides Privileged Access Management (PAM) capabilities. As an alternative to AAD PIM, there are third-party products and services with equivalent PAM capabilities that can be leveraged if an agency chooses to do so.
 
 ### Policies
-#### MS.AAD.7.1v1
+#### MS.AAD.7.1v0.1
 A minimum of two users and a maximum of eight users SHALL be provisioned with the Global Administrator role.
 
-<!--Policy: MS.AAD.7.1v1; Criticality: SHALL -->
+<!--Policy: MS.AAD.7.1v0.1; Criticality: SHALL -->
 - _Rationale:_  The Global Administrator role provides unfettered access to the tenant. Therefore, reducing the number of users with this access makes it more challenging for an adversary to compromise a tenant. Microsoft recommends fewer than five users, however, additional user accounts, up to eight, may be necessary to support emergency access and some operational scenarios.
 - _Last modified:_ June 2023
 
-#### MS.AAD.7.2v1
+#### MS.AAD.7.2v0.1
 Privileged users SHALL be provisioned with finer-grained roles instead of Global Administrator.
 
-<!--Policy: MS.AAD.7.2v1; Criticality: SHALL -->
+<!--Policy: MS.AAD.7.2v0.1; Criticality: SHALL -->
 - _Rationale:_ Many privileged administrative users do not need unfettered access to the tenant to perform their duties. By assigning them to roles based on least privilege, the risks associated with having their accounts compromised are reduced.
 - _Last modified:_ June 2023
 
-#### MS.AAD.7.3v1
+#### MS.AAD.7.3v0.1
 Privileged users SHALL be provisioned cloud-only accounts separate from an on-premises directory or other federated identity providers.
 
-<!--Policy: MS.AAD.7.3v1; Criticality: SHALL -->
+<!--Policy: MS.AAD.7.3v0.1; Criticality: SHALL -->
 - _Rationale:_ By provisioning cloud-only AAD user accounts to privileged users, the risks associated with a compromise of on-premises federation infrastructure are reduced. It is more challenging for the adversary to pivot from the compromised environment to the cloud with privileged access.
 - _Last modified:_ June 2023
 
-#### MS.AAD.7.4v1
+#### MS.AAD.7.4v0.1
 Permanent active role assignments SHALL NOT be allowed for highly privileged roles.
 
-<!--Policy: MS.AAD.7.4v1; Criticality: SHALL -->
+<!--Policy: MS.AAD.7.4v0.1; Criticality: SHALL -->
 - _Rationale:_ Instead of giving users permanent assignments to privileged roles, provisioning access "just in time" lessens the exposure period if those accounts become compromised. In AAD PIM or an alternative PAM system, just in time access can be provisioned by assigning users to roles as "eligible" instead of perpetually "active."
 - _Last modified:_ June 2023
 - _Note:_ There are a couple of exceptions to this policy. Emergency access accounts need perpetual access to the tenant in the rare event of system degradation or other scenarios. Some types of service accounts require a user account with privileged roles and since those accounts are used by software programs they cannot perform role activation.
 
-#### MS.AAD.7.5v1
+#### MS.AAD.7.5v0.1
 Provisioning users to highly privileged roles SHALL NOT occur outside of a PAM system.
 
-<!--Policy: MS.AAD.7.5v1; Criticality: SHALL -->
+<!--Policy: MS.AAD.7.5v0.1; Criticality: SHALL -->
 - _Rationale:_ By provisioning users to privileged roles within a PAM system, numerous privileged access policies and monitoring can be enforced. If privileged users are assigned directly to roles in the M365 admin center or via Powershell outside of the context of a PAM system, a significant set of critical security capabilities are bypassed.
 - _Last modified:_ June 2023
 
-#### MS.AAD.7.6v1
+#### MS.AAD.7.6v0.1
 Activation of the Global Administrator role SHALL require approval.
 
-<!--Policy: MS.AAD.7.6v1; Criticality: SHALL -->
+<!--Policy: MS.AAD.7.6v0.1; Criticality: SHALL -->
 - _Rationale:_ Requiring approval for a user to activate Global Administrator, which provides unfettered access, makes it more challenging for an attacker to compromise the tenant with stolen credentials and it provides visibility of activities indicating a compromise is taking place.
 - _Last modified:_ June 2023
 
-#### MS.AAD.7.7v1
+#### MS.AAD.7.7v0.1
 Eligible and Active highly privileged role assignments SHALL trigger an alert.
 
-<!--Policy: MS.AAD.7.7v1; Criticality: SHALL -->
+<!--Policy: MS.AAD.7.7v0.1; Criticality: SHALL -->
 - _Rationale:_ It is imperative to closely monitor the assignment of the highest privileged roles for signs of compromise. Sending alerts when these assignments occur provides the security monitoring team a chance to detect potential compromises in action.
 - _Last modified:_ June 2023
 
-#### MS.AAD.7.8v1
+#### MS.AAD.7.8v0.1
 User activation of the Global Administrator role SHALL trigger an alert.
 
-<!--Policy: MS.AAD.7.8v1; Criticality: SHALL -->
+<!--Policy: MS.AAD.7.8v0.1; Criticality: SHALL -->
 - _Rationale:_ It is imperative to closely monitor the activation of the Global Administrator role for signs of compromise. Sending alerts when this activation occurs, provides the security monitoring team a chance to detect potential compromises in action.
 - _Last modified:_ June 2023
 - _Note:_ It is recommended to prioritize user activation of Global Administrator as one of the most important events to monitor and respond to.
 
-#### MS.AAD.7.9v1
+#### MS.AAD.7.9v0.1
 User activation of other highly privileged roles SHOULD trigger an alert.
 
-<!--Policy: MS.AAD.7.9v1; Criticality: SHOULD -->
+<!--Policy: MS.AAD.7.9v0.1; Criticality: SHOULD -->
 - _Rationale:_ It is imperative to closely monitor the activation of high risk roles for signs of compromise. Sending alerts when this activation occurs, provides the security monitoring team a chance to detect potential compromises in action. In some environments, activating privileged roles can generate a significant number of alerts.
 - _Last modified:_ June 2023
 
@@ -606,7 +606,7 @@ User activation of other highly privileged roles SHOULD trigger an alert.
 
 The following implementation instructions that reference the AAD PIM service will vary if using a third-party PAM system instead. Additionally, the implementation instructions associated with highly privileged user access may be revised in the next release to incorporate functionality provided by the AAD PIM for Groups feature.
 
-#### MS.AAD.7.1v1 instructions:
+#### MS.AAD.7.1v0.1 instructions:
 
 1. In **Azure Active Directory** select **Roles and administrators.**
 
@@ -618,7 +618,7 @@ The following implementation instructions that reference the AAD PIM service wil
 
 5.  If you have AAD PIM, count the number of users in both the **Eligible assignments** and **Active assignments** tabs. There should be a total of two to eight users across both tabs (not individually). Do not count the same username twice. If any groups are listed, count the number of users who are members of the group and include it in the total count.
 
-#### MS.AAD.7.2v1 instructions:
+#### MS.AAD.7.2v0.1 instructions:
 
 1.  In **Azure Active Directory** select **Security.**
 
@@ -631,7 +631,7 @@ The following implementation instructions that reference the AAD PIM service wil
 5.  Review the **current score** value and compare it to the **max score**.
 If the current score is not the maximum value and the status is not **Completed**, you must perform the improvement actions. If that is the case, follow the detailed action steps and check the score again after 48 hours to ensure compliance.
 
-#### MS.AAD.7.3v1 instructions:
+#### MS.AAD.7.3v0.1 instructions:
 Performing a manual review of highly privileged users to determine which ones are not cloud-only is labor intensive; we recommend running the ScubaGear tool instead. ScubaGear will provide a list of the highly privileged users that are not cloud-only.
 
 1. Perform the steps below for each highly privileged role. We reference the Global Administrator role as an example.
@@ -651,7 +651,7 @@ Performing a manual review of highly privileged users to determine which ones ar
 
 6. Review the output field named **OnPremisesImmutableId**. If this field has a data value, it means that this specific user is not cloud-only. If the user is not cloud-only, create a cloud-only account for that user, assign the user to their respective roles and then remove the account that is not cloud-only from AAD.
 
-#### MS.AAD.7.4v1 instructions:
+#### MS.AAD.7.4v0.1 instructions:
 
 1. In **Azure Active Directory** select **Roles and administrators**. Perform the steps below for each highly privileged role. We reference the Global Administrator role as an example.
 
@@ -659,9 +659,9 @@ Performing a manual review of highly privileged users to determine which ones ar
 
 3. Under **Manage**, select **Assignments** and click the **Active assignments** tab.
 
-4. Verify there are no users or groups with a value of **Permanent** in the **End time** column. If there are any, recreate those assignments to have an expiration date using AAD PIM or an alternative PAM system. The only exception to this policy is emergency access accounts and service accounts requiring perpetual active assignments. See policy MS.AAD.7.4v1 note section for details.
+4. Verify there are no users or groups with a value of **Permanent** in the **End time** column. If there are any, recreate those assignments to have an expiration date using AAD PIM or an alternative PAM system. The only exception to this policy is emergency access accounts and service accounts requiring perpetual active assignments. See policy MS.AAD.7.4v0.1 note section for details.
 
-#### MS.AAD.7.5v1 instructions:
+#### MS.AAD.7.5v0.1 instructions:
 
 1. Perform the steps below for each highly privileged role. We reference the Global Administrator role as an example.
 
@@ -674,7 +674,7 @@ Performing a manual review of highly privileged users to determine which ones ar
 5. For each user or group listed, examine the value in the **Start time** column. If it contains a value of **-**, this indicates the respective user/group was assigned to that role outside of AAD PIM. If the role was assigned outside of AAD PIM, delete the assignment and recreate it using AAD PIM.
 
 
-#### MS.AAD.7.6v1 instructions:
+#### MS.AAD.7.6v0.1 instructions:
 
 1. In **Azure Active Directory** create a new group named **Privileged Escalation Approvers**. This group will contain users that will receive role activation approval requests and approve or deny them.
 
@@ -693,7 +693,7 @@ Performing a manual review of highly privileged users to determine which ones ar
   5.  Click **Select approvers** and select the group **Privileged Escalation Approvers**, and then click **Select**.
   6.  Click **Update**.
 
-#### MS.AAD.7.7v1 instructions:
+#### MS.AAD.7.7v0.1 instructions:
 
 1.  In **AAD Privileged Identity Management (PIM)**, under **Manage**, select **Azure AD roles.**
 
@@ -711,7 +711,7 @@ Performing a manual review of highly privileged users to determine which ones ar
 
 8. Click **Update**.
 
-#### MS.AAD.7.8v1 instructions:
+#### MS.AAD.7.8v0.1 instructions:
 
 1. In **AAD Privileged Identity Management (PIM)**, under **Manage**, select **Azure AD roles.**
 
@@ -727,32 +727,32 @@ Performing a manual review of highly privileged users to determine which ones ar
 
 7. Click **Update**.
 
-#### MS.AAD.7.9v1 instructions:
+#### MS.AAD.7.9v0.1 instructions:
 
- 1. Follow the same instructions as MS.AAD.7.8v1 for each of the highly privileged roles (other than Global Administrator) but enter a security monitoring mailbox different from the one used to monitor Global Administrator activations.
+ 1. Follow the same instructions as MS.AAD.7.8v0.1 for each of the highly privileged roles (other than Global Administrator) but enter a security monitoring mailbox different from the one used to monitor Global Administrator activations.
 
 ## 8. Guest User Access
 
 This section provides policies that help reduce security risks related to integrating M365 guest users. A guest user is a specific type of external user who belongs to a separate organization but can access files, meetings, Teams and other data in the target tenant. It is common to invite guest users to a tenant for cross-agency collaboration purposes.
 
-#### MS.AAD.8.1v1
+#### MS.AAD.8.1v0.1
 Guest users SHOULD have limited or restricted access to Azure AD directory objects.
 
-<!--Policy: MS.AAD.8.1v1; Criticality: SHOULD -->
+<!--Policy: MS.AAD.8.1v0.1; Criticality: SHOULD -->
 - _Rationale:_ Limiting the amount of information about objects available to guest users in the tenant, reduces the malicious reconnaissance exposure should a guest account become compromised or be created by an adversary.
 - _Last modified:_ June 2023
 
-#### MS.AAD.8.2v1
+#### MS.AAD.8.2v0.1
 Only users with the Guest Inviter role SHOULD be able to invite guest users.
 
-<!--Policy: MS.AAD.8.2v1; Criticality: SHOULD -->
+<!--Policy: MS.AAD.8.2v0.1; Criticality: SHOULD -->
 - _Rationale:_ By only allowing an authorized group of individuals to invite external users to create accounts in the tenant, an agency can enforce a guest user account approval process, reducing the risk of unauthorized accounts being created.
 - _Last modified:_ June 2023
 
-#### MS.AAD.8.3v1
+#### MS.AAD.8.3v0.1
 Guest invites SHOULD only be allowed to specific external domains that have been authorized by the agency for legitimate business purposes.
 
-<!--Policy: MS.AAD.8.3v1; Criticality: SHOULD -->
+<!--Policy: MS.AAD.8.3v0.1; Criticality: SHOULD -->
 - _Rationale:_ Limiting which domains can be invited to create guest accounts in the tenant helps reduce the risk of users from unauthorized external organizations getting access.
 - _Last modified:_ June 2023
 
@@ -768,7 +768,7 @@ Guest invites SHOULD only be allowed to specific external domains that have been
 
 ### Implementation
 
-#### MS.AAD.8.1v1 instructions:
+#### MS.AAD.8.1v0.1 instructions:
 
 1. In **Azure Active Directory** select **External Identities > External collaboration settings**.
 
@@ -776,7 +776,7 @@ Guest invites SHOULD only be allowed to specific external domains that have been
 
 3. Click **Save**.
 
-#### MS.AAD.8.2v1 instructions:
+#### MS.AAD.8.2v0.1 instructions:
 
 1. In **Azure Active Directory** select **External Identities > External collaboration settings**.
 
@@ -784,7 +784,7 @@ Guest invites SHOULD only be allowed to specific external domains that have been
 
 3. Click **Save**.
 
-#### MS.AAD.8.3v1 instructions:
+#### MS.AAD.8.3v0.1 instructions:
 
 1. In **Azure Active Directory** select **External Identities > External collaboration settings**.
 

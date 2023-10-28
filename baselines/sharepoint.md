@@ -26,32 +26,32 @@ This section helps reduce security risks related to sharing files with users ext
 
 
 ### Policies
-#### MS.SHAREPOINT.1.1v1
+#### MS.SHAREPOINT.1.1v0.1
 External sharing for SharePoint SHALL be limited to Existing Guests or Only People in your Organization.
 
-<!--Policy: MS.SHAREPOINT.1.1v1; Criticality: SHALL -->
+<!--Policy: MS.SHAREPOINT.1.1v0.1; Criticality: SHALL -->
 - _Rationale:_ Sharing information outside the organization via SharePoint increases the risk of unauthorized access. By limiting external sharing, administrators decrease the risk of access to information.
 - _Last modified:_ June 2023
 
-#### MS.SHAREPOINT.1.2v1
+#### MS.SHAREPOINT.1.2v0.1
 External sharing for OneDrive SHALL be limited to Existing Guests or Only People in your Organization.
 
-<!--Policy: MS.SHAREPOINT.1.2v1; Criticality: SHALL -->
+<!--Policy: MS.SHAREPOINT.1.2v0.1; Criticality: SHALL -->
 - _Rationale:_ Sharing files outside the organization via OneDrive increases the risk of unauthorized access. By limiting external sharing, administrators decrease the risk of unauthorized unauthorized access to information.
 - _Last modified:_ June 2023
 
-#### MS.SHAREPOINT.1.3v1
+#### MS.SHAREPOINT.1.3v0.1
 External sharing SHALL be restricted to approved external domains and/or users in approved security groups per interagency collaboration needs. 
 
-<!--Policy: MS.SHAREPOINT.1.3v1; Criticality: SHALL -->
+<!--Policy: MS.SHAREPOINT.1.3v0.1; Criticality: SHALL -->
 - _Rationale:_ By limiting sharing to domains or approved security groups used for interagency collaboration purposes, administrators prevent sharing with unknown organizations and individuals.
 - _Last modified:_ June 2023
 - _Note:_ This policy is only applicable if the external sharing slider on the admin page is set to any value other than Only People in your Organization.
 
-#### MS.SHAREPOINT.1.4v1
+#### MS.SHAREPOINT.1.4v0.1
 Guest access SHALL be limited to the email the invitation was sent to.
 
-<!--Policy: MS.SHAREPOINT.1.4v1; Criticality: SHALL -->
+<!--Policy: MS.SHAREPOINT.1.4v0.1; Criticality: SHALL -->
 - _Rationale:_ Email invitations allow external guests to access shared information. By requiring guests to sign in using the same account where the invite was sent, administrators ensure only the intended guest can use the invite.
 - _Last modified:_ June 2023
 - _Note:_ This policy is only applicable if the external sharing slider on the admin page is set to any value other than Only People in your Organization.
@@ -68,7 +68,7 @@ Guest access SHALL be limited to the email the invitation was sent to.
 
 ### Implementation
 
-#### MS.SHAREPOINT.1.1v1 instructions:
+#### MS.SHAREPOINT.1.1v0.1 instructions:
 
 1. Sign in to the **SharePoint admin center**.
 
@@ -78,7 +78,7 @@ Guest access SHALL be limited to the email the invitation was sent to.
 
 4. Select **Save**.
 
-#### MS.SHAREPOINT.1.2v1 instructions:
+#### MS.SHAREPOINT.1.2v0.1 instructions:
 
 
 1.  Sign in to the **SharePoint admin center**.
@@ -89,7 +89,7 @@ Guest access SHALL be limited to the email the invitation was sent to.
 
 4. Select **Save**.
 
-#### MS.SHAREPOINT.1.3v1 instructions:
+#### MS.SHAREPOINT.1.3v0.1 instructions:
 
 Note: If SharePoint external sharing is set to its most restrictive setting of "Only people in your organization", then no external sharing is allowed and no implementation changes are required for this policy item.
 
@@ -111,7 +111,7 @@ Note: If SharePoint external sharing is set to its most restrictive setting of "
 
 9.  Select **Save**.
 
-#### MS.SHAREPOINT.1.4v1 instructions:
+#### MS.SHAREPOINT.1.4v0.1 instructions:
 
 Note: If SharePoint external sharing is set to its most restrictive setting of "Only people in your organization", then no external sharing is allowed and no implementation changes are required for this policy item.
 
@@ -131,17 +131,17 @@ This section provides policies to set the scope and permissions for sharing link
 
 ### Policies
 
-#### MS.SHAREPOINT.2.1v1
+#### MS.SHAREPOINT.2.1v0.1
 File and folder default sharing scope SHALL be set to Specific People (only the people the user specifies).
 
-<!--Policy: MS.SHAREPOINT.2.1v1; Criticality: SHALL -->
+<!--Policy: MS.SHAREPOINT.2.1v0.1; Criticality: SHALL -->
 - _Rationale:_ By making the default sharing the most restrictive, administrators prevent accidentally sharing information too broadly.
 - _Last modified:_ June 2023
 
-#### MS.SHAREPOINT.2.2v1
+#### MS.SHAREPOINT.2.2v0.1
 File and folder default sharing permissions SHALL be set to View only.
 
-<!--Policy: MS.SHAREPOINT.2.2v1; Criticality: SHALL -->
+<!--Policy: MS.SHAREPOINT.2.2v0.1; Criticality: SHALL -->
 - _Rationale:_ Edit access to files and folders could allow a user to make unauthorized changes.  By restricting default permissions to View only, administrators prevent unintended or malicious modification.
 - _Last modified:_ June 2023
 
@@ -156,7 +156,7 @@ File and folder default sharing permissions SHALL be set to View only.
 
 ### Implementation
 
-#### MS.SHAREPOINT.2.1v1 instructions:
+#### MS.SHAREPOINT.2.1v0.1 instructions:
 
 1.  Sign in to the **SharePoint admin center**.
 
@@ -166,7 +166,7 @@ File and folder default sharing permissions SHALL be set to View only.
 
 4.  Select **Save**
 
-#### MS.SHAREPOINT.2.2v1 instructions:
+#### MS.SHAREPOINT.2.2v0.1 instructions:
 
 1.  Sign in to the **SharePoint admin center**.
 
@@ -183,26 +183,26 @@ Sharing files with external users via the usage of Anyone links or Verification 
 **Note**: The settings in this section are only applicable if an agency is using Anyone links or verification code sharing. See each policy below for details.
 
 ### Policies
-#### MS.SHAREPOINT.3.1v1
+#### MS.SHAREPOINT.3.1v0.1
 Expiration days for anyone links SHALL be set to 30 days or less.
 
-<!--Policy: MS.SHAREPOINT.3.1v1; Criticality: SHALL -->
+<!--Policy: MS.SHAREPOINT.3.1v0.1; Criticality: SHALL -->
 - _Rationale:_ Anyone links may be used to provide access to information for a short period of time. Without expiration, however, access is indefinite. By setting expiration timers for anyone links, administrators prevent unintended sustained access to information.
 - _Last modified:_ June 2023
 - _Note:_ This policy is only applicable if the external sharing slider on the admin center sharing page is set to Anyone.
 
-#### MS.SHAREPOINT.3.2v1
+#### MS.SHAREPOINT.3.2v0.1
 The allowable file and folder permissions for anyone links SHALL be set to View only.
 
-<!--Policy: MS.SHAREPOINT.3.1v1; Criticality: SHALL -->
+<!--Policy: MS.SHAREPOINT.3.1v0.1; Criticality: SHALL -->
 - _Rationale:_ Unauthorized changes to files can be made if permissions allow editing by anyone.  By restricting permissions on anyone links to View only, administrators prevent anonymous file changes.
 - _Last modified:_ June 2023
 - _Note:_ This policy is only applicable if the external sharing slider on the admin center sharing page is set to Anyone.
 
-#### MS.SHAREPOINT.3.3v1
+#### MS.SHAREPOINT.3.3v0.1
 Reauthentication days for people who use a verification code SHALL be set to 30 days or less.
 
-<!--Policy: MS.SHAREPOINT.3.1v1; Criticality: SHALL -->
+<!--Policy: MS.SHAREPOINT.3.1v0.1; Criticality: SHALL -->
 - _Rationale:_ A verification code may be given out to provide access to information for a short period of time. Without expiration, however, access is indefinite. By setting expiration timers for verification code access, administrators prevent  unintended sustained access to information.
 - _Last modified:_ June 2023
 - _Note:_ This policy is only applicable if the external sharing slider on the admin center sharing page is set to Anyone or New and Existing Guests.
@@ -218,7 +218,7 @@ Reauthentication days for people who use a verification code SHALL be set to 30 
 
 ### Implementation
 
-#### MS.SHAREPOINT.3.1v1 instructions:
+#### MS.SHAREPOINT.3.1v0.1 instructions:
 
 1.  Sign in to the **SharePoint admin center**.
 
@@ -232,7 +232,7 @@ Reauthentication days for people who use a verification code SHALL be set to 30 
 
 6.  Select **Save**.
 
-#### MS.SHAREPOINT.3.2v1 instructions:
+#### MS.SHAREPOINT.3.2v0.1 instructions:
 
 1.  Sign in to the **SharePoint admin center**.
 
@@ -248,7 +248,7 @@ Reauthentication days for people who use a verification code SHALL be set to 30 
 
 7.  Select **Save**.
 
-#### MS.SHAREPOINT.3.3v1 instructions:
+#### MS.SHAREPOINT.3.3v0.1 instructions:
 
 1.  Sign in to the **SharePoint admin center**.
 
@@ -266,17 +266,17 @@ Reauthentication days for people who use a verification code SHALL be set to 30 
 
 This section provides policies for restricting custom scripts execution.
 
-#### MS.SHAREPOINT.4.1v1
+#### MS.SHAREPOINT.4.1v0.1
 Users SHALL be prevented from running custom scripts on personal sites (aka OneDrive).
 
-<!--Policy: MS.SHAREPOINT.4.1v1; Criticality: SHALL -->
+<!--Policy: MS.SHAREPOINT.4.1v0.1; Criticality: SHALL -->
 - _Rationale:_ Scripts in OneDrive folders run in the context of the user visiting the site and have access to everything the user can access. By preventing custom scripts on personal sites, administrators block a path for potentially malicious code execution.
 - _Last modified:_ June 2023
 
-#### MS.SHAREPOINT.4.2v1
+#### MS.SHAREPOINT.4.2v0.1
 Users SHALL be prevented from running custom scripts on self-service created sites.
 
-<!--Policy: MS.SHAREPOINT.4.2v1; Criticality: SHALL -->
+<!--Policy: MS.SHAREPOINT.4.2v0.1; Criticality: SHALL -->
 - _Rationale:_ Scripts on SharePoint sites run in the context of the user visiting the site and have access to everything the user can access. By preventing custom scripts on self-service created sites, administrators block a path for potentially malicious code execution.
 - _Last modified:_ June 2023
 
@@ -291,7 +291,7 @@ Users SHALL be prevented from running custom scripts on self-service created sit
 
 ### Implementation
 
-#### MS.SHAREPOINT.4.1v1 instructions:
+#### MS.SHAREPOINT.4.1v0.1 instructions:
 
 1.  Sign in to the **SharePoint admin center**.
 
@@ -305,7 +305,7 @@ Users SHALL be prevented from running custom scripts on self-service created sit
 
 6.  Select **Ok**.
 
-#### MS.SHAREPOINT.4.2v1 instructions:
+#### MS.SHAREPOINT.4.2v0.1 instructions:
 
 1.  Sign in to the **SharePoint admin center**.
 

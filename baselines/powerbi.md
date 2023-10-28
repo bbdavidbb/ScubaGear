@@ -57,7 +57,7 @@ specific security groups, instead of allowing the entire agency to
 publish data to the web.
 
 ### Policies
-#### MS.POWERBI.1.1v1
+#### MS.POWERBI.1.1v0.1
 The Publish to Web feature SHOULD be disabled unless the agency mission requires the capability.
 
 - _Rationale:_ Having a publicly accessible web URL means there is no way to control who is viewing information. By following this policy there will be no sensitive information published to the public web that could be accessed by a malicious actor.
@@ -77,7 +77,7 @@ The Publish to Web feature SHOULD be disabled unless the agency mission requires
 
 
 ### Implementation 
-#### MS.POWERBI.1.1v1 instructions:
+#### MS.POWERBI.1.1v0.1 instructions:
 
 1. Navigate to the **PowerBI Admin Portal**
 
@@ -92,7 +92,7 @@ The Publish to Web feature SHOULD be disabled unless the agency mission requires
 This section provides policies helping reduce guest user access risks related to Power BI data and resources. An agency with externally shareable Power BI resources and data must consider its unique risk tolerance when granting access to guest users.
 
 ### Policies
-#### MS.POWERBI.2.1v1
+#### MS.POWERBI.2.1v0.1
 Guest user access to the Power BI tenant SHOULD be disabled unless the agency mission requires the capability.
 
 - _Rationale:_ By disabling Power BI external access, this helps keep guest users from accessing potentially risky data/APIs. If an agency needs to allow guest access, it can be limited to users in specific security groups to help limit risk.
@@ -111,7 +111,7 @@ Guest user access to the Power BI tenant SHOULD be disabled unless the agency mi
 - N/A
 
 ### Implementation
-#### MS.POWERBI.2.1v1 instructions:
+#### MS.POWERBI.2.1v0.1 instructions:
 **TO DISABLE COMPLETELY**
 1. Navigate to the **PowerBI Admin Portal**
 
@@ -142,7 +142,7 @@ AAD B2B guest user in the organization. They will then appear in user
 pickers throughout the Power BI user experience.
 
 ### Policies
-#### MS.POWERBI.3.1v1
+#### MS.POWERBI.3.1v0.1
 The Invite external users to your organization feature SHOULD be disabled unless agency mission requires the capability.
 
 - _Rationale:_ Disabling this feature keeps internal users from inviting guest users. Therefore guest users can be limited from accessing potentially risky data/APIs. If an agency needs to allow guest access, the invitation feature can be limited to users in specific security groups to help limit risk.
@@ -167,7 +167,7 @@ The Invite external users to your organization feature SHOULD be disabled unless
 
 
 ### Implementation
-#### MS.POWERBI.3.1v1 instructions:
+#### MS.POWERBI.3.1v0.1 instructions:
 **TO DISABLE COMPLETELY**
 1. Navigate to the **PowerBI Admin Portal**
 
@@ -214,12 +214,12 @@ permissions.
   interact with PBI content.
 
 ### Policies
-#### MS.POWERBI.4.1v1
+#### MS.POWERBI.4.1v0.1
 Service Principals with access to APIs SHOULD be restricted to specific security groups.
 - _Rationale:_ With unrestricted Service Principals there is possibility of unwanted access to APIs. By allowing Service Principals, through security groups, only where necessary, this will mitigate that risk. 
 - _Last modified:_ June 2023
 
-#### MS.POWERBI.4.2v1
+#### MS.POWERBI.4.2v0.1
 Service Principals creating and using profiles SHOULD be restricted to specific security groups.
 - _Rationale:_ With unrestricted Service Principals creating/using profiles there is a risk of an unauthorized user using a profile with more permissions than they have. By allowing Service Principals, through security groups, only where necessary, this will mitigate that risk. 
 - _Last modified:_ June 2023
@@ -255,7 +255,7 @@ Service Principals creating and using profiles SHOULD be restricted to specific 
 
 
 ### Implementation
-#### MS.POWERBI.4.1v1 instructions:
+#### MS.POWERBI.4.1v0.1 instructions:
 1. Navigate to the **PowerBI Admin Portal**
 
 2. Click on **Tenant settings**
@@ -266,7 +266,7 @@ Service Principals creating and using profiles SHOULD be restricted to specific 
 Choose a specific security group allowed to use service principles for the APIs.
 
 
-#### MS.POWERBI.4.2v1 instructions:
+#### MS.POWERBI.4.2v0.1 instructions:
 1. Navigate to the **PowerBI Admin Portal**
 
 2. Click on **Tenant settings**
@@ -300,7 +300,7 @@ an exception to the policy can be investigated.
 
 
 ### Policies
-#### MS.POWERBI.5.1v1
+#### MS.POWERBI.5.1v0.1
 ResourceKey Authentication SHOULD be blocked unless a specific use case (e.g., streaming and/or PUSH datasets) merits its use. <!--- remove the examples in the policy statement? -->
 
 - _Rationale:_ By allowing resource keys someone can move data without AAD OAuth bearer token, causing possibly malicious or junk data to be stored. By disabling this, there is less risk an unauthorized individual will make changes. 
@@ -320,7 +320,7 @@ ResourceKey Authentication SHOULD be blocked unless a specific use case (e.g., s
 
 
 ### Implementation
-#### MS.POWERBI.5.1v1 instructions:
+#### MS.POWERBI.5.1v0.1 instructions:
 1. Navigate to the **PowerBI Admin Portal**
 
 2. Click on **Tenant settings**
@@ -342,7 +342,7 @@ and deems the scripts free of security risks.
 
 
 ### Policies
-#### MS.POWERBI.6.1v1
+#### MS.POWERBI.6.1v0.1
 R and Python interactions SHOULD be disabled.
 
 - _Rationale:_ External code poses a security and privacy risk as there is no good way to regulate what is done with the data or integrations. Disabling this will reduce the risk of a data leak or malicious actor. 
@@ -359,7 +359,7 @@ R and Python interactions SHOULD be disabled.
 
 
 ### Implementation
-#### MS.POWERBI.6.1v1 instructions:
+#### MS.POWERBI.6.1v0.1 instructions:
 1. Navigate to the **PowerBI Admin Portal**
 
 2. Click on **Tenant settings**
@@ -385,7 +385,7 @@ Office 365 Minimum Viable Secure Configuration Baseline* for more on
 DLP.
 
 ### Policies
-#### MS.POWERBI.7.1v1
+#### MS.POWERBI.7.1v0.1
 Sensitivity labels SHOULD be enabled for Power BI and employed for sensitive data per enterprise data protection policies.
 
 - _Rationale:_ Without sensitivity labels it is possible for someone to open a document unknowingly, potentially reading information they are not supposed to access. This policy will help organize and classify data making it easier to keep data out of the wrong hands.   
@@ -430,7 +430,7 @@ Sensitivity labels SHOULD be enabled for Power BI and employed for sensitive dat
 
 
 ### Implementation 
-#### MS.POWERBI.7.1v1 instructions:
+#### MS.POWERBI.7.1v0.1 instructions:
 1. Navigate to the **PowerBI Admin Portal**
 
 2. Click on **Tenant settings**

@@ -50,46 +50,46 @@ standard and strict. These preset policies are informed by observations Microsof
 Within the preset policies, users can be enrolled in [Exchange Online Protection](https://learn.microsoft.com/en-us/microsoft-365/security/office-365-security/eop-about?view=o365-worldwide) and [Defender for Office 365 protection](https://learn.microsoft.com/en-us/microsoft-365/security/office-365-security/microsoft-defender-for-office-365-product-overview?view=o365-worldwide). Additionally, preset policies support configuration of [Impersonation Protection](https://learn.microsoft.com/en-us/microsoft-365/security/office-365-security/anti-phishing-policies-about?view=o365-worldwide#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
 
 ### Policies
-#### MS.DEFENDER.1.1v1
+#### MS.DEFENDER.1.1v0.1
 The standard and strict preset security policies SHALL be enabled.
 
-<!--Policy: MS.DEFENDER.1.1v1; Criticality: SHALL -->
+<!--Policy: MS.DEFENDER.1.1v0.1; Criticality: SHALL -->
 - _Rationale:_ Defender includes a large number of features and settings to protect users against threats. Using the preset security policies, administrators can easily ensure all new and existing users automatically have secure defaults applied.
 - _Last modified:_ June 2023
 
-#### MS.DEFENDER.1.2v1
+#### MS.DEFENDER.1.2v0.1
 All users SHALL be added to Exchange Online Protection in either the standard or strict preset security policy.
 
-<!--Policy: MS.DEFENDER.1.2v1; Criticality: SHALL -->
+<!--Policy: MS.DEFENDER.1.2v0.1; Criticality: SHALL -->
 - _Rationale:_ Important user protections are provided by Exchange Online Protection, including anti-spam, anti-malware, and anti-phishing protections. By using the preset policies, administrators can easily ensure all new and existing users automatically have secure defaults applied.
 - _Last modified:_ June 2023
 - _Note:_
   - Specific user accounts, except for sensitive accounts, MAY be exempt from the preset policies, provided they are added to one or more custom policies offering comparable protection. These specific users might need flexibility not offered by the preset policies. Those users' accounts should be added to a custom policy conforming as closely as possible to the settings used by the preset policies. See the **Resources** section for more details on configuring policies.
   - The standard and strict preset security policies must be enabled to protect users.
 
-#### MS.DEFENDER.1.3v1
+#### MS.DEFENDER.1.3v0.1
 All users SHALL be added to Defender for Office 365 Protection in either the standard or strict preset security policy.
 
-<!--Policy: MS.DEFENDER.1.3v1; Criticality: SHALL -->
+<!--Policy: MS.DEFENDER.1.3v0.1; Criticality: SHALL -->
 - _Rationale:_ Important user protections are provided by Defender for Office 365 Protection, including safe attachments and safe links. By using the preset policies, administrators can easily ensure all new and existing users automatically have secure defaults applied.  
 - _Last modified:_ June 2023
 - _Note:_
   - Specific user accounts, except for sensitive accounts, MAY be exempt from the preset policies, provided they are added to one or more custom policies offering comparable protection. These specific users might need flexibility not offered by the preset policies. Those users' accounts should be added to a custom policy conforming as closely as possible to the settings used by the preset policies. See the **Resources** section for more details on configuring policies.
   - The standard and strict preset security policies must be enabled to protect users.
 
-#### MS.DEFENDER.1.4v1
+#### MS.DEFENDER.1.4v0.1
 Sensitive accounts SHALL be added to Exchange Online Protection in the strict preset security policy.
 
-<!--Policy: MS.DEFENDER.1.4v1; Criticality: SHALL -->
+<!--Policy: MS.DEFENDER.1.4v0.1; Criticality: SHALL -->
 - _Rationale:_ Unauthorized access to a sensitive account may result in greater harm than a standard user account. Adding sensitive accounts to the strict preset security policy, with its increased protections, better mitigates their increased risk to email threats.
 - _Last modified:_ June 2023
 - _Note:_ The strict preset security policy must be enabled to protect
           accounts.
 
-#### MS.DEFENDER.1.5v1
+#### MS.DEFENDER.1.5v0.1
 Sensitive accounts SHALL be added to Defender for Office 365 Protection in the strict preset security policy.
 
-<!--Policy: MS.DEFENDER.1.5v1; Criticality: SHALL -->
+<!--Policy: MS.DEFENDER.1.5v0.1; Criticality: SHALL -->
 - _Rationale:_ Unauthorized access to a sensitive account may result in greater harm than a standard user account. Adding sensitive accounts to the strict preset security policy, with its increased protections, better mitigates their increased risk.
 - _Last modified:_ June 2023
 - _Note:_ The strict preset security policy must be enabled to protect
@@ -114,7 +114,7 @@ Sensitive accounts SHALL be added to Defender for Office 365 Protection in the s
 
 ### Implementation
 
-#### MS.DEFENDER.1.1v1 instructions:
+#### MS.DEFENDER.1.1v0.1 instructions:
 
 1. Sign in to **Microsoft 365 Defender**.
 2. In the left-hand menu, go to **Email & Collaboration** > **Policies & Rules**.
@@ -126,7 +126,7 @@ Sensitive accounts SHALL be added to Defender for Office 365 Protection in the s
 Note: If the toggle slider in step 5 is grayed out, click on **Manage protection settings**
 instead and configure the policy settings according to [Use the Microsoft 365 Defender portal to assign Standard and Strict preset security policies to users \| Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-365/security/office-365-security/preset-security-policies?view=o365-worldwide#use-the-microsoft-365-defender-portal-to-assign-standard-and-strict-preset-security-policies-to-users) to enable each preset security policy.
 
-#### MS.DEFENDER.1.2v1 instructions:
+#### MS.DEFENDER.1.2v0.1 instructions:
 
 1. Sign in to **Microsoft 365 Defender**.
 2. In the left-hand menu, go to **Email & Collaboration** > **Policies & Rules**.
@@ -140,7 +140,7 @@ instead and configure the policy settings according to [Use the Microsoft 365 De
 8. Select **Next** on each page until the **Review and confirm your changes** page.
 9. On the **Review and confirm your changes** page, select **Confirm**.
 
-#### MS.DEFENDER.1.3v1 instructions:
+#### MS.DEFENDER.1.3v0.1 instructions:
 
 1. Sign in to **Microsoft 365 Defender**.
 2. In the left-hand menu, go to **Email & Collaboration** > **Policies & Rules**.
@@ -155,7 +155,7 @@ instead and configure the policy settings according to [Use the Microsoft 365 De
 9. Select **Next** on each page until the **Review and confirm your changes** page.
 10. On the **Review and confirm your changes** page, select **Confirm**.
 
-#### MS.DEFENDER.1.4v1 instructions:
+#### MS.DEFENDER.1.4v0.1 instructions:
 
 1. Sign in to **Microsoft 365 Defender**.
 2. In the left-hand menu, go to **Email & Collaboration** > **Policies & Rules**.
@@ -168,7 +168,7 @@ instead and configure the policy settings according to [Use the Microsoft 365 De
 8. Select **Next** on each page until the **Review and confirm your changes** page.
 9. On the **Review and confirm your changes** page, select **Confirm**.
 
-#### MS.DEFENDER.1.5v1 instructions:
+#### MS.DEFENDER.1.5v0.1 instructions:
 
 1. Sign in to **Microsoft 365 Defender**.
 2. In the left-hand menu, go to **Email & Collaboration** > **Policies & Rules**.
@@ -194,28 +194,28 @@ the sender address is significantly similar, as to indicate an
 impersonation attempt, the email is quarantined.
 
 ### Policies
-#### MS.DEFENDER.2.1v1
+#### MS.DEFENDER.2.1v0.1
 User impersonation protection SHOULD be enabled for sensitive accounts in both the standard and strict preset policies.
 
-<!--Policy: MS.DEFENDER.2.1v1; Criticality: SHOULD -->
+<!--Policy: MS.DEFENDER.2.1v0.1; Criticality: SHOULD -->
 - _Rationale:_ User impersonation, especially of users with access to sensitive or high value information and resources, has the potential to result in serious harm. Impersonation protection mitigates this risk. By configuring impersonation protection in both preset policies, administrators ensure all email recipients are protected from impersonated emails, regardless of whether they are added to the standard or strict policy.
 - _Last modified:_ June 2023
 - _Note:_ The standard and strict preset security policies must be enabled to
           protect accounts.
 
-#### MS.DEFENDER.2.2v1
+#### MS.DEFENDER.2.2v0.1
 Domain impersonation protection SHOULD be enabled for domains owned by the agency in both the standard and strict preset policies.
 
-<!--Policy: MS.DEFENDER.2.2v1; Criticality: SHOULD -->
+<!--Policy: MS.DEFENDER.2.2v0.1; Criticality: SHOULD -->
 - _Rationale:_ By configuring domain impersonation protection for all agency domains, the risk of a user being deceived by a look-alike domain may be reduced. By configuring impersonation protection in both preset policies, administrators ensure all email recipients are protected from impersonated emails, regardless of whether they are added to the standard or strict policy.
 - _Last modified:_ June 2023
 - _Note:_ The standard and strict preset security policies must be enabled to
           protect agency domains.
 
-#### MS.DEFENDER.2.3v1
+#### MS.DEFENDER.2.3v0.1
 Domain impersonation protection SHOULD be added for important partners in both the standard and strict preset policies.
 
-<!--Policy: MS.DEFENDER.2.3v1; Criticality: SHOULD -->
+<!--Policy: MS.DEFENDER.2.3v0.1; Criticality: SHOULD -->
 - _Rationale:_ By configuring domain impersonation protection for domains owned by important partners, the risk of a user being deceived by a look-alike domain may be reduced. By configuring impersonation protection in both preset policies, administrators ensure that all email recipients are protected from impersonated emails, regardless of whether they are added to the standard or strict policy.
 - _Last modified:_ June 2023
 - _Note:_ The standard and strict preset security policies must be enabled to
@@ -239,7 +239,7 @@ Domain impersonation protection SHOULD be added for important partners in both t
 
 ### Implementation
 
-#### MS.DEFENDER.2.1v1 instructions:
+#### MS.DEFENDER.2.1v0.1 instructions:
 
 1. Sign in to **Microsoft 365 Defender**.
 2. In the left-hand menu, go to **Email & Collaboration** > **Policies & Rules**.
@@ -257,7 +257,7 @@ Domain impersonation protection SHOULD be added for important partners in both t
 10. Select **Next** on each page until the **Review and confirm your changes** page.
 11. On the **Review and confirm your changes** page, select **Confirm**.
 
-#### MS.DEFENDER.2.2v1 instructions:
+#### MS.DEFENDER.2.2v0.1 instructions:
 
 1. Sign in to **Microsoft 365 Defender**.
 2. In the left-hand menu, go to **Email & Collaboration** > **Policies & Rules**.
@@ -275,7 +275,7 @@ Domain impersonation protection SHOULD be added for important partners in both t
 10. Select **Next** on each page until the **Review and confirm your changes** page.
 11. On the **Review and confirm your changes** page, select **Confirm**.
 
-#### MS.DEFENDER.2.3v1 instructions:
+#### MS.DEFENDER.2.3v0.1 instructions:
 
 1. Sign in to **Microsoft 365 Defender**.
 2. In the left-hand menu, go to **Email & Collaboration** > **Policies & Rules**.
@@ -301,10 +301,10 @@ Exchange Online is automatically configured in the preset policies, separate
 action is needed to enable it for other products.
 
 ### Policies
-#### MS.DEFENDER.3.1v1
+#### MS.DEFENDER.3.1v0.1
 Safe attachments SHOULD be enabled for SharePoint, OneDrive, and Microsoft Teams.
 
-<!--Policy: MS.DEFENDER.3.1v1; Criticality: SHOULD -->
+<!--Policy: MS.DEFENDER.3.1v0.1; Criticality: SHOULD -->
 - _Rationale:_ Users clicking malicious links makes them vulnerable to attacks. However, this danger is not limited to links in emails. Other Microsoft products, such as Microsoft Teams, can be used to present users with malicious links. As such, it is important to protect users on these other Microsoft products as well.
 - _Last modified:_ June 2023
 
@@ -357,43 +357,43 @@ confidence levels or adjust the levels in custom DLP policies to fit
 their environment and needs.
 
 ### Policies
-#### MS.DEFENDER.4.1v1
+#### MS.DEFENDER.4.1v0.1
 A custom policy SHALL be configured to protect PII and sensitive information,
 as defined by the agency. At a minimum, credit card numbers, Taxpayer
 Identification Numbers (TIN), and Social Security numbers (SSN) SHALL be
 blocked.
 
-<!--Policy: MS.DEFENDER.4.1v1; Criticality: SHALL -->
+<!--Policy: MS.DEFENDER.4.1v0.1; Criticality: SHALL -->
 - _Rationale:_ Users may inadvertently share sensitive information with
                others who should not have access to it. Data loss prevention
                policies provide a way for agencies to detect and prevent
                unauthorized disclosures.
 - _Last modified:_ June 2023
 
-#### MS.DEFENDER.4.2v1
+#### MS.DEFENDER.4.2v0.1
 The custom policy SHOULD be applied to Exchange, OneDrive, SharePoint, Teams chat,
 and Devices.
 
-<!--Policy: MS.DEFENDER.4.2v1; Criticality: SHOULD -->
+<!--Policy: MS.DEFENDER.4.2v0.1; Criticality: SHOULD -->
 - _Rationale:_ Unauthorized disclosures may happen through Microsoft 365
                services or endpoint devices.  Data loss prevention
                policies should cover all affected locations to be
                effective.
 - _Last modified:_ June 2023
 - _Note:_ The custom policy referenced here is the same policy
-          configured in [MS.DEFENDER.4.1v1](#msdefender41v1).
-#### MS.DEFENDER.4.3v1
+          configured in [MS.DEFENDER.4.1v0.1](#msdefender41v1).
+#### MS.DEFENDER.4.3v0.1
 The action for the custom policy SHOULD be set to block sharing sensitive information with everyone.
 
-<!--Policy: MS.DEFENDER.4.3v1; Criticality: SHOULD -->
+<!--Policy: MS.DEFENDER.4.3v0.1; Criticality: SHOULD -->
 - _Rationale:_ Access to sensitive information should be prohibited unless
                explicitly allowed. Specific exemptions can be made based
                on agency policies and valid business justifications.
 - _Last modified:_ June 2023
 - _Note:_ The custom policy referenced here is the same policy
-          configured in [MS.DEFENDER.4.1v1](#msdefender41v1).
+          configured in [MS.DEFENDER.4.1v0.1](#msdefender41v1).
 
-#### MS.DEFENDER.4.4v1
+#### MS.DEFENDER.4.4v0.1
 Notifications to inform users and help educate them on the proper use of sensitive information SHOULD be enabled in the custom policy.
 
 <!--Policy: MS.DEFENDER.4.141; Criticality: SHOULD -->
@@ -403,12 +403,12 @@ Notifications to inform users and help educate them on the proper use of sensiti
                accessing sensitive information.
 - _Last modified:_ June 2023
 - _Note:_ The custom policy referenced here is the same policy
-          configured in [MS.DEFENDER.4.1v1](#msdefender41v1).
+          configured in [MS.DEFENDER.4.1v0.1](#msdefender41v1).
 
-#### MS.DEFENDER.4.5v1
+#### MS.DEFENDER.4.5v0.1
 A list of apps that are restricted from accessing files protected by DLP policy SHOULD be defined.
 
-<!--Policy: MS.DEFENDER.4.5v1; Criticality: SHOULD -->
+<!--Policy: MS.DEFENDER.4.5v0.1; Criticality: SHOULD -->
 - _Rationale:_ Some applications may inappropriately share accessed files
                or not conform to agency policies for access to sensitive
                information. Defining a list of those apps makes it
@@ -416,11 +416,11 @@ A list of apps that are restricted from accessing files protected by DLP policy 
                to sensitive information on endpoints using Defender.
 - _Last modified:_ June 2023
 
-#### MS.DEFENDER.4.6v1
+#### MS.DEFENDER.4.6v0.1
 The custom policy SHOULD include an action to block access to sensitive
 information by restricted apps and unwanted Bluetooth applications.
 
-<!--Policy: MS.DEFENDER.4.6v1; Criticality: SHOULD -->
+<!--Policy: MS.DEFENDER.4.6v0.1; Criticality: SHOULD -->
 - _Rationale:_ Some applications may inappropriately share accessed files
                or not conform to agency policies for access to sensitive
                information. Defining a DLP policy with an action to block
@@ -429,7 +429,7 @@ information by restricted apps and unwanted Bluetooth applications.
 - _Last modified:_ June 2023
 - _Note:_
   - The custom policy referenced here is the same policy
-    configured in [MS.DEFENDER.4.1v1](#msdefender41v1).
+    configured in [MS.DEFENDER.4.1v0.1](#msdefender41v1).
   - This action can only be included if at least one device is onboarded
     to the agency tenant. Otherwise, the option to block restricted apps will
     not be available.
@@ -465,7 +465,7 @@ information by restricted apps and unwanted Bluetooth applications.
 
 ### Implementation
 
-#### MS.DEFENDER.4.1v1 instructions:
+#### MS.DEFENDER.4.1v0.1 instructions:
 
 1. Sign in to the **Microsoft Purview compliance portal**.
 
@@ -524,24 +524,24 @@ information by restricted apps and unwanted Bluetooth applications.
 
 21. Click **Submit**.
 
-#### MS.DEFENDER.4.2v1 instructions:
+#### MS.DEFENDER.4.2v0.1 instructions:
 
-1. See [MS.DEFENDER.4.1v1 instructions](#msdefender41v1-instructions) for
+1. See [MS.DEFENDER.4.1v0.1 instructions](#msdefender41v1-instructions) for
    details to enforce DLP policy in specific M365 service locations.
 
-#### MS.DEFENDER.4.3v1 instructions:
+#### MS.DEFENDER.4.3v0.1 instructions:
 
-1. See [MS.DEFENDER.4.1v1 instructions](#msdefender41v1-instructions) for
+1. See [MS.DEFENDER.4.1v0.1 instructions](#msdefender41v1-instructions) for
    details to configure the DLP policy to block sharing sensitive
    information with everyone.
 
-#### MS.DEFENDER.4.4v1 instructions:
+#### MS.DEFENDER.4.4v0.1 instructions:
 
-1. See [MS.DEFENDER.4.1v1 instructions](#msdefender41v1-instructions) for
+1. See [MS.DEFENDER.4.1v0.1 instructions](#msdefender41v1-instructions) for
    details to  configure the DLP policy to notify users when accessing
    sensitive information.
 
-#### MS.DEFENDER.4.5v1 instructions:
+#### MS.DEFENDER.4.5v0.1 instructions:
 
 1. Sign in to the **Microsoft Purview compliance portal**.
 
@@ -563,7 +563,7 @@ information by restricted apps and unwanted Bluetooth applications.
 9. Enter an app and executable name to disallow said app from
    accessing protected files, and log the incident.
 
-#### MS.DEFENDER.4.6v1 instructions:
+#### MS.DEFENDER.4.6v0.1 instructions:
 
 If restricted app and unwanted Bluetooth app restrictions are desired,
 associated devices must be onboarded with Defender for Endpoint
@@ -576,7 +576,7 @@ before the instructions below can be completed.
 3. Select **Policies** from the top of the page.
 
 4. Find the custom DLP policy configured under
-   [MS.DEFENDER.4.1v1 instructions](#msdefender41v1-instructions) in the list
+   [MS.DEFENDER.4.1v0.1 instructions](#msdefender41v1-instructions) in the list
    and click the Policy name to select.
 
 5. Select **Edit Policy**.
@@ -612,20 +612,20 @@ There are several pre-built alert policies available pertaining to
 various apps in the M365 suite. These alerts give administrators better
 real-time insight into possible security incidents. Guidance on specific alerts to configure can be found in the linked section of the CISA M365 Security Configuration Baseline for Exchange Online.
 
-- [MS.EXO.16.1v1 \| CISA M365 Security Configuration Baseline for Exchange Online](./exo.md#msexo161v1)
+- [MS.EXO.16.1v0.1 \| CISA M365 Security Configuration Baseline for Exchange Online](./exo.md#msexo161v1)
 
 ### Policies
-#### MS.DEFENDER.5.1v1
+#### MS.DEFENDER.5.1v0.1
 At a minimum, the alerts required by the _CISA M365 Security Configuration Baseline for Exchange Online_ SHALL be enabled.
 
-<!--Policy: MS.DEFENDER.5.1v1; Criticality: SHALL -->
+<!--Policy: MS.DEFENDER.5.1v0.1; Criticality: SHALL -->
 - _Rationale:_ Potentially malicious or service impacting events may go undetected without a means of detecting these events. Setting up a mechanism to alert administrators to the list of events linked above draws attention to them to minimize any impact to users and the agency.
 - _Last modified:_ June 2023
 
-#### MS.DEFENDER.5.2v1
+#### MS.DEFENDER.5.2v0.1
 The alerts SHOULD be sent to a monitored address or incorporated into a SIEM.
 
-<!--Policy: MS.DEFENDER.5.2v1; Criticality: SHOULD -->
+<!--Policy: MS.DEFENDER.5.2v0.1; Criticality: SHOULD -->
 - _Rationale:_ Suspicious or malicious events, if not resolved promptly, may have a greater impact to users and the agency. Sending alerts to a monitored email address or Security Event and Information Management (SIEM) system helps ensure it is acted upon in a timely manner to limit overall impact.
 - _Last modified:_ June 2023
 
@@ -640,7 +640,7 @@ The alerts SHOULD be sent to a monitored address or incorporated into a SIEM.
 
 ### Implementation
 
-#### MS.DEFENDER.5.1v1 instructions:
+#### MS.DEFENDER.5.1v0.1 instructions:
 
 1. Sign in to **Microsoft 365 Defender**.
 
@@ -657,7 +657,7 @@ The alerts SHOULD be sent to a monitored address or incorporated into a SIEM.
 6. Select the **Enable selected policies** action from the **Bulk actions**
    menu.
 
-#### MS.DEFENDER.5.2v1 instructions:
+#### MS.DEFENDER.5.2v0.1 instructions:
 
 For each enabled alert, to add one or more email recipients:
 
@@ -701,17 +701,17 @@ Advanced Audit, now Microsoft Purview Audit (Premium), adds additional event
 types to the Unified Audit Log.
 
 ### Policies
-#### MS.DEFENDER.6.1v1
+#### MS.DEFENDER.6.1v0.1
 Microsoft Purview Audit (Standard) logging SHALL be enabled.
 
-<!--Policy: MS.DEFENDER.6.1v1; Criticality: SHALL -->
+<!--Policy: MS.DEFENDER.6.1v0.1; Criticality: SHALL -->
 - _Rationale:_ Responding to incidents without detailed information about activities that took place slows response actions. Enabling Microsoft Purview Audit (Standard) helps ensure agencies have visibility into user actions. Furthermore, enabling the unified audit log is required for government agencies by OMB M-21-31 (referred to therein by its former name, Unified Audit Logs).
 - _Last modified:_ June 2023
 
-#### MS.DEFENDER.6.2v1
+#### MS.DEFENDER.6.2v0.1
 Microsoft Purview Audit (Premium) logging SHALL be enabled for ALL users.
 
-<!--Policy: MS.DEFENDER.6.2v1; Criticality: SHALL -->
+<!--Policy: MS.DEFENDER.6.2v0.1; Criticality: SHALL -->
 - _Rationale:_ Standard logging may not include relevant details necessary for visibility into user actions during an incident. Enabling Microsoft Purview Audit (Premium) captures additional event types not included with Standard. Furthermore, it is required for government agencies by OMB M-21-13 (referred to therein as by its former name, Unified Audit Logs w/Advanced Features).
 - _Last modified:_ June 2023
 - _Note:_ At the time of this writing, Microsoft has announced upcoming changes
@@ -721,10 +721,10 @@ Microsoft Purview Audit (Premium) logging SHALL be enabled for ALL users.
           Purview (Standard) may be sufficient for agencies to meet basic
           logging requirements.
 
-#### MS.DEFENDER.6.3v1
+#### MS.DEFENDER.6.3v0.1
 Audit logs SHALL be maintained for at least the minimum duration dictated by OMB M-21-31.
 
-<!--Policy: MS.DEFENDER.6.3v1; Criticality: SHALL -->
+<!--Policy: MS.DEFENDER.6.3v0.1; Criticality: SHALL -->
 - _Rationale:_ Audit logs may no longer be available when needed if they are not retained for a sufficient time. Increased log retention time gives an agency the necessary visibility to investigate incidents that occurred some time ago.
 - _Last modified:_ June 2023
 - _Note_: Purview Audit (Premium) provides a default audit log retention policy
@@ -769,7 +769,7 @@ Related to Cybersecurity Incidents \| Office of Management and
 
 ### Implementation
 
-#### MS.DEFENDER.6.1v1 instructions:
+#### MS.DEFENDER.6.1v0.1 instructions:
 
 To enable auditing via the Microsoft Purview compliance portal:
 
@@ -782,12 +782,12 @@ administrator to start recording user and admin activity.
 
 4. Click the **Start recording user and admin activity**.
 
-#### MS.DEFENDER.6.2v1 instructions:
+#### MS.DEFENDER.6.2v0.1 instructions:
 To set up Microsoft Purview Audit (Premium), see [Set up Microsoft Purview Audit (Premium) \|
 Microsoft
 Learn.](https://learn.microsoft.com/en-us/purview/audit-premium-setup?view=o365-worldwide)
 
-#### MS.DEFENDER.6.3v1 instructions:
+#### MS.DEFENDER.6.3v0.1 instructions:
 To create one or more custom audit retention policies if the default retention policy is not sufficient for agency needs, follow the instructions
 listed in [Create an audit log retention policy](https://learn.microsoft.com/en-us/purview/audit-log-retention-policies?view=o365-worldwide#create-an-audit-log-retention-policy).
 Ensure the duration selected in the retention policies is at least one year,

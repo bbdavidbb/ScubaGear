@@ -67,18 +67,18 @@ By default, any user in the Azure Active Directory (AAD) Tenant can create addit
 
 ### Policies
 
-#### MS.POWERPLATFORM.1.1v1
+#### MS.POWERPLATFORM.1.1v0.1
 The ability to create production and sandbox environments SHALL be restricted to admins.
 
-<!--Policy: MS.POWERPLATFORM.1.1v1; Criticality: SHALL -->
+<!--Policy: MS.POWERPLATFORM.1.1v0.1; Criticality: SHALL -->
 - _Rationale:_ Users creating new Power Platform environments may inadvertently bypass data loss prevention (DLP) policy settings or misconfigure the security settings of their environment.
 - _Last Modified:_ June 2023
 - Note: This control restricts creating environments to users with Global admin, Dynamics 365 service admin, Power Platform Service admins, or Delegated admin roles.
 
-#### MS.POWERPLATFORM.1.2v1
+#### MS.POWERPLATFORM.1.2v0.1
 The ability to create trial environments SHALL be restricted to admins.
 
-<!--Policy: MS.POWERPLATFORM.1.2v1; Criticality: SHALL -->
+<!--Policy: MS.POWERPLATFORM.1.2v0.1; Criticality: SHALL -->
 - _Rationale:_ Users creating new Power Platform environments may inadvertently bypass DLP policy settings or misconfigure the security settings of their environment.
 - _Last Modified:_ June 2023
 - Note: This control restricts creating environments to users with Global admin, Dynamics 365 service admin, Power Platform Service admins, or Delegated admin roles.
@@ -101,7 +101,7 @@ The ability to create trial environments SHALL be restricted to admins.
 
 ### Implementation
 
-#### MS.POWERPLATFORM.1.1v1 instructions:
+#### MS.POWERPLATFORM.1.1v0.1 instructions:
 1.  Sign in to your tenant environment's respective [Power Platform admin
     center](https://learn.microsoft.com/en-us/power-platform/admin/powerapps-us-government#power-apps-us-government-service-urls).
 
@@ -113,8 +113,8 @@ The ability to create trial environments SHALL be restricted to admins.
 4.  Under **Who can create production and sandbox environments**, select
     **Only specific admins.**
 
-#### MS.POWERPLATFORM.1.2v1 instructions:
-1.  Follow the instructions the MS.POWERPLATFORM.1.1v1 instructions up to step **3**.
+#### MS.POWERPLATFORM.1.2v0.1 instructions:
+1.  Follow the instructions the MS.POWERPLATFORM.1.1v0.1 instructions up to step **3**.
 
 2.  Under **Who can create trial environments**, select **Only specific admins.**
 
@@ -148,18 +148,18 @@ creating apps in all other created environments.
 
 ### Policies
 
-#### MS.POWERPLATFORM.2.1v1
+#### MS.POWERPLATFORM.2.1v0.1
 A DLP policy SHALL be created to restrict connector access in the default Power Platform environment.
 
-<!--Policy: MS.POWERPLATFORM.2.1v1; Criticality: SHALL -->
+<!--Policy: MS.POWERPLATFORM.2.1v0.1; Criticality: SHALL -->
 - _Rationale:_ All users in the tenant have access to the default Power Platform environment. Those users may inadvertently use connectors that share sensitive information with others who should not have access to it. Users requiring Power Apps should be directed to conduct development in other Power Platform environments with DLP connector policies customized to suit the user's needs while maintaining the agency's security posture.
 - _Last Modified:_ June 2023
 - _Note:_ The following connectors drive core Power Platform functionality and enable core Office customization scenarios: Approvals, Dynamics 365 Customer Voice, Excel Online (Business), Microsoft DataverseMicrosoft Dataverse (legacy), Microsoft Teams, Microsoft To-Do (Business), Office 365 Groups, Office 365 Outlook, Office 365 Users, OneDrive for Business, OneNote (Business), Planner, Power Apps Notification, Power BI, SharePoint, Shifts for Microsoft Teams, and Yammer; as such they remain non-blockable to ensure core user scenarios remain fully functional.
 
-#### MS.POWERPLATFORM.2.2v1
+#### MS.POWERPLATFORM.2.2v0.1
 Non-default environments SHOULD have at least one DLP policy affecting them.
 
-<!--Policy: MS.POWERPLATFORM.2.2v1; Criticality: SHOULD -->
+<!--Policy: MS.POWERPLATFORM.2.2v0.1; Criticality: SHOULD -->
 - _Rationale:_ Users may inadvertently use connectors that share sensitive information with others who should not have access to it. DLP policies provide a way for agencies to detect and prevent unauthorized disclosures.
 - _Last Modified:_ June 2023
 
@@ -184,7 +184,7 @@ Non-default environments SHOULD have at least one DLP policy affecting them.
 
 ### Implementation
 
-#### MS.POWERPLATFORM.2.1v1 instructions:
+#### MS.POWERPLATFORM.2.1v0.1 instructions:
 1.  Sign in to your tenant environment's respective [Power Platform admin
     center](https://learn.microsoft.com/en-us/power-platform/admin/powerapps-us-government#power-apps-us-government-service-urls).
 
@@ -213,8 +213,8 @@ Non-default environments SHOULD have at least one DLP policy affecting them.
 
 13.  Select **Next**-\> **Create Policy** to finish.
 
-#### MS.POWERPLATFORM.2.2v1 instructions:
-1.  Repeat steps 1 - 11 in the MS.POWERPLATFORM.2.1v1 instructions.
+#### MS.POWERPLATFORM.2.2v0.1 instructions:
+1.  Repeat steps 1 - 11 in the MS.POWERPLATFORM.2.1v0.1 instructions.
 
 2.  At the **Scope** section for the default environment, select **Add multiple environments** and select the non-default environments you wish to enforce a DLP policy upon. If you wish to apply the DLP policy for all environments including environments created in the future select **Add all environments**.
 
@@ -243,17 +243,17 @@ source.
 
 ### Policies
 
-#### MS.POWERPLATFORM.3.1v1
+#### MS.POWERPLATFORM.3.1v0.1
 Power Platform tenant isolation SHALL be enabled.
 
-<!--Policy: MS.POWERPLATFORM.3.1v1; Criticality: SHALL -->
+<!--Policy: MS.POWERPLATFORM.3.1v0.1; Criticality: SHALL -->
 - _Rationale:_ Provides an additional tenant isolation control on top of AAD tenant isolation specifically for Power Platform applications to prevent accidental or malicious cross tenant information sharing.
 - _Last modified:_ June 2023
 
-#### MS.POWERPLATFORM.3.2v1
+#### MS.POWERPLATFORM.3.2v0.1
 An inbound/outbound connection allowlist SHOULD be configured.
 
-<!--Policy: MS.POWERPLATFORM.3.2v1; Criticality: SHOULD -->
+<!--Policy: MS.POWERPLATFORM.3.2v0.1; Criticality: SHOULD -->
 - _Rationale:_ Depending on agency needs an allowlist can be configured to allow cross tenant collaboration via connectors.
 - _Last modified:_ June 2023
 - Note: The allowlist may be empty if the agency has no need for cross tenant collaboration.
@@ -269,7 +269,7 @@ An inbound/outbound connection allowlist SHOULD be configured.
 
 ### Implementation
 
-#### MS.POWERPLATFORM.3.1v1 instructions:
+#### MS.POWERPLATFORM.3.1v0.1 instructions:
 1.  Sign in to your tenant environment's respective [Power Platform admin
     center](https://learn.microsoft.com/en-us/power-platform/admin/powerapps-us-government#power-apps-us-government-service-urls).
 
@@ -278,8 +278,8 @@ An inbound/outbound connection allowlist SHOULD be configured.
 3.  Set the slider in the center of the screen to **On** then click **Save**
     on the bottom of the screen.
 
-#### MS.POWERPLATFORM.3.2v1 instructions:
-1.  Follow steps **1-2** in **MS.POWERPLATFORM.3.1v1 instructions** to
+#### MS.POWERPLATFORM.3.2v0.1 instructions:
+1.  Follow steps **1-2** in **MS.POWERPLATFORM.3.1v0.1 instructions** to
 arrive at the same page.
 
 2.  The tenant isolation allowlist can be configured by clicking **New tenant rule**
@@ -299,10 +299,10 @@ current Canvas Apps and Model-driven apps at the Power Platform environment leve
 
 ###  Policies
 
-#### MS.POWERPLATFORM.4.1v1
+#### MS.POWERPLATFORM.4.1v0.1
 Content Security Policy SHALL be enforced for Model-driven and Canvas Power Apps.
 
-<!--Policy: MS.POWERPLATFORM.4.1v1; Criticality: SHALL -->
+<!--Policy: MS.POWERPLATFORM.4.1v0.1; Criticality: SHALL -->
 - _Rationale:_ Adds CSP as a defense mechanism for Power Apps against common website attacks.
 - _Last Modified:_ June 2023
 
@@ -317,7 +317,7 @@ Content Security Policy SHALL be enforced for Model-driven and Canvas Power Apps
 
 ### Implementation
 
-#### MS.POWERPLATFORM.4.1v1 instructions:
+#### MS.POWERPLATFORM.4.1v0.1 instructions:
 1.  Sign in to your tenant environment's respective [Power Platform admin
 center](https://learn.microsoft.com/en-us/power-platform/admin/powerapps-us-government#power-apps-us-government-service-urls).
 
@@ -339,10 +339,10 @@ Power Pages formerly known as Power Portals are Power Apps specifically designed
 
 ###  Policies
 
-#### MS.POWERPLATFORM.5.1v1
+#### MS.POWERPLATFORM.5.1v0.1
 The ability to create Power Pages sites SHOULD be restricted to admins.
 
-<!--Policy: MS.POWERPLATFORM.5.1v1; Criticality: SHOULD -->
+<!--Policy: MS.POWERPLATFORM.5.1v0.1; Criticality: SHOULD -->
 - _Rationale:_ Users may unintentionally misconfigure their Power Pages to expose sensitive information or leave the website in a vulnerable state.
 - _Last Modified:_ June 2023
 
@@ -356,7 +356,7 @@ The ability to create Power Pages sites SHOULD be restricted to admins.
 
 ### Implementation
 
-#### MS.POWERPLATFORM.5.1v1 instructions:
+#### MS.POWERPLATFORM.5.1v0.1 instructions:
 1.  This setting currently can only be enabled through the [Power Apps PowerShell modules](https://learn.microsoft.com/en-us/power-platform/admin/powerapps-powershell#installation).
 
 2. After installing the Power Apps PowerShell modules, run `Add-PowerAppsAccount -Endpoint $YourTenantsEndpoint`. To authenticate to your tenant's Power Platform.
