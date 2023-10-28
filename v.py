@@ -1,8 +1,12 @@
 import os
 import re
 
-CHARS_TO_REPLACE = 1 # n=1 for single numbers; replace with n=3 for decimals
-REPLACEMENT_VERSION ='0.1'
+CHARS_TO_REPLACE = 3 # n=1 for single numbers; replace with n=3 for decimals
+REPLACEMENT_VERSION ='1'
+
+BASELINE_PATH = './baselines'
+REGO_PATH ='./Rego'
+TEST_PATH ='./Testing'
 
 def replace_last_n_chars(match):
     """
@@ -12,6 +16,8 @@ def replace_last_n_chars(match):
     return match.group()[:-CHARS_TO_REPLACE] + REPLACEMENT_VERSION  # Replace 'the string with' with the desired replacement character
 
 def replace_version_number(file_path):
+    """
+    """
     try:
         # Read the file line by line
         with open(file_path, 'r', encoding='UTF-8') as file:
@@ -32,22 +38,16 @@ def replace_version_number(file_path):
     except Exception as e:
         print(f"Error processing file {file_path}: {e}")
 
-def process_directory(directory_path, extensions=None):
+def process_files(directory_path, extensions=None):
     if extensions is None:
         extensions = ['.md', '.rego', '.ps1']
-
     for root, dirs, files in os.walk(directory_path):
         for file in files:
             if any(file.lower().endswith(ext) for ext in extensions):
                 file_path = os.path.join(root, file)
                 replace_version_number(file_path)
 
-# Specify the directory path and the desired "v number"
-baseline_path = './baselines'
-rego_path ='./Rego'
-testing_path ='./Testing'
-
 # Process the directory
-process_directory(baseline_path)
-process_directory(rego_path)
-process_directory(testing_path)
+process_files(BASELINE_PATH)
+process_files(REGO_PATH)
+process_files(TEST_PATH)
