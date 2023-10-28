@@ -2,7 +2,7 @@ import os
 import re
 
 CHARS_TO_REPLACE = 1 # n=1 for single numbers; replace with n=3 for decimals
-REPLACEMENT_VERSION ='1'
+REPLACEMENT_VERSION ='0.1'
 
 def replace_last_n_chars(match):
     """
@@ -49,5 +49,5 @@ testing_path ='./Testing'
 
 # Process the directory
 process_directory(baseline_path)
-# process_directory(rego_path)
-# process_directory(testing_path)
+process_directory(rego_path)
+process_directory(testing_path)

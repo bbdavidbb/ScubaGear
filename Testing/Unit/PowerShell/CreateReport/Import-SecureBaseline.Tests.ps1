@@ -48,14 +48,14 @@ InModuleScope CreateReport {
             Should -Invoke -CommandName Write-Error -Exactly -Times 1 -Because "Except 1 error on parsing"
             Should -Invoke -CommandName Write-Warning -Exactly -Times 1 -Because "Except 1 warning on parsing"
         }
-        It "Check MS.AAD.1.1v1 for malformed" {
+        It "Check MS.AAD.1.1v0.1 for malformed" {
             $Output = Import-SecureBaseline -ProductNames "aad" -BaselinePath "./Testing/Unit/PowerShell/CreateReport/CreateReportStubs"
-            $Output.aad.Controls[0].MalformedDescription | Should -BeTrue -Because "MS.AAD.1.1v1 policy description does not start on line immediately after policy id."
+            $Output.aad.Controls[0].MalformedDescription | Should -BeTrue -Because "MS.AAD.1.1v0.1 policy description does not start on line immediately after policy id."
             $Output.aad.Controls[0].Value | Should -Be "Error - The baseline policy text is malformed. Description should start immediately after Policy Id."
         }
-        It "Check MS.AAD.2.1v1 for malformed" {
+        It "Check MS.AAD.2.1v0.1 for malformed" {
             $Output = Import-SecureBaseline -ProductNames "aad" -BaselinePath "./Testing/Unit/PowerShell/CreateReport/CreateReportStubs"
-            $Output.aad.Controls[1].MalformedDescription | Should -BeFalse -Because "Only warning for MS.AAD.2.1v1 policy description with to many lines."
+            $Output.aad.Controls[1].MalformedDescription | Should -BeFalse -Because "Only warning for MS.AAD.2.1v0.1 policy description with to many lines."
         }
     }
 }

@@ -6,7 +6,7 @@
 # Reference: Secure Baseline file, teams.md
 #--
 # This file implements controls/policies documented in the secure baseline.  The tests.PolicyId
-# (e.g., MS.TEAMS.1.1v1) aligns this files to the secure baseline control.
+# (e.g., MS.TEAMS.1.1v0.1) aligns this files to the secure baseline control.
 package teams
 import future.keywords
 import data.report.utils.Format
@@ -25,7 +25,7 @@ ReportDetailsArray(Status, Array, String1) := Detail if {
 }
 
 #--
-# MS.TEAMS.1.1v1
+# MS.TEAMS.1.1v0.1
 #--
 # The english translation of the following is:
 # Iterate through all meeting policies. For each, check if AllowExternalParticipantGiveRequestControl
@@ -36,7 +36,7 @@ MeetingsAllowingExternalControl[Policy.Identity] {
 }
 
 tests[{
-	"PolicyId" : "MS.TEAMS.1.1v1",
+	"PolicyId" : "MS.TEAMS.1.1v0.1",
 	"Criticality" : "Should",
 	"Commandlet" : ["Get-CsTeamsMeetingPolicy"],
 	"ActualValue" : Policies,
@@ -50,7 +50,7 @@ tests[{
 #--
 
 #--
-# MS.TEAMS.1.2v1
+# MS.TEAMS.1.2v0.1
 #--
 MeetingsAllowingAnonStart[Policy.Identity] {
 	Policy := input.meeting_policies[_]
@@ -58,7 +58,7 @@ MeetingsAllowingAnonStart[Policy.Identity] {
 }
 
 tests[{
-	"PolicyId" : "MS.TEAMS.1.2v1",
+	"PolicyId" : "MS.TEAMS.1.2v0.1",
 	"Criticality" : "Shall",
 	"Commandlet" : ["Get-CsTeamsMeetingPolicy"],
 	"ActualValue" : Policies,
@@ -72,7 +72,7 @@ tests[{
 #--
 
 #--
-# MS.TEAMS.1.3v1
+# MS.TEAMS.1.3v0.1
 #--
 ReportDetails1_3(Policy) := Description if {
 	Policy.AutoAdmittedUsers != "Everyone"
@@ -92,7 +92,7 @@ ReportDetails1_3(Policy) := Description if {
 }
 
 tests[{
-	"PolicyId" : "MS.TEAMS.1.3v1",
+	"PolicyId" : "MS.TEAMS.1.3v0.1",
 	"Criticality" : "Should",
 	"Commandlet" : ["Get-CsTeamsMeetingPolicy"],
 	"ActualValue" : [Policy.AutoAdmittedUsers, Policy.AllowPSTNUsersToBypassLobby],
@@ -107,7 +107,7 @@ tests[{
 }
 
 tests[{
-	"PolicyId" : "MS.TEAMS.1.3v1",
+	"PolicyId" : "MS.TEAMS.1.3v0.1",
 	"Criticality" : "Should",
 	"Commandlet" : ["Get-CsTeamsMeetingPolicy"],
 	"ActualValue" : "PowerShell Error",
@@ -119,10 +119,10 @@ tests[{
 #--
 
 #--
-# MS.TEAMS.1.4v1
+# MS.TEAMS.1.4v0.1
 #--
 tests[{
-	"PolicyId" : "MS.TEAMS.1.4v1",
+	"PolicyId" : "MS.TEAMS.1.4v0.1",
 	"Criticality" : "Should",
 	"Commandlet" : ["Get-CsTeamsMeetingPolicy"],
 	"ActualValue" : Policy.AutoAdmittedUsers,
@@ -137,7 +137,7 @@ tests[{
 
 #
 tests[{
-	"PolicyId" : "MS.TEAMS.1.4v1",
+	"PolicyId" : "MS.TEAMS.1.4v0.1",
 	"Criticality" : "Should",
 	"Commandlet" : ["Get-CsTeamsMeetingPolicy"],
 	"ActualValue" : "PowerShell Error",
@@ -148,7 +148,7 @@ tests[{
 }
 #--
 #--
-# MS.TEAMS.1.5v1
+# MS.TEAMS.1.5v0.1
 #--
 
 MeetingsAllowingPSTNBypass[Policy.Identity] {
@@ -157,7 +157,7 @@ MeetingsAllowingPSTNBypass[Policy.Identity] {
 }
 
 tests[{
-	"PolicyId" : "MS.TEAMS.1.5v1",
+	"PolicyId" : "MS.TEAMS.1.5v0.1",
 	"Criticality" : "Should",
 	"Commandlet" : ["Get-CsTeamsMeetingPolicy"],
 	"ActualValue" : Policies,
@@ -171,7 +171,7 @@ tests[{
 
 
 tests[{
-	"PolicyId" : "MS.TEAMS.1.5v1",
+	"PolicyId" : "MS.TEAMS.1.5v0.1",
 	"Criticality" : "Should",
 	"Commandlet" : ["Get-CsTeamsMeetingPolicy"],
 	"ActualValue" : "PowerShell Error",
@@ -183,10 +183,10 @@ tests[{
 #--
 
 #--
-# MS.TEAMS.1.6v1
+# MS.TEAMS.1.6v0.1
 #--
 tests[{
-	"PolicyId" : "MS.TEAMS.1.6v1",
+	"PolicyId" : "MS.TEAMS.1.6v0.1",
 	"Criticality" : "Should",
 	"Commandlet" : ["Get-CsTeamsMeetingPolicy"],
 	"ActualValue" : Policy.AllowCloudRecording,
@@ -202,7 +202,7 @@ tests[{
 #
 
 tests[{
-	"PolicyId" : "MS.TEAMS.1.6v1",
+	"PolicyId" : "MS.TEAMS.1.6v0.1",
 	"Criticality" : "Should",
 	"Commandlet" : ["Get-CsTeamsMeetingPolicy"],
 	"ActualValue" : "PowerShell Error",
@@ -214,10 +214,10 @@ tests[{
 #--
 
 #--
-# MS.TEAMS.1.7v1
+# MS.TEAMS.1.7v0.1
 #--
 tests[{
-	"PolicyId" : "MS.TEAMS.1.7v1",
+	"PolicyId" : "MS.TEAMS.1.7v0.1",
 	"Criticality" : "Should",
 	"Commandlet" : ["Get-CsTeamsMeetingBroadcastPolicy"],
 	"ActualValue" : Policy.BroadcastRecordingMode,
@@ -231,7 +231,7 @@ tests[{
 
 #
 tests[{
-	"PolicyId" : "MS.TEAMS.1.7v1",
+	"PolicyId" : "MS.TEAMS.1.7v0.1",
 	"Criticality" : "Should",
 	"Commandlet" : ["Get-CsTeamsMeetingBroadcastPolicy"],
 	"ActualValue" : "PowerShell Error",
@@ -243,7 +243,7 @@ tests[{
 #--
 
 #--
-# MS.TEAMS.2.1v1
+# MS.TEAMS.2.1v0.1
 #--
 ExternalAccessConfig[Policy.Identity] {
     	Policy := input.federation_configuration[_]
@@ -253,7 +253,7 @@ ExternalAccessConfig[Policy.Identity] {
 }
 
 tests[{
-	"PolicyId" : "MS.TEAMS.2.1v1",
+	"PolicyId" : "MS.TEAMS.2.1v0.1",
 	"Criticality" : "Shall",
 	"Commandlet" : ["Get-CsTenantFederationConfiguration"],
 	"ActualValue" : Policies,
@@ -267,7 +267,7 @@ tests[{
 #--
 
 #
-# MS.TEAMS.2.2v1
+# MS.TEAMS.2.2v0.1
 #--
 # There are two relevant settings:
 #	- AllowTeamsConsumer: Is contact to or from unmanaged users allowed at all?
@@ -293,7 +293,7 @@ FederationConfiguration[Policy.Identity] {
 }
 
 tests[{
-	"PolicyId" : "MS.TEAMS.2.2v1",
+	"PolicyId" : "MS.TEAMS.2.2v0.1",
 	"Criticality" : "Shall",
 	"Commandlet" : ["Get-CsTenantFederationConfiguration"],
 	"ActualValue" : Policies,
@@ -307,7 +307,7 @@ tests[{
 #--
 
 #--
-# MS.TEAMS.2.3v1
+# MS.TEAMS.2.3v0.1
 #--
 InternalCannotenable[Policy.Identity] {
     Policy := input.federation_configuration[_]
@@ -315,7 +315,7 @@ InternalCannotenable[Policy.Identity] {
 }
 
 tests[{
-	"PolicyId" : "MS.TEAMS.2.3v1",
+	"PolicyId" : "MS.TEAMS.2.3v0.1",
 	"Criticality" : "Should",
 	"Commandlet" : ["Get-CsTenantFederationConfiguration"],
 	"ActualValue" : Policies,
@@ -329,7 +329,7 @@ tests[{
 #--
 
 #--
-# MS.TEAMS.3.1v1
+# MS.TEAMS.3.1v0.1
 #--
 SkpyeBlocConfig[Policy.Identity] {
     Policy := input.federation_configuration[_]
@@ -337,7 +337,7 @@ SkpyeBlocConfig[Policy.Identity] {
 }
 
 tests[{
-	"PolicyId" : "MS.TEAMS.3.1v1",
+	"PolicyId" : "MS.TEAMS.3.1v0.1",
 	"Criticality" : "Shall",
 	"Commandlet" : ["Get-CsTenantFederationConfiguration"],
 	"ActualValue" : Policies,
@@ -351,7 +351,7 @@ tests[{
 #--
 
 #--
-# MS.TEAMS.4.1v1
+# MS.TEAMS.4.1v0.1
 #--
 ConfigsAllowingEmail[Policy.Identity] {
     Policy := input.client_configuration[_]
@@ -376,7 +376,7 @@ ReportDetails4_1(IsGCC, IsEnabled) := Description if {
 }
 
 tests[{
-	"PolicyId" : "MS.TEAMS.4.1v1",
+	"PolicyId" : "MS.TEAMS.4.1v0.1",
 	"Criticality" : "Shall",
 	"Commandlet" : ["Get-CsTeamsClientConfiguration", "Get-CsTenant"],
 	"ActualValue" : {"ClientConfig": input.client_configuration, "AssignedPlans": AssignedPlans},
@@ -399,7 +399,7 @@ tests[{
 }
 
 tests[{
-	"PolicyId" : "MS.TEAMS.4.1v1",
+	"PolicyId" : "MS.TEAMS.4.1v0.1",
 	"Criticality" : "Shall",
 	"Commandlet" : ["Get-CsTeamsClientConfiguration"],
 	"ActualValue" : "PowerShell Error",
@@ -411,7 +411,7 @@ tests[{
 #--
 
 #--
-# MS.TEAMS.5.1v1
+# MS.TEAMS.5.1v0.1
 #--
 PoliciesBlockingDefaultApps[Policy.Identity] {
 	Policy := input.app_policies[_]
@@ -419,7 +419,7 @@ PoliciesBlockingDefaultApps[Policy.Identity] {
 }
 
 tests[{
-	"PolicyId" : "MS.TEAMS.5.1v1",
+	"PolicyId" : "MS.TEAMS.5.1v0.1",
 	"Criticality" : "Should",
 	"Commandlet" : ["Get-CsTeamsAppPermissionPolicy"],
 	"ActualValue" : Policies,
@@ -433,7 +433,7 @@ tests[{
 #--
 
 #--
-# MS.TEAMS.5.2v1
+# MS.TEAMS.5.2v0.1
 #--
 PoliciesAllowingGlobalApps[Policy.Identity] {
 	Policy := input.app_policies[_]
@@ -441,7 +441,7 @@ PoliciesAllowingGlobalApps[Policy.Identity] {
 }
 
 tests[{
-	"PolicyId" : "MS.TEAMS.5.2v1",
+	"PolicyId" : "MS.TEAMS.5.2v0.1",
 	"Criticality" : "Should",
 	"Commandlet" : ["Get-CsTeamsAppPermissionPolicy"],
 	"ActualValue" : Policies,
@@ -455,7 +455,7 @@ tests[{
 #--
 
 #--
-# MS.TEAMS.5.3v1
+# MS.TEAMS.5.3v0.1
 #--
 #
 PoliciesAllowingCustomApps[Policy.Identity] {
@@ -463,7 +463,7 @@ PoliciesAllowingCustomApps[Policy.Identity] {
 	Policy.PrivateCatalogAppsType == "BlockedAppList"
 }
 tests[{
-	"PolicyId" : "MS.TEAMS.5.3v1",
+	"PolicyId" : "MS.TEAMS.5.3v0.1",
 	"Criticality" : "Should",
 	"Commandlet" : ["Get-CsTeamsAppPermissionPolicy"],
 	"ActualValue" : Policies,
@@ -477,11 +477,11 @@ tests[{
 #--
 
 #--
-# MS.TEAMS.6.1v1
+# MS.TEAMS.6.1v0.1
 #--
 # At this time we are unable to test because settings are configured in M365 Defender or using a third-party app
 tests[{
-    "PolicyId" : "MS.TEAMS.6.1v1",
+    "PolicyId" : "MS.TEAMS.6.1v0.1",
     "Criticality" : "Shall/3rd Party",
     "Commandlet" : [],
     "ActualValue" : [],
@@ -493,11 +493,11 @@ tests[{
 #--
 
 #--
-# MS.TEAMS.6.2v1
+# MS.TEAMS.6.2v0.1
 #--
 # At this time we are unable to test because settings are configured in M365 Defender or using a third-party app
 tests[{
-	"PolicyId" : "MS.TEAMS.6.2v1",
+	"PolicyId" : "MS.TEAMS.6.2v0.1",
     "Criticality" : "Should/3rd Party",
     "Commandlet" : [],
     "ActualValue" : [],
@@ -509,11 +509,11 @@ tests[{
 #--
 
 #--
-# MS.TEAMS.7.1v1
+# MS.TEAMS.7.1v0.1
 #--
 # At this time we are unable to test because settings are configured in M365 Defender or using a third-party app
 tests[{
-    "PolicyId" : "MS.TEAMS.7.1v1",
+    "PolicyId" : "MS.TEAMS.7.1v0.1",
     "Criticality" : "Should/3rd Party",
     "Commandlet" : [],
     "ActualValue" : [],
@@ -525,11 +525,11 @@ tests[{
 #--
 
 #--
-# MS.TEAMS.7.2v1
+# MS.TEAMS.7.2v0.1
 #--
 # At this time we are unable to test because settings are configured in M365 Defender or using a third-party app
 tests[{
-	"PolicyId" : "MS.TEAMS.7.2v1",
+	"PolicyId" : "MS.TEAMS.7.2v0.1",
     "Criticality" : "Should/3rd Party",
     "Commandlet" : [],
     "ActualValue" : [],
@@ -541,11 +541,11 @@ tests[{
 #--
 
 #--
-# MS.TEAMS.8.1v1
+# MS.TEAMS.8.1v0.1
 #--
 # At this time we are unable to test because settings are configured in M365 Defender or using a third-party app
 tests[{
-    "PolicyId" : "MS.TEAMS.8.1v1",
+    "PolicyId" : "MS.TEAMS.8.1v0.1",
     "Criticality" : "Should/3rd Party",
     "Commandlet" : [],
     "ActualValue" : [],
@@ -557,11 +557,11 @@ tests[{
 #--
 
 #--
-# MS.TEAMS.8.2v1
+# MS.TEAMS.8.2v0.1
 #--
 # At this time we are unable to test because settings are configured in M365 Defender or using a third-party app
 tests[{
-	"PolicyId" : "MS.TEAMS.8.2v1",
+	"PolicyId" : "MS.TEAMS.8.2v0.1",
     "Criticality" : "Should/3rd Party",
     "Commandlet" : [],
     "ActualValue" : [],

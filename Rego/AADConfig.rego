@@ -132,7 +132,7 @@ GroupExclusionsFullyExempt(Policy, PolicyID) := true if {
 ############
 
 #
-# MS.AAD.1.1v1
+# MS.AAD.1.1v0.1
 #--
 default LegacyAuthenticationConditionsMatch(_) := false
 LegacyAuthenticationConditionsMatch(Policy) := true if {
@@ -152,12 +152,12 @@ LegacyAuthentication[Cap.DisplayName] {
     LegacyAuthenticationConditionsMatch(Cap)
 
     # Only match policies with user and group exclusions if all exempted
-    UserExclusionsFullyExempt(Cap, "MS.AAD.1.1v1") == true
-    GroupExclusionsFullyExempt(Cap, "MS.AAD.1.1v1") == true
+    UserExclusionsFullyExempt(Cap, "MS.AAD.1.1v0.1") == true
+    GroupExclusionsFullyExempt(Cap, "MS.AAD.1.1v0.1") == true
 }
 
 tests[{
-    "PolicyId" : "MS.AAD.1.1v1",
+    "PolicyId" : "MS.AAD.1.1v0.1",
     "Criticality" : "Shall",
     "Commandlet" : ["Get-MgBetaIdentityConditionalAccessPolicy"],
     "ActualValue" : LegacyAuthentication,
@@ -174,7 +174,7 @@ tests[{
 ############
 
 #
-# MS.AAD.2.1v1
+# MS.AAD.2.1v0.1
 #--
 default BlockHighRiskConditionsMatch(_) := false
 BlockHighRiskConditionsMatch(Policy) := true if {
@@ -193,12 +193,12 @@ BlockHighRisk[Cap.DisplayName] {
     BlockHighRiskConditionsMatch(Cap)
 
     # Only match policies with user and group exclusions if all exempted
-    UserExclusionsFullyExempt(Cap, "MS.AAD.2.1v1") == true
-    GroupExclusionsFullyExempt(Cap, "MS.AAD.2.1v1") == true
+    UserExclusionsFullyExempt(Cap, "MS.AAD.2.1v0.1") == true
+    GroupExclusionsFullyExempt(Cap, "MS.AAD.2.1v0.1") == true
 }
 
 tests[{
-    "PolicyId" : "MS.AAD.2.1v1",
+    "PolicyId" : "MS.AAD.2.1v0.1",
     "Criticality" : "Shall",
     "Commandlet" : ["Get-MgBetaIdentityConditionalAccessPolicy"],
     "ActualValue" : BlockHighRisk,
@@ -212,7 +212,7 @@ tests[{
 #--
 
 #
-# MS.AAD.2.2v1
+# MS.AAD.2.2v0.1
 #--
 # At this time we are unable to test for X because of Y
 tests[{
@@ -223,13 +223,13 @@ tests[{
     "ReportDetails" : NotCheckedDetails(PolicyId),
     "RequirementMet" : false
 }] {
-    PolicyId := "MS.AAD.2.2v1"
+    PolicyId := "MS.AAD.2.2v0.1"
     true
 }
 #--
 
 #
-# MS.AAD.2.3v1
+# MS.AAD.2.3v0.1
 #--
 default SignInBlockedConditionsMatch(_) := false
 SignInBlockedConditionsMatch(Policy) := true if {
@@ -248,12 +248,12 @@ SignInBlocked[Cap.DisplayName] {
     SignInBlockedConditionsMatch(Cap)
 
     # Only match policies with user and group exclusions if all exempted
-    UserExclusionsFullyExempt(Cap, "MS.AAD.2.3v1") == true
-    GroupExclusionsFullyExempt(Cap, "MS.AAD.2.3v1") == true
+    UserExclusionsFullyExempt(Cap, "MS.AAD.2.3v0.1") == true
+    GroupExclusionsFullyExempt(Cap, "MS.AAD.2.3v0.1") == true
 }
 
 tests[{
-    "PolicyId": "MS.AAD.2.3v1",
+    "PolicyId": "MS.AAD.2.3v0.1",
     "Criticality" : "Shall",
     "Commandlet" : ["Get-MgBetaIdentityConditionalAccessPolicy"],
     "ActualValue" : SignInBlocked,
@@ -271,7 +271,7 @@ tests[{
 ############
 
 #
-# MS.AAD.3.1v1
+# MS.AAD.3.1v0.1
 #--
 
 MS_AAD_3_1v1_CAP[Cap.DisplayName] {
@@ -281,8 +281,8 @@ MS_AAD_3_1v1_CAP[Cap.DisplayName] {
     Contains(Cap.Conditions.Users.IncludeUsers, "All")
     IsEmptyContainer(Cap.Conditions.Applications.ExcludeApplications)
     Contains(Cap.Conditions.Applications.IncludeApplications, "All")
-    GroupExclusionsFullyExempt(Cap, "MS.AAD.3.1v1") == true
-    UserExclusionsFullyExempt(Cap, "MS.AAD.3.1v1") == true
+    GroupExclusionsFullyExempt(Cap, "MS.AAD.3.1v0.1") == true
+    UserExclusionsFullyExempt(Cap, "MS.AAD.3.1v0.1") == true
 
     # Strength must be at least one of acceptable with no unacceptable strengths
     Strengths := { Strength | Strength := Cap.GrantControls.AuthenticationStrength.AllowedCombinations[_]}
@@ -293,7 +293,7 @@ MS_AAD_3_1v1_CAP[Cap.DisplayName] {
 }
 
 tests[{
-    "PolicyId" : "MS.AAD.3.1v1",
+    "PolicyId" : "MS.AAD.3.1v0.1",
     "Criticality" : "Shall",
     "Commandlet" : ["Get-MgBetaIdentityConditionalAccessPolicy"],
     "ActualValue" : MS_AAD_3_1v1_CAP,
@@ -306,7 +306,7 @@ tests[{
 #--
 
 #
-# MS.AAD.3.2v1
+# MS.AAD.3.2v0.1
 #--
 default AlternativeMFAConditionsMatch(_) := false
 AlternativeMFAConditionsMatch(Policy) := true if {
@@ -328,12 +328,12 @@ AlternativeMFA[Cap.DisplayName] {
     AlternativeMFAConditionsMatch(Cap)
 
     # Only match policies with user and group exclusions if all exempted
-    UserExclusionsFullyExempt(Cap, "MS.AAD.3.2v1") == true
-    GroupExclusionsFullyExempt(Cap, "MS.AAD.3.2v1") == true
+    UserExclusionsFullyExempt(Cap, "MS.AAD.3.2v0.1") == true
+    GroupExclusionsFullyExempt(Cap, "MS.AAD.3.2v0.1") == true
 }
 
 tests[{
-    "PolicyId" : "MS.AAD.3.2v1",
+    "PolicyId" : "MS.AAD.3.2v0.1",
     "Criticality" : "Shall",
     "Commandlet" : ["Get-MgBetaIdentityConditionalAccessPolicy"],
     "ActualValue" : AlternativeMFA,
@@ -346,13 +346,13 @@ tests[{
 #--
 
 #
-# MS.AAD.3.3v1
+# MS.AAD.3.3v0.1
 #--
 # At this time we are unable to test for X because of NEW POLICY
 # If we have acceptable MFA then policy passes otherwise MS Authenticator need to be
 # enabled to pass. However, we can not currently check if MS Authenticator enabled
 tests[{
-    "PolicyId" : "MS.AAD.3.3v1",
+    "PolicyId" : "MS.AAD.3.3v0.1",
     "Criticality" : "Shall",
     "Commandlet" : ["Get-MgBetaIdentityConditionalAccessPolicy"],
     "ActualValue" : MS_AAD_3_1v1_CAP,
@@ -372,17 +372,17 @@ tests[{
     "ReportDetails" : NotCheckedDetails(PolicyId),
     "RequirementMet" : false
 }] {
-    PolicyId := "MS.AAD.3.3v1"
+    PolicyId := "MS.AAD.3.3v0.1"
     count(MS_AAD_3_1v1_CAP) == 0
 }
 #--
 
 #
-# MS.AAD.3.4v1
+# MS.AAD.3.4v0.1
 #--
 # At this time we are unable to test for X because of NEW POLICY
 tests[{
-    "PolicyId": "MS.AAD.3.4v1",
+    "PolicyId": "MS.AAD.3.4v0.1",
     "Criticality" : "Shall",
     "Commandlet" : ["Get-MgBetaPolicyAuthenticationMethodPolicy"],
     "ActualValue" : [Policy.PolicyMigrationState],
@@ -395,7 +395,7 @@ tests[{
 #--
 
 #
-# MS.AAD.3.5v1
+# MS.AAD.3.5v0.1
 #--
 # At this time we are unable to test for SMS/Voice settings due to lack of API to validate
 # Awaiting API changes and feature updates from Microsoft for automated checking
@@ -407,13 +407,13 @@ tests[{
     "ReportDetails" : NotCheckedDetails(PolicyId),
     "RequirementMet" : false
 }] {
-    PolicyId := "MS.AAD.3.5v1"
+    PolicyId := "MS.AAD.3.5v0.1"
     true
 }
 #--
 
 #
-# MS.AAD.3.6v1
+# MS.AAD.3.6v0.1
 #--
 PhishingResistantMFA[Cap.DisplayName] {
     Cap := input.conditional_access_policies[_]
@@ -430,8 +430,8 @@ PhishingResistantMFA[Cap.DisplayName] {
     count(MatchingExcludeRoles) == 0
     Contains(Cap.Conditions.Applications.IncludeApplications, "All")
     IsEmptyContainer(Cap.Conditions.Applications.ExcludeApplications)
-    GroupExclusionsFullyExempt(Cap, "MS.AAD.3.6v1") == true
-    UserExclusionsFullyExempt(Cap, "MS.AAD.3.6v1") == true
+    GroupExclusionsFullyExempt(Cap, "MS.AAD.3.6v0.1") == true
+    UserExclusionsFullyExempt(Cap, "MS.AAD.3.6v0.1") == true
 
     # Strength must be at least one of acceptable with no unacceptable strengths
     Strengths := { Strength | Strength := Cap.GrantControls.AuthenticationStrength.AllowedCombinations[_]}
@@ -442,7 +442,7 @@ PhishingResistantMFA[Cap.DisplayName] {
 }
 
 tests[{
-    "PolicyId" : "MS.AAD.3.6v1",
+    "PolicyId" : "MS.AAD.3.6v0.1",
     "Criticality" : "Shall",
     "Commandlet" : ["Get-MgBetaSubscribedSku", "Get-PrivilegedRole", "Get-MgBetaIdentityConditionalAccessPolicy"],
     "ActualValue" : PhishingResistantMFA,
@@ -455,7 +455,7 @@ tests[{
 #--
 
 #
-# MS.AAD.3.7v1
+# MS.AAD.3.7v0.1
 #--
 ManagedDeviceAuth[Cap.DisplayName] {
     Cap := input.conditional_access_policies[_]
@@ -470,7 +470,7 @@ ManagedDeviceAuth[Cap.DisplayName] {
 }
 
 tests[{
-    "PolicyId" : "MS.AAD.3.7v1",
+    "PolicyId" : "MS.AAD.3.7v0.1",
     "Criticality" : "Should",
     "Commandlet" : ["Get-MgBetaIdentityConditionalAccessPolicy"],
     "ActualValue" : ManagedDeviceAuth,
@@ -483,7 +483,7 @@ tests[{
 #--
 
 #
-# MS.AAD.3.8v1
+# MS.AAD.3.8v0.1
 #--
 RequireManagedDeviceMFA[Cap.DisplayName] {
     Cap := input.conditional_access_policies[_]
@@ -496,12 +496,12 @@ RequireManagedDeviceMFA[Cap.DisplayName] {
     Cap.State == "enabled"
 
     # Only match policies with user and group exclusions if all exempted
-    UserExclusionsFullyExempt(Cap, "MS.AAD.3.8v1") == true
-    GroupExclusionsFullyExempt(Cap, "MS.AAD.3.8v1") == true
+    UserExclusionsFullyExempt(Cap, "MS.AAD.3.8v0.1") == true
+    GroupExclusionsFullyExempt(Cap, "MS.AAD.3.8v0.1") == true
 }
 
 tests[{
-    "PolicyId": "MS.AAD.3.8v1",
+    "PolicyId": "MS.AAD.3.8v0.1",
     "Criticality" : "Should",
     "Commandlet" : ["Get-MgBetaIdentityConditionalAccessPolicy"],
     "ActualValue" : RequireManagedDeviceMFA,
@@ -518,7 +518,7 @@ tests[{
 ############
 
 #
-# MS.AAD.4.1v1
+# MS.AAD.4.1v0.1
 #--
 # At this time we are unable to test for log collection until we integrate Azure Powershell capabilities
 tests[{
@@ -529,7 +529,7 @@ tests[{
     "ReportDetails" : NotCheckedDetails(PolicyId),
     "RequirementMet" : false
 }] {
-    PolicyId := "MS.AAD.4.1v1"
+    PolicyId := "MS.AAD.4.1v0.1"
     true
 }
 #--
@@ -539,7 +539,7 @@ tests[{
 ############
 
 #
-# MS.AAD.5.1v1
+# MS.AAD.5.1v0.1
 #--
 AuthPoliciesBad_5_1[Policy.Id] {
     Policy = input.authorization_policies[_]
@@ -554,7 +554,7 @@ AllAuthPoliciesAllowedCreate[{
 }
 
 tests[{
-    "PolicyId" : "MS.AAD.5.1v1",
+    "PolicyId" : "MS.AAD.5.1v0.1",
     "Criticality" : "Shall",
     "Commandlet" : ["Get-MgBetaPolicyAuthorizationPolicy"],
     "ActualValue" : {"all_allowed_create_values": AllAuthPoliciesAllowedCreate},
@@ -568,7 +568,7 @@ tests[{
 #--
 
 #
-# MS.AAD.5.2v1
+# MS.AAD.5.2v0.1
 #--
 BadDefaultGrantPolicies[Policy.Id] {
     Policy = input.authorization_policies[_]
@@ -583,7 +583,7 @@ AllDefaultGrantPolicies[{
 }
 
 tests[{
-    "PolicyId" : "MS.AAD.5.2v1",
+    "PolicyId" : "MS.AAD.5.2v0.1",
     "Criticality" : "Shall",
     "Commandlet" : ["Get-MgBetaPolicyAuthorizationPolicy"],
     "ActualValue" : {"all_grant_policy_values": AllDefaultGrantPolicies},
@@ -597,7 +597,7 @@ tests[{
 #--
 
 #
-# MS.AAD.5.3v1
+# MS.AAD.5.3v0.1
 #--
 BadConsentPolicies[Policy.Id] {
     Policy := input.admin_consent_policies[_]
@@ -613,7 +613,7 @@ AllConsentPolicies[{
 
 
 tests[{
-    "PolicyId" : "MS.AAD.5.3v1",
+    "PolicyId" : "MS.AAD.5.3v0.1",
     "Criticality" : "Shall",
     "Commandlet" : ["Get-MgBetaPolicyAdminConsentRequestPolicy"],
     "ActualValue" : {"all_consent_policies": AllConsentPolicies},
@@ -626,7 +626,7 @@ tests[{
 #--
 
 #
-# MS.AAD.5.4v1
+# MS.AAD.5.4v0.1
 #--
 AllConsentSettings[{
     "SettingsGroup": SettingGroup.DisplayName,
@@ -657,7 +657,7 @@ BadConsentSettings[{
 }
 
 tests[{
-    "PolicyId" : "MS.AAD.5.4v1",
+    "PolicyId" : "MS.AAD.5.4v0.1",
     "Criticality" : "Shall",
     "Commandlet" : ["Get-MgBetaDirectorySetting"],
     "ActualValue" : AllConsentSettings,
@@ -674,7 +674,7 @@ tests[{
 ############
 
 #
-# MS.AAD.6.1v1
+# MS.AAD.6.1v0.1
 #--
 # At this time we are unable to test for X because of Y
 tests[{
@@ -685,7 +685,7 @@ tests[{
     "ReportDetails" : NotCheckedDetails(PolicyId),
     "RequirementMet" : false
 }] {
-    PolicyId := "MS.AAD.6.1v1"
+    PolicyId := "MS.AAD.6.1v0.1"
     true
 }
 #--
@@ -695,7 +695,7 @@ tests[{
 ############
 
 #
-# MS.AAD.7.1v1
+# MS.AAD.7.1v0.1
 #--
 GlobalAdmins[User.DisplayName] {
     some id
@@ -704,7 +704,7 @@ GlobalAdmins[User.DisplayName] {
 }
 
 tests[{
-    "PolicyId" : "MS.AAD.7.1v1",
+    "PolicyId" : "MS.AAD.7.1v0.1",
     "Criticality" : "Shall",
     "Commandlet" : ["Get-MgBetaSubscribedSku", "Get-PrivilegedUser"],
     "ActualValue" : GlobalAdmins,
@@ -717,7 +717,7 @@ tests[{
 }
 #--
 
-# MS.AAD.7.2v1
+# MS.AAD.7.2v0.1
 #--
 # At this time we are unable to test for 7.2v1
 tests[{
@@ -728,13 +728,13 @@ tests[{
     "ReportDetails" : NotCheckedDetails(PolicyId),
     "RequirementMet" : false
 }] {
-    PolicyId := "MS.AAD.7.2v1"
+    PolicyId := "MS.AAD.7.2v0.1"
     true
 }
 #--
 
 #
-# MS.AAD.7.3v1
+# MS.AAD.7.3v0.1
 #--
 FederatedAdmins[User.DisplayName] {
     some id
@@ -743,7 +743,7 @@ FederatedAdmins[User.DisplayName] {
 }
 
 tests[{
-    "PolicyId" : "MS.AAD.7.3v1",
+    "PolicyId" : "MS.AAD.7.3v0.1",
     "Criticality" : "Shall",
     "Commandlet" : ["Get-MgBetaSubscribedSku", "Get-PrivilegedUser"],
     "ActualValue" : AdminNames,
@@ -757,7 +757,7 @@ tests[{
 #--
 
 #
-# MS.AAD.7.4v1
+# MS.AAD.7.4v0.1
 #--
 default PrivilegedRoleExclusions(_, _) := false
 PrivilegedRoleExclusions(PrivilegedRole, PolicyID) := true if {
@@ -779,11 +779,11 @@ PrivilegedRoleExclusions(PrivilegedRole, PolicyID) := true if {
 
 PrivilegedRolesWithoutExpirationPeriod[Role.DisplayName] {
     Role := input.privileged_roles[_]
-    PrivilegedRoleExclusions(Role, "MS.AAD.7.4v1") == true
+    PrivilegedRoleExclusions(Role, "MS.AAD.7.4v0.1") == true
 }
 
 tests[{
-    "PolicyId" : "MS.AAD.7.4v1",
+    "PolicyId" : "MS.AAD.7.4v0.1",
     "Criticality" : "Shall",
     "Commandlet" : ["Get-MgBetaSubscribedSku", "Get-PrivilegedRole"],
     "ActualValue" : PrivilegedRolesWithoutExpirationPeriod,
@@ -796,7 +796,7 @@ tests[{
 }
 
 #
-# MS.AAD.7.5v1
+# MS.AAD.7.5v0.1
 #--
 RolesAssignedOutsidePim[Role.DisplayName] {
     Role := input.privileged_roles[_]
@@ -806,7 +806,7 @@ RolesAssignedOutsidePim[Role.DisplayName] {
 }
 
 tests[{
-    "PolicyId" : "MS.AAD.7.5v1",
+    "PolicyId" : "MS.AAD.7.5v0.1",
     "Criticality" : "Shall",
     "Commandlet" : ["Get-MgBetaSubscribedSku", "Get-PrivilegedRole"],
     "ActualValue" : RolesAssignedOutsidePim,
@@ -820,7 +820,7 @@ tests[{
 #--
 
 #
-# MS.AAD.7.6v1
+# MS.AAD.7.6v0.1
 #--
 RolesWithoutApprovalRequired[RoleName] {
     Role := input.privileged_roles[_]
@@ -832,7 +832,7 @@ RolesWithoutApprovalRequired[RoleName] {
 }
 
 tests[{
-    "PolicyId" : "MS.AAD.7.6v1",
+    "PolicyId" : "MS.AAD.7.6v0.1",
     "Criticality" : "Shall",
     "Commandlet" : ["Get-MgBetaSubscribedSku", "Get-PrivilegedRole"],
     "ActualValue" : RolesWithoutApprovalRequired,
@@ -846,7 +846,7 @@ tests[{
 #--
 
 #
-# MS.AAD.7.7v1
+# MS.AAD.7.7v0.1
 #--
 RolesWithoutActiveAssignmentAlerts[RoleName] {
     Role := input.privileged_roles[_]
@@ -867,7 +867,7 @@ RolesWithoutEligibleAssignmentAlerts[RoleName] {
 }
 
 tests[{
-    "PolicyId" : "MS.AAD.7.7v1",
+    "PolicyId" : "MS.AAD.7.7v0.1",
     "Criticality" : "Shall",
     "Commandlet" : ["Get-MgBetaSubscribedSku", "Get-PrivilegedRole"],
     "ActualValue" : RolesWithoutAssignmentAlerts,
@@ -882,7 +882,7 @@ tests[{
 #--
 
 #
-# MS.AAD.7.8v1
+# MS.AAD.7.8v0.1
 #--
 AdminsWithoutActivationAlert[RoleName] {
     Role := input.privileged_roles[_]
@@ -895,7 +895,7 @@ AdminsWithoutActivationAlert[RoleName] {
 }
 
 tests[{
-    "PolicyId" : "MS.AAD.7.8v1",
+    "PolicyId" : "MS.AAD.7.8v0.1",
     "Criticality" : "Shall",
     "Commandlet" : ["Get-MgBetaSubscribedSku", "Get-PrivilegedRole"],
     "ActualValue" : AdminsWithoutActivationAlert,
@@ -909,10 +909,10 @@ tests[{
 #--
 
 #
-# MS.AAD.7.9v1
+# MS.AAD.7.9v0.1
 #--
 tests[{
-    "PolicyId" : "MS.AAD.7.9v1",
+    "PolicyId" : "MS.AAD.7.9v0.1",
     "Criticality" : "Should",
     "Commandlet" : ["Get-MgBetaSubscribedSku", "Get-PrivilegedRole"],
     "ActualValue" : NonGlobalAdminsWithoutActivationAlert,
@@ -931,7 +931,7 @@ tests[{
 ############
 
 #
-# MS.AAD.8.1v1
+# MS.AAD.8.1v0.1
 #--
 # must hardcode the ID. See
 # https://docs.microsoft.com/en-us/azure/active-directory/enterprise-users/users-restrict-guest-permissions
@@ -965,7 +965,7 @@ RoleIdByPolicy[concat("", ["\"", Level, "\"", " (", Policy.Id, ")"])] {
 }
 
 tests[{
-    "PolicyId" : "MS.AAD.8.1v1",
+    "PolicyId" : "MS.AAD.8.1v0.1",
     "Criticality" : "Should",
     "Commandlet" : ["Get-MgBetaPolicyAuthorizationPolicy"],
     "ActualValue" : {"all_roleid_values" : AllAuthPoliciesRoleIds},
@@ -979,7 +979,7 @@ tests[{
 #--
 
 #
-# MS.AAD.8.2v1
+# MS.AAD.8.2v0.1
 #--
 AuthPoliciesBadAllowInvites[Policy.Id] {
     Policy = input.authorization_policies[_]
@@ -998,7 +998,7 @@ AllAuthPoliciesAllowInvites[{
 }
 
 tests[{
-    "PolicyId" : "MS.AAD.8.2v1",
+    "PolicyId" : "MS.AAD.8.2v0.1",
     "Criticality" : "Should",
     "Commandlet" : ["Get-MgBetaPolicyAuthorizationPolicy"],
     "ActualValue" : {"all_allow_invite_values": AllAuthPoliciesAllowInvites},
@@ -1012,7 +1012,7 @@ tests[{
 #--
 
 #
-# MS.AAD.8.3v1
+# MS.AAD.8.3v0.1
 #--
 # At this time we are unable to test for X because of Y
 tests[{
@@ -1023,7 +1023,7 @@ tests[{
     "ReportDetails" : NotCheckedDetails(PolicyId),
     "RequirementMet" : false
 }] {
-    PolicyId := "MS.AAD.8.3v1"
+    PolicyId := "MS.AAD.8.3v0.1"
     true
 }
 #--

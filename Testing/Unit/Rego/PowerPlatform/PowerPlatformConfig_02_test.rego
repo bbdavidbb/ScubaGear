@@ -6,7 +6,7 @@ import future.keywords
 # Policy 1
 #--
 test_name_Correct if {
-    PolicyId := "MS.POWERPLATFORM.2.1v1"
+    PolicyId := "MS.POWERPLATFORM.2.1v0.1"
 
     Output := tests with input as {
         "tenant_id": "Test Id",
@@ -28,7 +28,7 @@ test_name_Correct if {
 }
 
 test_name_Incorrect if {
-    PolicyId := "MS.POWERPLATFORM.2.1v1"
+    PolicyId := "MS.POWERPLATFORM.2.1v0.1"
 
     Output := tests with input as {
         "tenant_id": "Test Id",
@@ -53,7 +53,7 @@ test_name_Incorrect if {
 # Policy 2
 #--
 test_environment_list_Correct if {
-    PolicyId := "MS.POWERPLATFORM.2.2v1"
+    PolicyId := "MS.POWERPLATFORM.2.2v0.1"
 
     Output := tests with input as {
         "dlp_policies": [{
@@ -77,7 +77,7 @@ test_environment_list_Correct if {
 }
 
 test_environment_list_Incorrect if {
-    PolicyId := "MS.POWERPLATFORM.2.2v1"
+    PolicyId := "MS.POWERPLATFORM.2.2v0.1"
 
     Output := tests with input as {
         "dlp_policies": [{
@@ -109,7 +109,7 @@ test_environment_list_Incorrect if {
 # Policy 3
 #--
 test_classification_Correct_V1 if {
-    PolicyId := "MS.POWERPLATFORM.2.3v1"
+    PolicyId := "MS.POWERPLATFORM.2.3v0.1"
 
     Output := tests with input as {
         "tenant_id": "Test Id",
@@ -136,7 +136,7 @@ test_classification_Correct_V1 if {
 }
 
 test_classification_Correct_V2 if {
-    PolicyId := "MS.POWERPLATFORM.2.3v1"
+    PolicyId := "MS.POWERPLATFORM.2.3v0.1"
 
     Output := tests with input as {
         "tenant_id": "Test Id",
@@ -163,7 +163,7 @@ test_classification_Correct_V2 if {
 }
 
 test_connectorGroups_Correct if {
-    PolicyId := "MS.POWERPLATFORM.2.3v1"
+    PolicyId := "MS.POWERPLATFORM.2.3v0.1"
 
     Output := tests with input as {
         "tenant_id": "Test Id",
@@ -196,7 +196,7 @@ test_connectorGroups_Correct if {
 }
 
 test_classification_Incorrect_V1 if {
-    PolicyId := "MS.POWERPLATFORM.2.3v1"
+    PolicyId := "MS.POWERPLATFORM.2.3v0.1"
 
     Output := tests with input as {
         "tenant_id": "Test Id",
@@ -223,7 +223,7 @@ test_classification_Incorrect_V1 if {
 }
 
 test_classification_Incorrect_V2 if {
-    PolicyId := "MS.POWERPLATFORM.2.3v1"
+    PolicyId := "MS.POWERPLATFORM.2.3v0.1"
 
     Output := tests with input as {
         "tenant_id": "Test Id",
@@ -250,7 +250,7 @@ test_classification_Incorrect_V2 if {
 }
 
 test_connectorGroups_Incorrect if {
-    PolicyId := "MS.POWERPLATFORM.2.3v1"
+    PolicyId := "MS.POWERPLATFORM.2.3v0.1"
 
     Output := tests with input as {
         "tenant_id": "Test Id",

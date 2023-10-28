@@ -3,10 +3,10 @@ import future.keywords
 
 
 #--
-# Policy MS.TEAMS.1.1v1
+# Policy MS.TEAMS.1.1v0.1
 #--
 test_ExternalParticipantControl_Correct_V1 if {
-    PolicyId := "MS.TEAMS.1.1v1"
+    PolicyId := "MS.TEAMS.1.1v0.1"
     Output := tests with input as {
         "meeting_policies": [
             {
@@ -24,7 +24,7 @@ test_ExternalParticipantControl_Correct_V1 if {
 }
 
 test_ExternalParticipantControl_Correct_V2 if {
-    PolicyId := "MS.TEAMS.1.1v1"
+    PolicyId := "MS.TEAMS.1.1v0.1"
     Output := tests with input as {
     "meeting_policies": [
         {
@@ -42,7 +42,7 @@ test_ExternalParticipantControl_Correct_V2 if {
 }
 
 test_ExternalParticipantControl_Incorrect_V1 if {
-    PolicyId := "MS.TEAMS.1.1v1"
+    PolicyId := "MS.TEAMS.1.1v0.1"
     Output := tests with input as {
         "meeting_policies": [
             {
@@ -60,7 +60,7 @@ test_ExternalParticipantControl_Incorrect_V1 if {
 }
 
 test_ExternalParticipantControl_Incorrect_V2 if {
-    PolicyId := "MS.TEAMS.1.1v1"
+    PolicyId := "MS.TEAMS.1.1v0.1"
     Output := tests with input as {
         "meeting_policies": [
             {
@@ -78,7 +78,7 @@ test_ExternalParticipantControl_Incorrect_V2 if {
 }
 
 test_ExternalParticipantControl_MultiplePolicies if {
-    PolicyId := "MS.TEAMS.1.1v1"
+    PolicyId := "MS.TEAMS.1.1v0.1"
     Output := tests with input as {
         "meeting_policies": [
             {
@@ -107,10 +107,10 @@ test_ExternalParticipantControl_MultiplePolicies if {
 }
 
 #--
-# Policy MS.TEAMS.1.2v1
+# Policy MS.TEAMS.1.2v0.1
 #--
 test_AnonymousMeetingStart_Correct_V1 if {
-    PolicyId := "MS.TEAMS.1.2v1"
+    PolicyId := "MS.TEAMS.1.2v0.1"
     
     Output := tests with input as {
         "meeting_policies": [
@@ -129,7 +129,7 @@ test_AnonymousMeetingStart_Correct_V1 if {
 }
 
 test_AnonymousMeetingStart_Correct_V2 if {
-    PolicyId := "MS.TEAMS.1.2v1"
+    PolicyId := "MS.TEAMS.1.2v0.1"
 
     Output := tests with input as {
         "meeting_policies": [
@@ -148,7 +148,7 @@ test_AnonymousMeetingStart_Correct_V2 if {
 }
 
 test_AnonymousMeetingStart_Incorrect_V1 if {
-    PolicyId := "MS.TEAMS.1.2v1"
+    PolicyId := "MS.TEAMS.1.2v0.1"
 
     Output := tests with input as {
         "meeting_policies": [
@@ -167,7 +167,7 @@ test_AnonymousMeetingStart_Incorrect_V1 if {
 }
 
 test_AnonymousMeetingStart_Incorrect_V2 if {
-    PolicyId := "MS.TEAMS.1.2v1"
+    PolicyId := "MS.TEAMS.1.2v0.1"
 
     Output := tests with input as {
         "meeting_policies": [
@@ -186,7 +186,7 @@ test_AnonymousMeetingStart_Incorrect_V2 if {
 }
 
 test_AnonymousMeetingStart_MultiplePolicies if {
-    PolicyId := "MS.TEAMS.1.2v1"
+    PolicyId := "MS.TEAMS.1.2v0.1"
 
     Output := tests with input as {
         "meeting_policies": [
@@ -216,10 +216,10 @@ test_AnonymousMeetingStart_MultiplePolicies if {
 }
 
 #--
-# Policy MS.TEAMS.1.3v1
+# Policy MS.TEAMS.1.3v0.1
 #--
 test_meeting_policies_Correct if {
-    PolicyId := "MS.TEAMS.1.3v1"
+    PolicyId := "MS.TEAMS.1.3v0.1"
 
     Output := tests with input as {
         "meeting_policies": [
@@ -239,7 +239,7 @@ test_meeting_policies_Correct if {
 }
 
 test_AllowPSTNUsersToBypassLobby_Incorrect if {
-    PolicyId := "MS.TEAMS.1.3v1"
+    PolicyId := "MS.TEAMS.1.3v0.1"
 
     Output := tests with input as {
         "meeting_policies": [
@@ -259,7 +259,7 @@ test_AllowPSTNUsersToBypassLobby_Incorrect if {
 }
 
 test_AutoAdmittedUsers_Incorrect if {
-    PolicyId := "MS.TEAMS.1.3v1"
+    PolicyId := "MS.TEAMS.1.3v0.1"
 
     Output := tests with input as {
         "meeting_policies": [
@@ -280,7 +280,7 @@ test_AutoAdmittedUsers_Incorrect if {
 
 # It shouldn't matter that the custom policy is incorrect as this policy only applies to the Global policy
 test_Multiple_Correct if {
-    PolicyId := "MS.TEAMS.1.3v1"
+    PolicyId := "MS.TEAMS.1.3v0.1"
 
     Output := tests with input as {
         "meeting_policies": [
@@ -305,10 +305,10 @@ test_Multiple_Correct if {
 }
 
 #--
-# Policy MS.TEAMS.1.4v1
+# Policy MS.TEAMS.1.4v0.1
 #--
 test_AutoAdmittedUsers_Correct_V1 if {
-    PolicyId := "MS.TEAMS.1.4v1"
+    PolicyId := "MS.TEAMS.1.4v0.1"
 
     Output := tests with input as {
         "meeting_policies": [
@@ -327,7 +327,7 @@ test_AutoAdmittedUsers_Correct_V1 if {
 }
 
 test_AutoAdmittedUsers_Correct_V2 if {
-    PolicyId := "MS.TEAMS.1.4v1"
+    PolicyId := "MS.TEAMS.1.4v0.1"
 
     Output := tests with input as {
         "meeting_policies": [
@@ -346,7 +346,7 @@ test_AutoAdmittedUsers_Correct_V2 if {
 }
 
 test_AutoAdmittedUsers_Incorrect_V2 if {
-    PolicyId := "MS.TEAMS.1.4v1"
+    PolicyId := "MS.TEAMS.1.4v0.1"
 
     Output := tests with input as {
         "meeting_policies": [
@@ -365,7 +365,7 @@ test_AutoAdmittedUsers_Incorrect_V2 if {
 }
 
 test_AutoAdmittedUsers_Incorrect_V3 if {
-    PolicyId := "MS.TEAMS.1.4v1"
+    PolicyId := "MS.TEAMS.1.4v0.1"
 
     Output := tests with input as {
         "meeting_policies": [
@@ -384,10 +384,10 @@ test_AutoAdmittedUsers_Incorrect_V3 if {
 }
 
 #--
-# Policy MS.TEAMS.1.5v1
+# Policy MS.TEAMS.1.5v0.1
 #--
 test_meeting_policies_Correct if {
-    PolicyId := "MS.TEAMS.1.5v1"
+    PolicyId := "MS.TEAMS.1.5v0.1"
 
     Output := tests with input as {
         "meeting_policies": [
@@ -407,7 +407,7 @@ test_meeting_policies_Correct if {
 }
 
 test_OneGoodOneBadPolicy_Incorrect if {
-    PolicyId := "MS.TEAMS.1.5v1"
+    PolicyId := "MS.TEAMS.1.5v0.1"
 
     Output := tests with input as {
         "meeting_policies": [
@@ -432,7 +432,7 @@ test_OneGoodOneBadPolicy_Incorrect if {
 }
 
 test_AllowPSTNUsersToBypassLobby_Incorrect if {
-    PolicyId := "MS.TEAMS.1.5v1"
+    PolicyId := "MS.TEAMS.1.5v0.1"
 
     Output := tests with input as {
         "meeting_policies": [
@@ -452,10 +452,10 @@ test_AllowPSTNUsersToBypassLobby_Incorrect if {
 }
 
 #--
-# Policy MS.TEAMS.1.6v1
+# Policy MS.TEAMS.1.6v0.1
 #--
 test_AllowCloudRecording_Correct if {
-    PolicyId := "MS.TEAMS.1.6v1"
+    PolicyId := "MS.TEAMS.1.6v0.1"
 
     Output := tests with input as {
         "meeting_policies": [
@@ -474,7 +474,7 @@ test_AllowCloudRecording_Correct if {
 }
 
 test_AllowCloudRecording_Incorrect if {
-    PolicyId := "MS.TEAMS.1.6v1"
+    PolicyId := "MS.TEAMS.1.6v0.1"
 
     Output := tests with input as {
         "meeting_policies": [
@@ -493,7 +493,7 @@ test_AllowCloudRecording_Incorrect if {
 }
 
 test_AllowCloudRecording_Multiple if {
-    PolicyId := "MS.TEAMS.1.6v1"
+    PolicyId := "MS.TEAMS.1.6v0.1"
 
     Output := tests with input as {
         "meeting_policies": [
@@ -517,10 +517,10 @@ test_AllowCloudRecording_Multiple if {
 }
 
 #--
-# Policy MS.TEAMS.1.7v1
+# Policy MS.TEAMS.1.7v0.1
 #--
 test_BroadcastRecordingMode_Correct if {
-    PolicyId := "MS.TEAMS.1.7v1"
+    PolicyId := "MS.TEAMS.1.7v0.1"
    
     Output := tests with input as {
         "broadcast_policies": [
@@ -539,7 +539,7 @@ test_BroadcastRecordingMode_Correct if {
 }
 
 test_BroadcastRecordingMode_Incorrect if {
-    PolicyId := "MS.TEAMS.1.7v1"
+    PolicyId := "MS.TEAMS.1.7v0.1"
    
     Output := tests with input as {
         "broadcast_policies": [
@@ -559,7 +559,7 @@ test_BroadcastRecordingMode_Incorrect if {
 
 
 test_BroadcastRecordingMode_Multiple if {
-    PolicyId := "MS.TEAMS.1.7v1"
+    PolicyId := "MS.TEAMS.1.7v0.1"
 
     Output := tests with input as {
         "broadcast_policies": [

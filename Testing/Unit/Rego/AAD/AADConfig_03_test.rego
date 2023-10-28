@@ -5,10 +5,10 @@ import data.report.utils.ReportDetailsBoolean
 
 
 #
-# MS.AAD.3.1v1
+# MS.AAD.3.1v0.1
 #--
 test_PhishingResistantAllMFA_Correct if {
-    PolicyId := "MS.AAD.3.1v1"
+    PolicyId := "MS.AAD.3.1v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -48,7 +48,7 @@ test_PhishingResistantAllMFA_Correct if {
 }
 
 test_PhishingResistantSingleMFA_Correct if {
-    PolicyId := "MS.AAD.3.1v1"
+    PolicyId := "MS.AAD.3.1v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -86,7 +86,7 @@ test_PhishingResistantSingleMFA_Correct if {
 }
 
 test_PhishingResistantExtraMFA_Incorrect if {
-    PolicyId := "MS.AAD.3.1v1"
+    PolicyId := "MS.AAD.3.1v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -125,7 +125,7 @@ test_PhishingResistantExtraMFA_Incorrect if {
 }
 
 test_PhishingResistantNoneMFA_Incorrect if {
-    PolicyId := "MS.AAD.3.1v1"
+    PolicyId := "MS.AAD.3.1v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -161,7 +161,7 @@ test_PhishingResistantNoneMFA_Incorrect if {
 }
 
 test_PhishingResistantMFAExcludeApp_Incorrect if {
-    PolicyId := "MS.AAD.3.1v1"
+    PolicyId := "MS.AAD.3.1v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -201,7 +201,7 @@ test_PhishingResistantMFAExcludeApp_Incorrect if {
 }
 
 test_PhishingResistantMFAExcludeUser_Incorrect if {
-    PolicyId := "MS.AAD.3.1v1"
+    PolicyId := "MS.AAD.3.1v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -241,7 +241,7 @@ test_PhishingResistantMFAExcludeUser_Incorrect if {
 }
 
 test_PhishingResistantMFAExcludeGroup_Incorrect if {
-    PolicyId := "MS.AAD.3.1v1"
+    PolicyId := "MS.AAD.3.1v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -282,10 +282,10 @@ test_PhishingResistantMFAExcludeGroup_Incorrect if {
 #--
 
 #
-# MS.AAD.3.2v1
+# MS.AAD.3.2v0.1
 #--
 test_NoExclusionsConditions_Correct if {
-    PolicyId := "MS.AAD.3.2v1"
+    PolicyId := "MS.AAD.3.2v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -318,7 +318,7 @@ test_NoExclusionsConditions_Correct if {
 }
 
 test_3_1_Passes_3_2_Fails_Correct if {
-    PolicyId := "MS.AAD.3.2v1"
+    PolicyId := "MS.AAD.3.2v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -376,7 +376,7 @@ test_3_1_Passes_3_2_Fails_Correct if {
 }
 
 test_3_1_Fails_3_2_Passes_Correct if {
-    PolicyId := "MS.AAD.3.2v1"
+    PolicyId := "MS.AAD.3.2v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -435,7 +435,7 @@ test_3_1_Fails_3_2_Passes_Correct if {
 }
 
 test_NoExclusionsExemptUsers_Correct if {
-    PolicyId := "MS.AAD.3.2v1"
+    PolicyId := "MS.AAD.3.2v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -460,7 +460,7 @@ test_NoExclusionsExemptUsers_Correct if {
         ],
         "scuba_config" : {
             "Aad" : {
-                "MS.AAD.3.2v1" : {
+                "MS.AAD.3.2v0.1" : {
                     "CapExclusions" : {
                         "Users" : ["49b4dcdf-1f90-41a7c3609b425-9dd7-5e3"],
                         "Groups" : []
@@ -478,7 +478,7 @@ test_NoExclusionsExemptUsers_Correct if {
 }
 
 test_NoExclusionsExemptGroups_Correct if {
-    PolicyId := "MS.AAD.3.2v1"
+    PolicyId := "MS.AAD.3.2v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -503,7 +503,7 @@ test_NoExclusionsExemptGroups_Correct if {
         ],
         "scuba_config" : {
             "Aad" : {
-                "MS.AAD.3.2v1" : {
+                "MS.AAD.3.2v0.1" : {
                     "CapExclusions" : {
                         "Users" : [],
                         "Groups" : ["49b4dcdf-1f90-41a5-9dd7-5e7c3609b423"]
@@ -522,7 +522,7 @@ test_NoExclusionsExemptGroups_Correct if {
 
 # User exclusions test
 test_UserExclusionNoExempt_Incorrect if {
-    PolicyId := "MS.AAD.3.2v1"
+    PolicyId := "MS.AAD.3.2v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -555,7 +555,7 @@ test_UserExclusionNoExempt_Incorrect if {
 }
 
 test_UserExclusionConditions_Correct if {
-    PolicyId := "MS.AAD.3.2v1"
+    PolicyId := "MS.AAD.3.2v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -580,7 +580,7 @@ test_UserExclusionConditions_Correct if {
         ],
         "scuba_config" : {
             "Aad" : {
-                "MS.AAD.3.2v1" : {
+                "MS.AAD.3.2v0.1" : {
                     "CapExclusions" : {
                         "Users" : ["49b4dcdf-1f90-41a7c3609b425-9dd7-5e3"],
                         "Groups" : []
@@ -598,7 +598,7 @@ test_UserExclusionConditions_Correct if {
 }
 
 test_UserExclusionsNoExempt_Incorrect if {
-    PolicyId := "MS.AAD.3.2v1"
+    PolicyId := "MS.AAD.3.2v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -631,7 +631,7 @@ test_UserExclusionsNoExempt_Incorrect if {
 }
 
 test_UserExclusionsSingleExempt_Incorrect if {
-    PolicyId := "MS.AAD.3.2v1"
+    PolicyId := "MS.AAD.3.2v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -656,7 +656,7 @@ test_UserExclusionsSingleExempt_Incorrect if {
         ],
         "scuba_config" : {
             "Aad" : {
-                "MS.AAD.3.2v1" : {
+                "MS.AAD.3.2v0.1" : {
                     "CapExclusions" : {
                         "Users" : ["49b4dcdf-1f90-41a7c3609b425-9dd7-5e3"],
                         "Groups" : []
@@ -674,7 +674,7 @@ test_UserExclusionsSingleExempt_Incorrect if {
 }
 
 test_MultiUserExclusionsConditions_Correct if {
-    PolicyId := "MS.AAD.3.2v1"
+    PolicyId := "MS.AAD.3.2v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -699,7 +699,7 @@ test_MultiUserExclusionsConditions_Correct if {
         ],
         "scuba_config" : {
             "Aad" : {
-                "MS.AAD.3.2v1" : {
+                "MS.AAD.3.2v0.1" : {
                     "CapExclusions" : {
                         "Users" : ["49b4dcdf-1f90-41a7c3609b425-9dd7-5e3", "65fea286-22d3-42f9-b4ca-93a6f75817d4"],
                         "Groups" : []
@@ -718,7 +718,7 @@ test_MultiUserExclusionsConditions_Correct if {
 
 # Group Exclusion tests
 test_GroupExclusionNoExempt_Incorrect if {
-    PolicyId := "MS.AAD.3.2v1"
+    PolicyId := "MS.AAD.3.2v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -751,7 +751,7 @@ test_GroupExclusionNoExempt_Incorrect if {
 }
 
 test_GroupExclusionsConditions_Correct if {
-    PolicyId := "MS.AAD.3.2v1"
+    PolicyId := "MS.AAD.3.2v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -776,7 +776,7 @@ test_GroupExclusionsConditions_Correct if {
         ],
         "scuba_config" : {
             "Aad" : {
-                "MS.AAD.3.2v1" : {
+                "MS.AAD.3.2v0.1" : {
                     "CapExclusions" : {
                         "Users" : [],
                         "Groups" : ["49b4dcdf-1f90-41a5-9dd7-5e7c3609b423"]
@@ -794,7 +794,7 @@ test_GroupExclusionsConditions_Correct if {
 }
 
 test_GroupExclusionsNoExempt_Incorrect if {
-    PolicyId := "MS.AAD.3.2v1"
+    PolicyId := "MS.AAD.3.2v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -827,7 +827,7 @@ test_GroupExclusionsNoExempt_Incorrect if {
 }
 
 test_GroupExclusionsSingleExempt_Incorrect if {
-    PolicyId := "MS.AAD.3.2v1"
+    PolicyId := "MS.AAD.3.2v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -852,7 +852,7 @@ test_GroupExclusionsSingleExempt_Incorrect if {
         ],
         "scuba_config" : {
             "Aad" : {
-                "MS.AAD.3.2v1" : {
+                "MS.AAD.3.2v0.1" : {
                     "CapExclusions" : {
                         "Users" : [],
                         "Groups" : ["49b4dcdf-1f90-41a5-9dd7-5e7c3609b423"]
@@ -870,7 +870,7 @@ test_GroupExclusionsSingleExempt_Incorrect if {
 }
 
 test_MultiGroupExclusionsConditions_Correct if {
-    PolicyId := "MS.AAD.3.2v1"
+    PolicyId := "MS.AAD.3.2v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -895,7 +895,7 @@ test_MultiGroupExclusionsConditions_Correct if {
         ],
         "scuba_config" : {
             "Aad" : {
-                "MS.AAD.3.2v1" : {
+                "MS.AAD.3.2v0.1" : {
                     "CapExclusions" : {
                         "Users" : [],
                         "Groups" : ["49b4dcdf-1f90-41a5-9dd7-5e7c3609b423", "65fea286-22d3-42f9-b4ca-93a6f75817d4"]
@@ -914,7 +914,7 @@ test_MultiGroupExclusionsConditions_Correct if {
 
 # User and group exclusions tests
 test_UserGroupExclusionConditions_Correct if {
-    PolicyId := "MS.AAD.3.2v1"
+    PolicyId := "MS.AAD.3.2v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -939,7 +939,7 @@ test_UserGroupExclusionConditions_Correct if {
         ],
         "scuba_config" : {
             "Aad" : {
-                "MS.AAD.3.2v1" : {
+                "MS.AAD.3.2v0.1" : {
                     "CapExclusions" : {
                         "Users" : ["49b4dcdf-1f90-41a7c3609b425-9dd7-5e3"],
                         "Groups" : ["49b4dcdf-1f90-41a5-9dd7-5e7c3609b423"]
@@ -957,7 +957,7 @@ test_UserGroupExclusionConditions_Correct if {
 }
 
 test_UserGroupExclusionNoExempt_Incorrect if {
-    PolicyId := "MS.AAD.3.2v1"
+    PolicyId := "MS.AAD.3.2v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -990,7 +990,7 @@ test_UserGroupExclusionNoExempt_Incorrect if {
 }
 
 test_UserGroupExclusionUserExemptOnly_Incorrect if {
-    PolicyId := "MS.AAD.3.2v1"
+    PolicyId := "MS.AAD.3.2v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -1015,7 +1015,7 @@ test_UserGroupExclusionUserExemptOnly_Incorrect if {
         ],
         "scuba_config" : {
             "Aad" : {
-                "MS.AAD.3.2v1" : {
+                "MS.AAD.3.2v0.1" : {
                     "CapExclusions" : {
                         "Users" : ["49b4dcdf-1f90-41a7c3609b425-9dd7-5e3"],
                         "Groups" : []
@@ -1033,7 +1033,7 @@ test_UserGroupExclusionUserExemptOnly_Incorrect if {
 }
 
 test_UserGroupExclusionGroupExemptOnly_Incorrect if {
-    PolicyId := "MS.AAD.3.2v1"
+    PolicyId := "MS.AAD.3.2v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -1058,7 +1058,7 @@ test_UserGroupExclusionGroupExemptOnly_Incorrect if {
         ],
         "scuba_config" : {
             "Aad" : {
-                "MS.AAD.3.2v1" : {
+                "MS.AAD.3.2v0.1" : {
                     "CapExclusions" : {
                         "Users" : [],
                         "Groups" : ["49b4dcdf-1f90-41a5-9dd7-5e7c3609b423"]
@@ -1076,7 +1076,7 @@ test_UserGroupExclusionGroupExemptOnly_Incorrect if {
 }
 
 test_UserGroupExclusionTooFewUserExempts_Incorrect if {
-    PolicyId := "MS.AAD.3.2v1"
+    PolicyId := "MS.AAD.3.2v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -1101,7 +1101,7 @@ test_UserGroupExclusionTooFewUserExempts_Incorrect if {
         ],
         "scuba_config" : {
             "Aad" : {
-                "MS.AAD.3.2v1" : {
+                "MS.AAD.3.2v0.1" : {
                     "CapExclusions" : {
                         "Users" : ["65fea286-22d3-42f9-b4ca-93a6f75817d4"],
                         "Groups" : ["49b4dcdf-1f90-41a5-9dd7-5e7c3609b423"]
@@ -1120,7 +1120,7 @@ test_UserGroupExclusionTooFewUserExempts_Incorrect if {
 
 # Other conditions
 test_ConditionalAccessPolicies_Correct_V1 if {
-    PolicyId := "MS.AAD.3.2v1"
+    PolicyId := "MS.AAD.3.2v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -1153,7 +1153,7 @@ test_ConditionalAccessPolicies_Correct_V1 if {
 }
 
 test_IncludeApplications_Incorrect_V1 if {
-    PolicyId := "MS.AAD.3.2v1"
+    PolicyId := "MS.AAD.3.2v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -1186,7 +1186,7 @@ test_IncludeApplications_Incorrect_V1 if {
 }
 
 test_IncludeUsers_Incorrect_V1 if {
-    PolicyId := "MS.AAD.3.2v1"
+    PolicyId := "MS.AAD.3.2v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -1219,7 +1219,7 @@ test_IncludeUsers_Incorrect_V1 if {
 }
 
 test_ExcludeUsers_Incorrect if {
-    PolicyId := "MS.AAD.3.2v1"
+    PolicyId := "MS.AAD.3.2v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -1252,7 +1252,7 @@ test_ExcludeUsers_Incorrect if {
 }
 
 test_ExcludeGroups_Incorrect if {
-    PolicyId := "MS.AAD.3.2v1"
+    PolicyId := "MS.AAD.3.2v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -1285,7 +1285,7 @@ test_ExcludeGroups_Incorrect if {
 }
 
 test_ExcludeRoles_Incorrect_V1 if {
-    PolicyId := "MS.AAD.3.2v1"
+    PolicyId := "MS.AAD.3.2v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -1318,7 +1318,7 @@ test_ExcludeRoles_Incorrect_V1 if {
 }
 
 test_BuiltInControls_Incorrect_V1 if {
-    PolicyId := "MS.AAD.3.2v1"
+    PolicyId := "MS.AAD.3.2v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -1351,7 +1351,7 @@ test_BuiltInControls_Incorrect_V1 if {
 }
 
 test_State_Incorrect_V1 if {
-    PolicyId := "MS.AAD.3.2v1"
+    PolicyId := "MS.AAD.3.2v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -1385,10 +1385,10 @@ test_State_Incorrect_V1 if {
 #--
 
 #
-# MS.AAD.3.3v1
+# MS.AAD.3.3v0.1
 #--
 test_3_1_passes_and_satisfies_3_3 if{
-    PolicyId := "MS.AAD.3.3v1"
+    PolicyId := "MS.AAD.3.3v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -1429,7 +1429,7 @@ test_3_1_passes_and_satisfies_3_3 if{
 }
 
 test_NotImplemented_Correct_V2 if {
-    PolicyId := "MS.AAD.3.3v1"
+    PolicyId := "MS.AAD.3.3v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -1470,10 +1470,10 @@ test_NotImplemented_Correct_V2 if {
 #--
 
 #
-# MS.AAD.3.4v1
+# MS.AAD.3.4v0.1
 #--
 test_Migrated_Correct if {
-    PolicyId := "MS.AAD.3.4v1"
+    PolicyId := "MS.AAD.3.4v0.1"
 
     Output := tests with input as { 
         "authentication_method": [
@@ -1491,7 +1491,7 @@ test_Migrated_Correct if {
 }
 
 test_Migrated_Incorrect if {
-    PolicyId := "MS.AAD.3.4v1"
+    PolicyId := "MS.AAD.3.4v0.1"
 
     Output := tests with input as { 
         "authentication_method": [
@@ -1510,10 +1510,10 @@ test_Migrated_Incorrect if {
 #--
 
 #
-# MS.AAD.3.5v1
+# MS.AAD.3.5v0.1
 #--
 test_NotImplemented_Correct_V4 if {
-    PolicyId := "MS.AAD.3.5v1"
+    PolicyId := "MS.AAD.3.5v0.1"
 
     Output := tests with input as { }
 
@@ -1526,10 +1526,10 @@ test_NotImplemented_Correct_V4 if {
 #--
 
 #
-# MS.AAD.3.6v1
+# MS.AAD.3.6v0.1
 #--
 test_ConditionalAccessPolicies_Correct_all_strengths if {
-    PolicyId := "MS.AAD.3.6v1"
+    PolicyId := "MS.AAD.3.6v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -1573,7 +1573,7 @@ test_ConditionalAccessPolicies_Correct_all_strengths if {
 }
 
 test_ConditionalAccessPolicies_Correct_windowsHelloForBusiness_only if {
-    PolicyId := "MS.AAD.3.6v1"
+    PolicyId := "MS.AAD.3.6v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -1617,7 +1617,7 @@ test_ConditionalAccessPolicies_Correct_windowsHelloForBusiness_only if {
 }
 
 test_ConditionalAccessPolicies_Correct_fido2_only if {
-    PolicyId := "MS.AAD.3.6v1"
+    PolicyId := "MS.AAD.3.6v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -1661,7 +1661,7 @@ test_ConditionalAccessPolicies_Correct_fido2_only if {
 }
 
 test_ConditionalAccessPolicies_Correct_x509_only if {
-    PolicyId := "MS.AAD.3.6v1"
+    PolicyId := "MS.AAD.3.6v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -1705,7 +1705,7 @@ test_ConditionalAccessPolicies_Correct_x509_only if {
 }
 
 test_ConditionalAccessPolicies_Incorrect_not_all_apps if {
-    PolicyId := "MS.AAD.3.6v1"
+    PolicyId := "MS.AAD.3.6v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -1749,7 +1749,7 @@ test_ConditionalAccessPolicies_Incorrect_not_all_apps if {
 }
 
 test_BuiltInControls_Incorrect_No_Authentication_Strenght if {
-    PolicyId := "MS.AAD.3.6v1"
+    PolicyId := "MS.AAD.3.6v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -1794,7 +1794,7 @@ test_BuiltInControls_Incorrect_No_Authentication_Strenght if {
 }
 
 test_ConditionalAccessPolicies_Incorrect_disabled if {
-    PolicyId := "MS.AAD.3.6v1"
+    PolicyId := "MS.AAD.3.6v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -1838,7 +1838,7 @@ test_ConditionalAccessPolicies_Incorrect_disabled if {
 }
 
 test_ConditionalAccessPolicies_Incorrect_Covered_Roles if {
-    PolicyId := "MS.AAD.3.6v1"
+    PolicyId := "MS.AAD.3.6v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -1882,7 +1882,7 @@ test_ConditionalAccessPolicies_Incorrect_Covered_Roles if {
 }
 
 test_ConditionalAccessPolicies_Incorrect_Wrong_Roles if {
-    PolicyId := "MS.AAD.3.6v1"
+    PolicyId := "MS.AAD.3.6v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -1922,7 +1922,7 @@ test_ConditionalAccessPolicies_Incorrect_Wrong_Roles if {
 }
 
 test_ExcludeRoles_Incorrect_V2 if {
-    PolicyId := "MS.AAD.3.6v1"
+    PolicyId := "MS.AAD.3.6v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -1967,10 +1967,10 @@ test_ExcludeRoles_Incorrect_V2 if {
 #--
 
 #
-# MS.AAD.3.7v1
+# MS.AAD.3.7v0.1
 #--
 test_ConditionalAccessPolicies_Correct_V3 if {
-    PolicyId := "MS.AAD.3.7v1"
+    PolicyId := "MS.AAD.3.7v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -2000,7 +2000,7 @@ test_ConditionalAccessPolicies_Correct_V3 if {
 }
 
 test_BuiltInControls_Correct if {
-    PolicyId := "MS.AAD.3.7v1"
+    PolicyId := "MS.AAD.3.7v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -2030,7 +2030,7 @@ test_BuiltInControls_Correct if {
 }
 
 test_IncludeApplications_Incorrect_V3 if {
-    PolicyId := "MS.AAD.3.7v1"
+    PolicyId := "MS.AAD.3.7v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -2060,7 +2060,7 @@ test_IncludeApplications_Incorrect_V3 if {
 }
 
 test_IncludeUsers_Incorrect_V2 if {
-    PolicyId := "MS.AAD.3.7v1"
+    PolicyId := "MS.AAD.3.7v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -2090,7 +2090,7 @@ test_IncludeUsers_Incorrect_V2 if {
 }
 
 test_BuiltInControls_Incorrect_V3 if {
-    PolicyId := "MS.AAD.3.7v1"
+    PolicyId := "MS.AAD.3.7v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -2120,7 +2120,7 @@ test_BuiltInControls_Incorrect_V3 if {
 }
 
 test_State_Incorrect_V3 if {
-    PolicyId := "MS.AAD.3.7v1"
+    PolicyId := "MS.AAD.3.7v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -2151,10 +2151,10 @@ test_State_Incorrect_V3 if {
 #--
 
 #
-# MS.AAD.3.8v1
+# MS.AAD.3.8v0.1
 #--
 test_Correct_V1 if {
-    PolicyId := "MS.AAD.3.8v1"
+    PolicyId := "MS.AAD.3.8v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -2185,7 +2185,7 @@ test_Correct_V1 if {
 }
 
 test_ExcludeUserCorrect_V1 if {
-    PolicyId := "MS.AAD.3.8v1"
+    PolicyId := "MS.AAD.3.8v0.1"
 
     Output := tests with input as {
         "scuba_config" : {
@@ -2228,7 +2228,7 @@ test_ExcludeUserCorrect_V1 if {
 }
 
 test_ExcludeGroupCorrect_V1 if {
-    PolicyId := "MS.AAD.3.8v1"
+    PolicyId := "MS.AAD.3.8v0.1"
 
     Output := tests with input as {
         "scuba_config" : {
@@ -2271,7 +2271,7 @@ test_ExcludeGroupCorrect_V1 if {
 }
 
 test_ExcludeUserIncorrect_V1 if {
-    PolicyId := "MS.AAD.3.8v1"
+    PolicyId := "MS.AAD.3.8v0.1"
 
     Output := tests with input as {
         "scuba_config" : {
@@ -2314,7 +2314,7 @@ test_ExcludeUserIncorrect_V1 if {
 }
 
 test_ExcludeGroupIncorrect_V1 if {
-    PolicyId := "MS.AAD.3.8v1"
+    PolicyId := "MS.AAD.3.8v0.1"
 
     Output := tests with input as {
         "scuba_config" : {
@@ -2357,7 +2357,7 @@ test_ExcludeGroupIncorrect_V1 if {
 }
 
 test_InCorrect_ReportOnly if {
-    PolicyId := "MS.AAD.3.8v1"
+    PolicyId := "MS.AAD.3.8v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -2388,7 +2388,7 @@ test_InCorrect_ReportOnly if {
 }
 
 test_Correct_OnlyCompliantDevice if {
-    PolicyId := "MS.AAD.3.8v1"
+    PolicyId := "MS.AAD.3.8v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -2419,7 +2419,7 @@ test_Correct_OnlyCompliantDevice if {
 }
 
 test_Correct_OnlyDomainJoinedDevice if {
-    PolicyId := "MS.AAD.3.8v1"
+    PolicyId := "MS.AAD.3.8v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -2450,7 +2450,7 @@ test_Correct_OnlyDomainJoinedDevice if {
 }
 
 test_InCorrect_EmptyGrantControls if {
-    PolicyId := "MS.AAD.3.8v1"
+    PolicyId := "MS.AAD.3.8v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [
@@ -2481,7 +2481,7 @@ test_InCorrect_EmptyGrantControls if {
 }
 
 test_InCorrect_No_Policy if {
-    PolicyId := "MS.AAD.3.8v1"
+    PolicyId := "MS.AAD.3.8v0.1"
 
     Output := tests with input as {
         "conditional_access_policies" : [

@@ -68,7 +68,7 @@ ApplyLicenseWarning(Message) := concat("", [ReportDetailsBoolean(false), License
 
 
 #
-# MS.DEFENDER.1.1v1
+# MS.DEFENDER.1.1v0.1
 #--
 
 ReportDetails1_1(Standard, Strict) := "Requirement met" if {
@@ -89,7 +89,7 @@ ReportDetails1_1(Standard, Strict) := "Standard and Strict preset policies are b
 }
 
 tests[{
-    "PolicyId" : "MS.DEFENDER.1.1v1",
+    "PolicyId" : "MS.DEFENDER.1.1v0.1",
     "Criticality" : "Shall",
     "Commandlet" : ["Get-EOPProtectionPolicyRule", "Get-ATPProtectionPolicyRule"],
     "ActualValue" : {"StandardPresetState": IsStandardEnabled, "StrictPresetState": IsStrictEnabled},
@@ -144,13 +144,13 @@ tests[{
 #--
 
 #
-# MS.DEFENDER.1.2v1
+# MS.DEFENDER.1.2v0.1
 #--
 
 # TODO check exclusions
 
 tests[{
-    "PolicyId" : "MS.DEFENDER.1.2v1",
+    "PolicyId" : "MS.DEFENDER.1.2v0.1",
     "Criticality" : "Shall",
     "Commandlet" : ["Get-EOPProtectionPolicyRule"],
     "ActualValue" : {"StandardSetToAll": IsStandardAll, "StrictSetToAll": IsStrictAll},
@@ -191,20 +191,20 @@ tests[{
 #--
 
 #
-# MS.DEFENDER.1.3v1
+# MS.DEFENDER.1.3v0.1
 #--
 
 # TODO check exclusions
 
 tests[{
-    "PolicyId" : "MS.DEFENDER.1.3v1",
+    "PolicyId" : "MS.DEFENDER.1.3v0.1",
     "Criticality" : "Shall",
     "Commandlet" : ["Get-ATPProtectionPolicyRule"],
     "ActualValue" : {"StandardSetToAll": IsStandardAll, "StrictSetToAll": IsStrictAll},
     "ReportDetails" : ApplyLicenseWarning(ReportDetailsBoolean(Status)),
     "RequirementMet" : Status
 }] {
-    # See MS.DEFENDER.1.2v1, the same logic applies, just with a
+    # See MS.DEFENDER.1.2v0.1, the same logic applies, just with a
     # different commandlet.
 
     Policies := input.atp_policy_rules
@@ -224,19 +224,19 @@ tests[{
 #--
 
 #
-# MS.DEFENDER.1.4v1
+# MS.DEFENDER.1.4v0.1
 #--
 
 ProtectionPolicyForSensitiveIDs[Policies] {
     Policies := input.protection_policy_rules
     AccountsSetting := SensitiveAccountsSetting(Policies)
-    AccountsConfig := SensitiveAccountsConfig("MS.DEFENDER.1.4v1")
+    AccountsConfig := SensitiveAccountsConfig("MS.DEFENDER.1.4v0.1")
 
     SensitiveAccounts(AccountsSetting, AccountsConfig) == true
 }
 
 tests[{
-    "PolicyId" : "MS.DEFENDER.1.4v1",
+    "PolicyId" : "MS.DEFENDER.1.4v0.1",
     "Criticality" : "Shall",
     "Commandlet" : ["Get-EOPProtectionPolicyRule"],
     "ActualValue" : {"EOPProtectionPolicies": Status},
@@ -248,19 +248,19 @@ tests[{
 #--
 
 #
-# MS.DEFENDER.1.5v1
+# MS.DEFENDER.1.5v0.1
 #--
 
 ATPPolicyForSensitiveIDs[Policies] {
     Policies := input.atp_policy_rules
     AccountsSetting := SensitiveAccountsSetting(Policies)
-    AccountsConfig := SensitiveAccountsConfig("MS.DEFENDER.1.5v1")
+    AccountsConfig := SensitiveAccountsConfig("MS.DEFENDER.1.5v0.1")
 
     SensitiveAccounts(AccountsSetting, AccountsConfig) == true
 }
 
 tests[{
-    "PolicyId" : "MS.DEFENDER.1.5v1",
+    "PolicyId" : "MS.DEFENDER.1.5v0.1",
     "Criticality" : "Shall",
     "Commandlet" : ["Get-ATPProtectionPolicyRule"],
     "ActualValue" : {"ATPProtectionPolicies": Status},
@@ -272,7 +272,7 @@ tests[{
 #--
 
 #
-# MS.DEFENDER.2.1v1
+# MS.DEFENDER.2.1v0.1
 #--
 
 ImpersonationProtectionErrorMsg(StrictImpersonationProtection, StandardImpersonationProtection, AccountType) := Description if {
@@ -311,7 +311,7 @@ ImpersonationProtectionErrorMsg(StrictImpersonationProtection, StandardImpersona
 }
 
 tests[{
-    "PolicyId" : "MS.DEFENDER.2.1v1",
+    "PolicyId" : "MS.DEFENDER.2.1v0.1",
     "Criticality" : "Should",
     "Commandlet" : ["Get-AntiPhishPolicy"],
     "ActualValue" : [StrictImpersonationProtection.Policy, StandardImpersonationProtection.Policy],
@@ -322,7 +322,7 @@ tests[{
     FilterKey := "EnableTargetedUserProtection"
     AccountKey := "TargetedUsersToProtect"
     ActionKey := "TargetedUserProtectionAction"
-    ProtectedConfig := ImpersonationProtectionConfig("MS.DEFENDER.2.1v1", "SensitiveUsers")
+    ProtectedConfig := ImpersonationProtectionConfig("MS.DEFENDER.2.1v0.1", "SensitiveUsers")
     StrictImpersonationProtection := ImpersonationProtection(Policies, "Strict Preset Security Policy", ProtectedConfig, FilterKey, AccountKey, ActionKey)
     StandardImpersonationProtection := ImpersonationProtection(Policies, "Standard Preset Security Policy", ProtectedConfig, FilterKey, AccountKey, ActionKey)
     ErrorMessage := ImpersonationProtectionErrorMsg(StrictImpersonationProtection, StandardImpersonationProtection, "sensitive users")
@@ -335,13 +335,13 @@ tests[{
 #--
 
 #
-# MS.DEFENDER.2.2v1
+# MS.DEFENDER.2.2v0.1
 #--
 
 # Assert that at least one of the enabled policies includes
 # protection for the org's own domains
 tests[{
-    "PolicyId" : "MS.DEFENDER.2.2v1",
+    "PolicyId" : "MS.DEFENDER.2.2v0.1",
     "Criticality" : "Should",
     "Commandlet" : ["Get-AntiPhishPolicy"],
     "ActualValue" : [StrictImpersonationProtection.Policy, StandardImpersonationProtection.Policy],
@@ -352,7 +352,7 @@ tests[{
     FilterKey := "EnableTargetedDomainsProtection"
     AccountKey := "TargetedDomainsToProtect"
     ActionKey := "TargetedDomainProtectionAction"
-    ProtectedConfig := ImpersonationProtectionConfig("MS.DEFENDER.2.2v1", "AgencyDomains")
+    ProtectedConfig := ImpersonationProtectionConfig("MS.DEFENDER.2.2v0.1", "AgencyDomains")
     StrictImpersonationProtection := ImpersonationProtection(Policies, "Strict Preset Security Policy", ProtectedConfig, FilterKey, AccountKey, ActionKey)
     StandardImpersonationProtection := ImpersonationProtection(Policies, "Standard Preset Security Policy", ProtectedConfig, FilterKey, AccountKey, ActionKey)
     ErrorMessage := ImpersonationProtectionErrorMsg(StrictImpersonationProtection, StandardImpersonationProtection, "agency domains")
@@ -366,10 +366,10 @@ tests[{
 #--
 
 #
-# MS.DEFENDER.2.3v1
+# MS.DEFENDER.2.3v0.1
 #--
 tests[{
-    "PolicyId" : "MS.DEFENDER.2.3v1",
+    "PolicyId" : "MS.DEFENDER.2.3v0.1",
     "Criticality" : "Should",
     "Commandlet" : ["Get-AntiPhishPolicy"],
     "ActualValue" : [StrictImpersonationProtection.Policy, StandardImpersonationProtection.Policy],
@@ -380,7 +380,7 @@ tests[{
     FilterKey := "EnableTargetedDomainsProtection"
     AccountKey := "TargetedDomainsToProtect"
     ActionKey := "TargetedDomainProtectionAction"
-    ProtectedConfig := ImpersonationProtectionConfig("MS.DEFENDER.2.3v1", "PartnerDomains")
+    ProtectedConfig := ImpersonationProtectionConfig("MS.DEFENDER.2.3v0.1", "PartnerDomains")
     StrictImpersonationProtection := ImpersonationProtection(Policies, "Strict Preset Security Policy", ProtectedConfig, FilterKey, AccountKey, ActionKey)
     StandardImpersonationProtection := ImpersonationProtection(Policies, "Standard Preset Security Policy", ProtectedConfig, FilterKey, AccountKey, ActionKey)
     ErrorMessage := ImpersonationProtectionErrorMsg(StrictImpersonationProtection, StandardImpersonationProtection, "partner domains")
@@ -393,7 +393,7 @@ tests[{
 #--
 
 #
-# MS.DEFENDER.3.1v1
+# MS.DEFENDER.3.1v0.1
 #--
 
 # Find the set of policies that have EnableATPForSPOTeamsODB set to true
@@ -405,7 +405,7 @@ ATPPolicies[{
 }
 
 tests[{
-    "PolicyId" : "MS.DEFENDER.3.1v1",
+    "PolicyId" : "MS.DEFENDER.3.1v0.1",
     "Criticality" : "Should",
     "Commandlet" : ["Get-AtpPolicyForO365"],
     "ActualValue" : Policies,
@@ -418,7 +418,7 @@ tests[{
 #--
 
 #
-# MS.DEFENDER.4.1v1
+# MS.DEFENDER.4.1v0.1
 #--
 
 # Return set of content info types in basic rules
@@ -561,7 +561,7 @@ error_rules contains "U.S. Individual Taxpayer Identification Number (ITIN)" if 
 error_rules contains "Credit Card Number" if count(Rules.Credit_Card) == 0
 
 tests[{
-    "PolicyId" : "MS.DEFENDER.4.1v1",
+    "PolicyId" : "MS.DEFENDER.4.1v0.1",
     "Criticality" : "Shall",
     "Commandlet" : ["Get-DlpComplianceRule"],
     "ActualValue" : Rules,
@@ -575,7 +575,7 @@ tests[{
 }
 
 #
-# MS.DEFENDER.4.2v1
+# MS.DEFENDER.4.2v0.1
 #--
 
 # Step 2: determine the set of sensitive policies that apply to EXO, Teams, etc.
@@ -660,7 +660,7 @@ DefenderErrorMessage4_2 := ErrorMessage if {
 }
 
 tests[{
-    "PolicyId": "MS.DEFENDER.4.2v1",
+    "PolicyId": "MS.DEFENDER.4.2v0.1",
     "Criticality": "Should",
     "Commandlet": ["Get-DLPCompliancePolicy"],
     "ActualValue": Policies,
@@ -674,7 +674,7 @@ tests[{
 }
 
 #
-# MS.DEFENDER.4.3v1
+# MS.DEFENDER.4.3v0.1
 #--
 # Step 3: Ensure that the action for the rules is set to block
 SensitiveRulesNotBlocking[Rule.Name] {
@@ -701,7 +701,7 @@ DefenderErrorMessage4_3(Rules) := ErrorMessage if {
 }
 
 tests[{
-    "PolicyId" : "MS.DEFENDER.4.3v1",
+    "PolicyId" : "MS.DEFENDER.4.3v0.1",
     "Criticality" : "Should",
     "Commandlet" : ["Get-DlpComplianceRule"],
     "ActualValue" : Rules,
@@ -717,7 +717,7 @@ tests[{
 #--
 
 #
-# MS.DEFENDER.4.4v1
+# MS.DEFENDER.4.4v0.1
 #--
 # Step 4: ensure that some user is notified in the event of a DLP violation
 SensitiveRulesNotNotifying[Rule.Name] {
@@ -738,7 +738,7 @@ DefenderErrorMessage4_4(Rules) := ErrorMessage if {
 }
 
 tests[{
-    "PolicyId" : "MS.DEFENDER.4.4v1",
+    "PolicyId" : "MS.DEFENDER.4.4v0.1",
     "Criticality" : "Should",
     "Commandlet" : ["Get-DlpComplianceRule"],
     "ActualValue" : Rules,
@@ -754,7 +754,7 @@ tests[{
 #--
 
 #
-# MS.DEFENDER.4.5v1
+# MS.DEFENDER.4.5v0.1
 #--
 # At this time we are unable to test for X because of Y
 tests[{
@@ -765,13 +765,13 @@ tests[{
     "ReportDetails" : NotCheckedDetails(PolicyId),
     "RequirementMet" : false
 }] {
-    PolicyId := "MS.DEFENDER.4.5v1"
+    PolicyId := "MS.DEFENDER.4.5v0.1"
     true
 }
 #--
 
 #
-# MS.DEFENDER.4.6v1
+# MS.DEFENDER.4.6v0.1
 #--
 # At this time we are unable to test for X because of Y
 tests[{
@@ -782,13 +782,13 @@ tests[{
     "ReportDetails" : NotCheckedDetails(PolicyId),
     "RequirementMet" : false
 }] {
-    PolicyId := "MS.DEFENDER.4.6v1"
+    PolicyId := "MS.DEFENDER.4.6v0.1"
     true
 }
 #--
 
 #
-# MS.DEFENDER.5.1v1
+# MS.DEFENDER.5.1v0.1
 #--
 # At a minimum, the alerts required by the EXO baseline SHALL be enabled.
 RequiredAlerts := {
@@ -807,7 +807,7 @@ EnabledAlerts[Alert.Name] {
 }
 
 tests[{
-    "PolicyId" : "MS.DEFENDER.5.1v1",
+    "PolicyId" : "MS.DEFENDER.5.1v0.1",
     "Criticality" : "Shall",
     "Commandlet" : ["Get-ProtectionAlert"],
     "ActualValue" : MissingAlerts,
@@ -821,7 +821,7 @@ tests[{
 #--
 
 #
-# MS.DEFENDER.5.2v1
+# MS.DEFENDER.5.2v0.1
 #--
 # SIEM incorporation cannot be checked programmatically
 tests[{
@@ -832,14 +832,14 @@ tests[{
     "ReportDetails" : NotCheckedDetails(PolicyId),
     "RequirementMet" : false
 }] {
-    PolicyId := "MS.DEFENDER.5.2v1"
+    PolicyId := "MS.DEFENDER.5.2v0.1"
     true
 }
 #--
 
 
 #
-# MS.DEFENDER.6.1v1
+# MS.DEFENDER.6.1v0.1
 #--
 
 CorrectLogConfigs[{
@@ -851,7 +851,7 @@ CorrectLogConfigs[{
 }
 
 tests[{
-    "PolicyId" : "MS.DEFENDER.6.1v1",
+    "PolicyId" : "MS.DEFENDER.6.1v0.1",
     "Criticality" : "Shall",
     "Commandlet" : ["Get-AdminAuditLogConfig"],
     "ActualValue" : CorrectLogConfigs,
@@ -863,7 +863,7 @@ tests[{
 #--
 
 #
-# MS.DEFENDER.6.2v1
+# MS.DEFENDER.6.2v0.1
 #--
 # Turns out audit logging is non-trivial to implement and test for.
 # Would require looping through all users. See discussion in GitHub
@@ -876,13 +876,13 @@ tests[{
     "ReportDetails" : NotCheckedDetails(PolicyId),
     "RequirementMet" : false
 }] {
-    PolicyId := "MS.DEFENDER.6.2v1"
+    PolicyId := "MS.DEFENDER.6.2v0.1"
     true
 }
 #--
 
 #
-# MS.DEFENDER.6.3v1
+# MS.DEFENDER.6.3v0.1
 #--
 # Dictated by OMB M-21-31: 12 months in hot storage and 18 months in cold
 # It is not required to maintain these logs in the M365 cloud environment; doing so would require an additional add-on SKU.
@@ -895,7 +895,7 @@ tests[{
     "ReportDetails" : NotCheckedDetails(PolicyId),
     "RequirementMet" : false
 }] {
-    PolicyId := "MS.DEFENDER.6.3v1"
+    PolicyId := "MS.DEFENDER.6.3v0.1"
     true
 }
 #--

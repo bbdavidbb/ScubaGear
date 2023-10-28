@@ -4,10 +4,10 @@ import data.report.utils.NotCheckedDetails
 
 
 #
-# MS.SHAREPOINT.1.1v1
+# MS.SHAREPOINT.1.1v0.1
 #--
 test_SharingCapability_Correct_V1 if {
-    PolicyId := "MS.SHAREPOINT.1.1v1"
+    PolicyId := "MS.SHAREPOINT.1.1v0.1"
 
     Output := tests with input as {
         "SPO_tenant": [
@@ -25,7 +25,7 @@ test_SharingCapability_Correct_V1 if {
 }
 
 test_SharingCapability_Correct_V2 if {
-    PolicyId := "MS.SHAREPOINT.1.1v1"
+    PolicyId := "MS.SHAREPOINT.1.1v0.1"
 
     Output := tests with input as {
         "SPO_tenant": [
@@ -43,7 +43,7 @@ test_SharingCapability_Correct_V2 if {
 }
 
 test_SharingCapability_Incorrect_V1 if {
-    PolicyId := "MS.SHAREPOINT.1.1v1"
+    PolicyId := "MS.SHAREPOINT.1.1v0.1"
 
     Output := tests with input as {
         "SPO_tenant": [
@@ -61,7 +61,7 @@ test_SharingCapability_Incorrect_V1 if {
 }
 
 test_SharingCapability_Incorrect_V2 if {
-    PolicyId := "MS.SHAREPOINT.1.1v1"
+    PolicyId := "MS.SHAREPOINT.1.1v0.1"
 
     Output := tests with input as {
         "SPO_tenant": [
@@ -80,10 +80,10 @@ test_SharingCapability_Incorrect_V2 if {
 #--
 
 #
-# MS.SHAREPOINT.1.2v1
+# MS.SHAREPOINT.1.2v0.1
 #--
 test_OneDriveSharingCapability_Correct_V1 if {
-    PolicyId := "MS.SHAREPOINT.1.2v1"
+    PolicyId := "MS.SHAREPOINT.1.2v0.1"
 
     Output := tests with input as {
         "SPO_tenant": [
@@ -103,7 +103,7 @@ test_OneDriveSharingCapability_Correct_V1 if {
 }
 
 test_OneDriveSharingCapability_Correct_V2 if {
-    PolicyId := "MS.SHAREPOINT.1.2v1"
+    PolicyId := "MS.SHAREPOINT.1.2v0.1"
 
     Output := tests with input as {
         "SPO_tenant": [
@@ -122,7 +122,7 @@ test_OneDriveSharingCapability_Correct_V2 if {
 }
 
 test_UsingServicePrincipal if {
-    PolicyId := "MS.SHAREPOINT.1.2v1"
+    PolicyId := "MS.SHAREPOINT.1.2v0.1"
 
     Output := tests with input as {
         "SPO_tenant": [
@@ -142,7 +142,7 @@ test_UsingServicePrincipal if {
 }
 
 test_OneDriveSharingCapability_Incorrect_V1 if {
-    PolicyId := "MS.SHAREPOINT.1.2v1"
+    PolicyId := "MS.SHAREPOINT.1.2v0.1"
 
     Output := tests with input as {
         "SPO_tenant": [
@@ -161,7 +161,7 @@ test_OneDriveSharingCapability_Incorrect_V1 if {
 }
 
 test_OneDriveSharingCapability_Incorrect_V2 if {
-    PolicyId := "MS.SHAREPOINT.1.2v1"
+    PolicyId := "MS.SHAREPOINT.1.2v0.1"
 
     Output := tests with input as {
         "SPO_tenant": [
@@ -181,10 +181,10 @@ test_OneDriveSharingCapability_Incorrect_V2 if {
 #--
 
 #
-# MS.SHAREPOINT.1.3v1
+# MS.SHAREPOINT.1.3v0.1
 #--
 test_SharingDomainRestrictionMode_Correct_V1 if {
-    PolicyId := "MS.SHAREPOINT.1.3v1"
+    PolicyId := "MS.SHAREPOINT.1.3v0.1"
 
     Output := tests with input as {
         "SPO_tenant": [
@@ -203,7 +203,7 @@ test_SharingDomainRestrictionMode_Correct_V1 if {
 }
 
 test_SharingDomainRestrictionMode_Correct_V2 if {
-    PolicyId := "MS.SHAREPOINT.1.3v1"
+    PolicyId := "MS.SHAREPOINT.1.3v0.1"
 
     Output := tests with input as {
         "SPO_tenant": [
@@ -222,7 +222,7 @@ test_SharingDomainRestrictionMode_Correct_V2 if {
 }
 
 test_SharingDomainRestrictionMode_Incorrect if {
-    PolicyId := "MS.SHAREPOINT.1.3v1"
+    PolicyId := "MS.SHAREPOINT.1.3v0.1"
 
     Output := tests with input as {
         "SPO_tenant": [
@@ -242,10 +242,10 @@ test_SharingDomainRestrictionMode_Incorrect if {
 #--
 
 #
-# MS.SHAREPOINT.1.4v1
+# MS.SHAREPOINT.1.4v0.1
 #--
 test_SameAccount_Correct_V1 if {
-    PolicyId := "MS.SHAREPOINT.1.4v1"
+    PolicyId := "MS.SHAREPOINT.1.4v0.1"
 
     Output := tests with input as {
         "SPO_tenant": [
@@ -264,7 +264,7 @@ test_SameAccount_Correct_V1 if {
 }
 
 test_SameAccount_Correct_V3 if {
-    PolicyId := "MS.SHAREPOINT.1.4v1"
+    PolicyId := "MS.SHAREPOINT.1.4v0.1"
 
     Output := tests with input as {
         "SPO_tenant": [
@@ -283,7 +283,7 @@ test_SameAccount_Correct_V3 if {
 }
 
 test_SameAccount_Correct_V2 if {
-    PolicyId := "MS.SHAREPOINT.1.4v1"
+    PolicyId := "MS.SHAREPOINT.1.4v0.1"
 
     Output := tests with input as {
         "SPO_tenant": [
@@ -302,7 +302,7 @@ test_SameAccount_Correct_V2 if {
 }
 
 test_SameAccount_Incorrect if {
-    PolicyId := "MS.SHAREPOINT.1.4v1"
+    PolicyId := "MS.SHAREPOINT.1.4v0.1"
 
     Output := tests with input as {
         "SPO_tenant": [

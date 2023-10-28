@@ -5,7 +5,7 @@ import future.keywords
 # Policy 1
 #--
 test_disablePortalCreationByNonAdminUsers_Correct if {
-    PolicyId := "MS.POWERPLATFORM.5.1v1"
+    PolicyId := "MS.POWERPLATFORM.5.1v0.1"
 
     Output := tests with input as {
         "environment_creation": [{
@@ -21,7 +21,7 @@ test_disablePortalCreationByNonAdminUsers_Correct if {
 }
 
 test_disablePortalCreationByNonAdminUsers_Incorrect if {
-    PolicyId := "MS.POWERPLATFORM.5.1v1"
+    PolicyId := "MS.POWERPLATFORM.5.1v0.1"
 
     Output := tests with input as {
         "environment_creation": [{

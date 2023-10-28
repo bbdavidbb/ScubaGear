@@ -6,7 +6,7 @@ import data.report.utils.NotCheckedDetails
 # Policy 1
 #--
 test_NotImplemented_Correct if {
-    PolicyId := "MS.POWERPLATFORM.4.1v1"
+    PolicyId := "MS.POWERPLATFORM.4.1v0.1"
 
     Output := tests with input as { }
 

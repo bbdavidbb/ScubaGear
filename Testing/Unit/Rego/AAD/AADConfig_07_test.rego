@@ -2,10 +2,10 @@ package aad
 import future.keywords
 import data.report.utils.NotCheckedDetails
 #
-# MS.AAD.7.1v1
+# MS.AAD.7.1v0.1
 #--
 test_PrivilegedUsers_Correct if {
-    PolicyId := "MS.AAD.7.1v1"
+    PolicyId := "MS.AAD.7.1v0.1"
 
     Output := tests with input as {
         "privileged_users" : {
@@ -28,7 +28,7 @@ test_PrivilegedUsers_Correct if {
 }
 
 test_PrivilegedUsers_Incorrect_V1 if {
-    PolicyId := "MS.AAD.7.1v1"
+    PolicyId := "MS.AAD.7.1v0.1"
 
     Output := tests with input as {
         "privileged_users" : {
@@ -47,7 +47,7 @@ test_PrivilegedUsers_Incorrect_V1 if {
 }
 
 test_PrivilegedUsers_Incorrect_V2 if {
-    PolicyId := "MS.AAD.7.1v1"
+    PolicyId := "MS.AAD.7.1v0.1"
 
     Output := tests with input as {
         "privileged_users" : {
@@ -97,10 +97,10 @@ test_PrivilegedUsers_Incorrect_V2 if {
     RuleOutput[0].ReportDetails == "9 global admin(s) found:<br/>Test Name1, Test Name2, Test Name3, Test Name4, Test Name5, Test Name6, Test Name7, Test Name8, Test Name9"
 }
 #--
-# MS.AAD.7.2v1
+# MS.AAD.7.2v0.1
 #--
 test_NotImplemented_Correct if {
-    PolicyId := "MS.AAD.7.2v1"
+    PolicyId := "MS.AAD.7.2v0.1"
 
     Output := tests with input as { }
 
@@ -111,10 +111,10 @@ test_NotImplemented_Correct if {
     RuleOutput[0].ReportDetails == NotCheckedDetails(PolicyId)
 }
 #--
-# MS.AAD.7.3v1
+# MS.AAD.7.3v0.1
 #--
 test_OnPremisesImmutableId_Correct if {
-    PolicyId := "MS.AAD.7.3v1"
+    PolicyId := "MS.AAD.7.3v0.1"
 
     Output := tests with input as {
         "privileged_users" : {
@@ -138,7 +138,7 @@ test_OnPremisesImmutableId_Correct if {
 }
 
 test_OnPremisesImmutableId_Incorrect_V1 if {
-    PolicyId := "MS.AAD.7.3v1"
+    PolicyId := "MS.AAD.7.3v0.1"
 
     Output := tests with input as {
         "privileged_users" : {
@@ -158,7 +158,7 @@ test_OnPremisesImmutableId_Incorrect_V1 if {
 }
 
 test_OnPremisesImmutableId_Incorrect_V2 if {
-    PolicyId := "MS.AAD.7.3v1"
+    PolicyId := "MS.AAD.7.3v0.1"
 
     Output := tests with input as {
         "privileged_users" : {
@@ -183,10 +183,10 @@ test_OnPremisesImmutableId_Incorrect_V2 if {
 }
 #--
 
-# MS.AAD.7.4v1
+# MS.AAD.7.4v0.1
 #--
 test_AdditionalProperties_Correct_V1 if {
-    PolicyId := "MS.AAD.7.4v1"
+    PolicyId := "MS.AAD.7.4v0.1"
 
     Output := tests with input as {
         "privileged_roles" : [
@@ -218,7 +218,7 @@ test_AdditionalProperties_Correct_V1 if {
 }
 
 test_AdditionalProperties_Correct_V2 if {
-    PolicyId := "MS.AAD.7.4v1"
+    PolicyId := "MS.AAD.7.4v0.1"
 
     Output := tests with input as {
         "privileged_roles" : [
@@ -242,7 +242,7 @@ test_AdditionalProperties_Correct_V2 if {
         ],
         "scuba_config" : {
             "Aad" : {
-                "MS.AAD.7.4v1" : {
+                "MS.AAD.7.4v0.1" : {
                     "RoleExclusions" : {
                         "Users" : ["ae71e61c-f465-4db6-8d26-5f3e52bdd800"],
                         "Groups" : []
@@ -260,7 +260,7 @@ test_AdditionalProperties_Correct_V2 if {
 }
 
 test_AdditionalProperties_Correct_V3 if {
-    PolicyId := "MS.AAD.7.4v1"
+    PolicyId := "MS.AAD.7.4v0.1"
 
     Output := tests with input as {
         "privileged_roles" : [
@@ -284,7 +284,7 @@ test_AdditionalProperties_Correct_V3 if {
         ],
         "scuba_config" : {
             "Aad" : {
-                "MS.AAD.7.4v1" : {
+                "MS.AAD.7.4v0.1" : {
                     "RoleExclusions" : {
                         "Users" : [],
                         "Groups" : ["ae71e61c-f465-4db6-8d26-5f3e52bdd800"]
@@ -302,7 +302,7 @@ test_AdditionalProperties_Correct_V3 if {
 }
 
 test_AdditionalProperties_LicenseMissing_V1 if {
-    PolicyId := "MS.AAD.7.4v1"
+    PolicyId := "MS.AAD.7.4v0.1"
 
     Output := tests with input as {
         "privileged_roles" : [
@@ -327,7 +327,7 @@ test_AdditionalProperties_LicenseMissing_V1 if {
         ],
         "scuba_config" : {
             "Aad" : {
-                "MS.AAD.7.4v1" : {
+                "MS.AAD.7.4v0.1" : {
                     "RoleExclusions" : {
                         "Users" : [],
                         "Groups" : ["ae71e61c-f465-4db6-8d26-5f3e52bdd800"]
@@ -345,7 +345,7 @@ test_AdditionalProperties_LicenseMissing_V1 if {
 }
 
 test_AdditionalProperties_Incorrect_V1 if {
-    PolicyId := "MS.AAD.7.4v1"
+    PolicyId := "MS.AAD.7.4v0.1"
 
     Output := tests with input as {
         "privileged_roles" : [
@@ -377,7 +377,7 @@ test_AdditionalProperties_Incorrect_V1 if {
 }
 
 test_AdditionalProperties_Incorrect_V2 if {
-    PolicyId := "MS.AAD.7.4v1"
+    PolicyId := "MS.AAD.7.4v0.1"
 
     Output := tests with input as {
         "privileged_roles" : [
@@ -418,7 +418,7 @@ test_AdditionalProperties_Incorrect_V2 if {
 }
 
 test_AdditionalProperties_Incorrect_V3 if {
-    PolicyId := "MS.AAD.7.4v1"
+    PolicyId := "MS.AAD.7.4v0.1"
 
     Output := tests with input as {
         "privileged_roles" : [
@@ -459,7 +459,7 @@ test_AdditionalProperties_Incorrect_V3 if {
 }
 
 test_AdditionalProperties_Incorrect_V4 if {
-    PolicyId := "MS.AAD.7.4v1"
+    PolicyId := "MS.AAD.7.4v0.1"
 
     Output := tests with input as {
         "privileged_roles" : [
@@ -504,7 +504,7 @@ test_AdditionalProperties_Incorrect_V4 if {
 }
 
 test_AdditionalProperties_Incorrect_V5 if {
-    PolicyId := "MS.AAD.7.4v1"
+    PolicyId := "MS.AAD.7.4v0.1"
 
     Output := tests with input as {
         "privileged_roles" : [
@@ -528,7 +528,7 @@ test_AdditionalProperties_Incorrect_V5 if {
         ],
         "scuba_config" : {
             "Aad" : {
-                "MS.AAD.7.4v1" : {
+                "MS.AAD.7.4v0.1" : {
                     "RoleExclusions" : {
                         "Users" : ["7b36d094-0211-400b-aabd-3793e9a30fc6"],
                         "Groups" : []
@@ -546,7 +546,7 @@ test_AdditionalProperties_Incorrect_V5 if {
 }
 
 test_AdditionalProperties_Incorrect_V6 if {
-    PolicyId := "MS.AAD.7.4v1"
+    PolicyId := "MS.AAD.7.4v0.1"
 
     Output := tests with input as {
         "privileged_roles" : [
@@ -579,7 +579,7 @@ test_AdditionalProperties_Incorrect_V6 if {
         ],
         "scuba_config" : {
             "Aad" : {
-                "MS.AAD.7.4v1" : {
+                "MS.AAD.7.4v0.1" : {
                     "RoleExclusions" : {
                         "Users" : ["7b36d094-0211-400b-aabd-3793e9a30fc6"],
                         "Groups" : []
@@ -597,7 +597,7 @@ test_AdditionalProperties_Incorrect_V6 if {
 }
 
 test_AdditionalProperties_Incorrect_V7 if {
-    PolicyId := "MS.AAD.7.4v1"
+    PolicyId := "MS.AAD.7.4v0.1"
 
     Output := tests with input as {
         "privileged_roles" : [
@@ -630,7 +630,7 @@ test_AdditionalProperties_Incorrect_V7 if {
         ],
         "scuba_config" : {
             "Aad" : {
-                "MS.AAD.7.4v1" : {
+                "MS.AAD.7.4v0.1" : {
                     "RoleExclusions" : {
                         "Users" : ["7b36d094-0211-400b-aabd-3793e9a30fc6"],
                         "Groups" : []
@@ -648,7 +648,7 @@ test_AdditionalProperties_Incorrect_V7 if {
 }
 
 test_AdditionalProperties_Incorrect_V8 if {
-    PolicyId := "MS.AAD.7.4v1"
+    PolicyId := "MS.AAD.7.4v0.1"
 
     Output := tests with input as {
         "privileged_roles" : [
@@ -685,7 +685,7 @@ test_AdditionalProperties_Incorrect_V8 if {
         ],
         "scuba_config" : {
             "Aad" : {
-                "MS.AAD.7.4v1" : {
+                "MS.AAD.7.4v0.1" : {
                     "RoleExclusions" : {
                         "Users" : ["7b36d094-0211-400b-aabd-3793e9a30fc6"],
                         "Groups" : []
@@ -703,7 +703,7 @@ test_AdditionalProperties_Incorrect_V8 if {
 }
 
 test_AdditionalProperties_Incorrect_V9 if {
-    PolicyId := "MS.AAD.7.4v1"
+    PolicyId := "MS.AAD.7.4v0.1"
 
     Output := tests with input as {
         "privileged_roles" : [
@@ -736,7 +736,7 @@ test_AdditionalProperties_Incorrect_V9 if {
         ],
         "scuba_config" : {
             "Aad" : {
-                "MS.AAD.7.4v1" : {
+                "MS.AAD.7.4v0.1" : {
                     "RoleExclusions" : {
                         "Users" : ["e54ac846-1f5a-4afe-aa69-273b42c3b0c1"],
                         "Groups" : []
@@ -753,7 +753,7 @@ test_AdditionalProperties_Incorrect_V9 if {
     RuleOutput[0].ReportDetails == "1 role(s) that contain users with permanent active assignment:<br/>Global Administrator"
 }
 test_AdditionalProperties_Incorrect_V10 if {
-    PolicyId := "MS.AAD.7.4v1"
+    PolicyId := "MS.AAD.7.4v0.1"
 
     Output := tests with input as {
         "privileged_roles" : [
@@ -777,7 +777,7 @@ test_AdditionalProperties_Incorrect_V10 if {
         ],
         "scuba_config" : {
             "Aad" : {
-                "MS.AAD.7.4v1" : {
+                "MS.AAD.7.4v0.1" : {
                     "RoleExclusions" : {
                         "Users" : [],
                         "Groups" : ["7b36d094-0211-400b-aabd-3793e9a30fc6"]
@@ -795,7 +795,7 @@ test_AdditionalProperties_Incorrect_V10 if {
 }
 
 test_AdditionalProperties_Incorrect_V11 if {
-    PolicyId := "MS.AAD.7.4v1"
+    PolicyId := "MS.AAD.7.4v0.1"
 
     Output := tests with input as {
         "privileged_roles" : [
@@ -828,7 +828,7 @@ test_AdditionalProperties_Incorrect_V11 if {
         ],
         "scuba_config" : {
             "Aad" : {
-                "MS.AAD.7.4v1" : {
+                "MS.AAD.7.4v0.1" : {
                     "RoleExclusions" : {
                         "Users" : [],
                         "Groups" : ["7b36d094-0211-400b-aabd-3793e9a30fc6"]
@@ -846,7 +846,7 @@ test_AdditionalProperties_Incorrect_V11 if {
 }
 
 test_AdditionalProperties_Incorrect_V12 if {
-    PolicyId := "MS.AAD.7.4v1"
+    PolicyId := "MS.AAD.7.4v0.1"
 
     Output := tests with input as {
         "privileged_roles" : [
@@ -879,7 +879,7 @@ test_AdditionalProperties_Incorrect_V12 if {
         ],
         "scuba_config" : {
             "Aad" : {
-                "MS.AAD.7.4v1" : {
+                "MS.AAD.7.4v0.1" : {
                     "RoleExclusions" : {
                         "Users" : [],
                         "Groups" : ["7b36d094-0211-400b-aabd-3793e9a30fc6"]
@@ -897,7 +897,7 @@ test_AdditionalProperties_Incorrect_V12 if {
 }
 
 test_AdditionalProperties_Incorrect_V13 if {
-    PolicyId := "MS.AAD.7.4v1"
+    PolicyId := "MS.AAD.7.4v0.1"
 
     Output := tests with input as {
         "privileged_roles" : [
@@ -934,7 +934,7 @@ test_AdditionalProperties_Incorrect_V13 if {
         ],
         "scuba_config" : {
             "Aad" : {
-                "MS.AAD.7.4v1" : {
+                "MS.AAD.7.4v0.1" : {
                     "RoleExclusions" : {
                         "Users" : [],
                         "Groups" : ["7b36d094-0211-400b-aabd-3793e9a30fc6"]
@@ -952,7 +952,7 @@ test_AdditionalProperties_Incorrect_V13 if {
 }
 
 test_AdditionalProperties_Incorrect_V14 if {
-    PolicyId := "MS.AAD.7.4v1"
+    PolicyId := "MS.AAD.7.4v0.1"
 
     Output := tests with input as {
         "privileged_roles" : [
@@ -985,7 +985,7 @@ test_AdditionalProperties_Incorrect_V14 if {
         ],
         "scuba_config" : {
             "Aad" : {
-                "MS.AAD.7.4v1" : {
+                "MS.AAD.7.4v0.1" : {
                     "RoleExclusions" : {
                         "Users" : [],
                         "Groups" : ["e54ac846-1f5a-4afe-aa69-273b42c3b0c1"]
@@ -1004,10 +1004,10 @@ test_AdditionalProperties_Incorrect_V14 if {
 #--
 
 #
-# MS.AAD.7.5v1
+# MS.AAD.7.5v0.1
 #--
 test_Assignments_Correct if {
-    PolicyId := "MS.AAD.7.5v1"
+    PolicyId := "MS.AAD.7.5v0.1"
 
     Output := tests with input as {
         "privileged_roles" : [
@@ -1047,7 +1047,7 @@ test_Assignments_Correct if {
 }
 
 test_Assignments_Incorrect if {
-    PolicyId := "MS.AAD.7.5v1"
+    PolicyId := "MS.AAD.7.5v0.1"
 
     Output := tests with input as {
         "privileged_roles" : [
@@ -1088,10 +1088,10 @@ test_Assignments_Incorrect if {
 #--
 
 #
-# MS.AAD.7.6v1
+# MS.AAD.7.6v0.1
 #--
 test_AdditionalProperties_Correct_V2 if {
-    PolicyId := "MS.AAD.7.6v1"
+    PolicyId := "MS.AAD.7.6v0.1"
 
     Output := tests with input as {
         "privileged_roles" : [
@@ -1127,7 +1127,7 @@ test_AdditionalProperties_Correct_V2 if {
 }
 
 test_AdditionalProperties_Correct_V3 if {
-    PolicyId := "MS.AAD.7.6v1"
+    PolicyId := "MS.AAD.7.6v0.1"
 
     Output := tests with input as {
         "privileged_roles" : [
@@ -1176,7 +1176,7 @@ test_AdditionalProperties_Correct_V3 if {
 }
 
 test_AdditionalProperties_Incorrect_V3 if {
-    PolicyId := "MS.AAD.7.6v1"
+    PolicyId := "MS.AAD.7.6v0.1"
 
     Output := tests with input as {
         "privileged_roles" : [
@@ -1213,10 +1213,10 @@ test_AdditionalProperties_Incorrect_V3 if {
 #--
 
 #
-# MS.AAD.7.7v1
+# MS.AAD.7.7v0.1
 #--
 test_notificationRecipients_Correct if {
-    PolicyId := "MS.AAD.7.7v1"
+    PolicyId := "MS.AAD.7.7v0.1"
 
     Output := tests with input as {
         "privileged_roles" : [
@@ -1257,7 +1257,7 @@ test_notificationRecipients_Correct if {
 }
 
 test_notificationRecipients_Incorrect_V1 if {
-    PolicyId := "MS.AAD.7.7v1"
+    PolicyId := "MS.AAD.7.7v0.1"
 
     Output := tests with input as {
         "privileged_roles" : [
@@ -1298,7 +1298,7 @@ test_notificationRecipients_Incorrect_V1 if {
 }
 
 test_notificationRecipients_Incorrect_V2 if {
-    PolicyId := "MS.AAD.7.7v1"
+    PolicyId := "MS.AAD.7.7v0.1"
 
     Output := tests with input as {
         "privileged_roles" : [
@@ -1339,7 +1339,7 @@ test_notificationRecipients_Incorrect_V2 if {
 }
 
 test_notificationRecipients_Incorrect_V3 if {
-    PolicyId := "MS.AAD.7.7v1"
+    PolicyId := "MS.AAD.7.7v0.1"
 
     Output := tests with input as {
         "privileged_roles" : [
@@ -1381,10 +1381,10 @@ test_notificationRecipients_Incorrect_V3 if {
 #--
 
 #
-# MS.AAD.7.8v1
+# MS.AAD.7.8v0.1
 #--
 test_Id_Correct_V1 if {
-    PolicyId := "MS.AAD.7.8v1"
+    PolicyId := "MS.AAD.7.8v0.1"
 
     Output := tests with input as {
         "privileged_roles" : [
@@ -1420,7 +1420,7 @@ test_Id_Correct_V1 if {
 }
 
 test_Id_Correct_V2 if {
-    PolicyId := "MS.AAD.7.8v1"
+    PolicyId := "MS.AAD.7.8v0.1"
 
     Output := tests with input as {
         "privileged_roles" : [
@@ -1456,7 +1456,7 @@ test_Id_Correct_V2 if {
 }
 
 test_Id_Incorrect if {
-    PolicyId := "MS.AAD.7.8v1"
+    PolicyId := "MS.AAD.7.8v0.1"
 
     Output := tests with input as {
         "privileged_roles" : [
@@ -1493,11 +1493,11 @@ test_Id_Incorrect if {
 #--
 
 #
-# MS.AAD.7.9v1
+# MS.AAD.7.9v0.1
 #--
 
 test_DisplayName_Correct if {
-    PolicyId := "MS.AAD.7.9v1"
+    PolicyId := "MS.AAD.7.9v0.1"
 
     Output := tests with input as {
         "privileged_roles" : [
@@ -1533,7 +1533,7 @@ test_DisplayName_Correct if {
 }
 
 test_DisplayName_Incorrect if {
-    PolicyId := "MS.AAD.7.9v1"
+    PolicyId := "MS.AAD.7.9v0.1"
 
     Output := tests with input as {
         "privileged_roles" : [

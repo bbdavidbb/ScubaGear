@@ -6,7 +6,7 @@ import data.report.utils.NotCheckedDetails
 # Policy 1
 #--
 test_isDisabled_Correct if {
-    PolicyId := "MS.POWERPLATFORM.3.1v1"
+    PolicyId := "MS.POWERPLATFORM.3.1v0.1"
 
     Output := tests with input as {
         "tenant_isolation": [{
@@ -24,7 +24,7 @@ test_isDisabled_Correct if {
 }
 
 test_isDisabled_Incorrect if {
-    PolicyId := "MS.POWERPLATFORM.3.1v1"
+    PolicyId := "MS.POWERPLATFORM.3.1v0.1"
 
     Output := tests with input as {
         "tenant_isolation": [{
@@ -45,7 +45,7 @@ test_isDisabled_Incorrect if {
 # Policy 2
 #--
 test_NotImplemented_Correct if {
-    PolicyId := "MS.POWERPLATFORM.3.2v1"
+    PolicyId := "MS.POWERPLATFORM.3.2v0.1"
 
     Output := tests with input as { }
 

@@ -18,10 +18,10 @@ ReportDetailsArray(Status, Array, String1) := Detail if {
 }
 
 #
-# MS.POWERPLATFORM.1.1v1
+# MS.POWERPLATFORM.1.1v0.1
 #--
 tests[{
-    "PolicyId" : "MS.POWERPLATFORM.1.1v1",
+    "PolicyId" : "MS.POWERPLATFORM.1.1v0.1",
     "Criticality" : "Shall",
     "Commandlet" : ["Get-TenantSettings"],
     "ActualValue" : EnvironmentCreation.disableEnvironmentCreationByNonAdminUsers,
@@ -33,10 +33,10 @@ tests[{
 }
 #--
 
-# MS.POWERPLATFORM.1.1v1
+# MS.POWERPLATFORM.1.1v0.1
 #--
 tests[{
-    "PolicyId" : "MS.POWERPLATFORM.1.1v1",
+    "PolicyId" : "MS.POWERPLATFORM.1.1v0.1",
     "Criticality" : "Shall",
     "Commandlet" : ["Get-TenantSettings"],
     "ActualValue" : "PowerShell Error",
@@ -48,10 +48,10 @@ tests[{
 #--
 
 #
-# MS.POWERPLATFORM.1.2v1
+# MS.POWERPLATFORM.1.2v0.1
 #--
 tests[{
-    "PolicyId" : "MS.POWERPLATFORM.1.2v1",
+    "PolicyId" : "MS.POWERPLATFORM.1.2v0.1",
     "Criticality" : "Shall",
     "Commandlet" : ["Get-TenantSettings"],
     "ActualValue" : EnvironmentCreation.disableTrialEnvironmentCreationByNonAdminUsers,
@@ -64,10 +64,10 @@ tests[{
 #--
 
 #
-# MS.POWERPLATFORM.1.2v1
+# MS.POWERPLATFORM.1.2v0.1
 #--
 tests[{
-    "PolicyId" : "MS.POWERPLATFORM.1.2v1",
+    "PolicyId" : "MS.POWERPLATFORM.1.2v0.1",
     "Criticality" : "Shall",
     "Commandlet" : ["Get-TenantSettings"],
     "ActualValue" : "PowerShell Error",
@@ -79,7 +79,7 @@ tests[{
 #--
 
 #
-# MS.POWERPLATFORM.2.1v1
+# MS.POWERPLATFORM.2.1v0.1
 #--
 DefaultEnvPolicies[{"PolicyName" : Policy.displayName}]{
     TenantId := input.tenant_id
@@ -91,7 +91,7 @@ DefaultEnvPolicies[{"PolicyName" : Policy.displayName}]{
 
 # Note: there is only one default environment per tenant and it cannot be deleted or backed up
 tests[{
-    "PolicyId" : "MS.POWERPLATFORM.2.1v1",
+    "PolicyId" : "MS.POWERPLATFORM.2.1v0.1",
     "Criticality" : "Shall",
     "Commandlet" : ["Get-DlpPolicy"],
     "ActualValue" : DefaultEnvPolicies,
@@ -104,7 +104,7 @@ tests[{
 #--
 
 #
-# MS.POWERPLATFORM.2.2v1
+# MS.POWERPLATFORM.2.2v0.1
 #--
 # gets the list of all tenant environments
 AllEnvironments [{ "EnvName" : EnvName }] {
@@ -129,7 +129,7 @@ EnvWithoutPolicies [Env] {
 }
 
 tests[{
-    "PolicyId" : "MS.POWERPLATFORM.2.2v1",
+    "PolicyId" : "MS.POWERPLATFORM.2.2v0.1",
     "Criticality" : "Should",
     "Commandlet" : ["Get-DlpPolicy"],
     "ActualValue" : EnvWithoutPolicies,
@@ -144,10 +144,10 @@ tests[{
 #--
 
 #
-# MS.POWERPLATFORM.2.2v1
+# MS.POWERPLATFORM.2.2v0.1
 #--
 tests[{
-    "PolicyId" : "MS.POWERPLATFORM.2.2v1",
+    "PolicyId" : "MS.POWERPLATFORM.2.2v0.1",
     "Criticality" : "Should",
     "Commandlet" : ["Get-DlpPolicy"],
     "ActualValue" : "No DLP Policies found",
@@ -160,10 +160,10 @@ tests[{
 #--
 
 #
-# MS.POWERPLATFORM.2.2v1
+# MS.POWERPLATFORM.2.2v0.1
 #--
 tests[{
-    "PolicyId" : "MS.POWERPLATFORM.2.2v1",
+    "PolicyId" : "MS.POWERPLATFORM.2.2v0.1",
     "Criticality" : "Should",
     "Commandlet" : ["Get-DlpPolicy"],
     "ActualValue" : "PowerShell Error",
@@ -175,7 +175,7 @@ tests[{
 #--
 
 #
-# MS.POWERPLATFORM.2.3v1
+# MS.POWERPLATFORM.2.3v0.1
 #--
 # gets the set of connectors that are allowed in the default environment
 # general and confidential groups refer to business and non-business
@@ -222,7 +222,7 @@ AllowedInBaseline := {
 }
 
 tests[{
-    "PolicyId" : "MS.POWERPLATFORM.2.3v1",
+    "PolicyId" : "MS.POWERPLATFORM.2.3v0.1",
     "Criticality" : "Should",
     "Commandlet" : ["Get-DlpPolicy"],
     "ActualValue" : RogueConnectors,
@@ -238,10 +238,10 @@ tests[{
 #--
 
 #
-# MS.POWERPLATFORM.2.3v1
+# MS.POWERPLATFORM.2.3v0.1
 #--
 tests[{
-    "PolicyId" : "MS.POWERPLATFORM.2.3v1",
+    "PolicyId" : "MS.POWERPLATFORM.2.3v0.1",
     "Criticality" : "Should",
     "Commandlet" : ["Get-DlpPolicy"],
     "ActualValue" : "No DLP Policies found",
@@ -254,10 +254,10 @@ tests[{
 #--
 
 #
-# MS.POWERPLATFORM.2.3v1
+# MS.POWERPLATFORM.2.3v0.1
 #--
 tests[{
-    "PolicyId" : "MS.POWERPLATFORM.2.3v1",
+    "PolicyId" : "MS.POWERPLATFORM.2.3v0.1",
     "Criticality" : "Should",
     "Commandlet" : ["Get-DlpPolicy"],
     "ActualValue" : "PowerShell error",
@@ -269,10 +269,10 @@ tests[{
 #--
 
 #
-# MS.POWERPLATFORM.3.1v1
+# MS.POWERPLATFORM.3.1v0.1
 #--
 tests[{
-    "PolicyId" : "MS.POWERPLATFORM.3.1v1",
+    "PolicyId" : "MS.POWERPLATFORM.3.1v0.1",
     "Criticality" : "Shall",
     "Commandlet" : ["Get-PowerAppTenantIsolationPolicy"],
     "ActualValue" : TenantIsolation.properties.isDisabled,
@@ -285,10 +285,10 @@ tests[{
 #--
 
 #
-# MS.POWERPLATFORM.3.1v1
+# MS.POWERPLATFORM.3.1v0.1
 #--
 tests[{
-    "PolicyId" : "MS.POWERPLATFORM.3.1v1",
+    "PolicyId" : "MS.POWERPLATFORM.3.1v0.1",
     "Criticality" : "Shall",
     "Commandlet" : ["Get-PowerAppTenantIsolationPolicy"],
     "ActualValue" : "PowerShell Error",
@@ -300,7 +300,7 @@ tests[{
 #--
 
 #
-# MS.POWERPLATFORM.3.2v1
+# MS.POWERPLATFORM.3.2v0.1
 #--
 # At this time we are unable to test for X because of Y
 tests[{
@@ -311,13 +311,13 @@ tests[{
     "ReportDetails" : NotCheckedDetails(PolicyId),
     "RequirementMet" : false
 }] {
-    PolicyId := "MS.POWERPLATFORM.3.2v1"
+    PolicyId := "MS.POWERPLATFORM.3.2v0.1"
     true
 }
 #--
 
 #
-# MS.POWERPLATFORM.4.1v1
+# MS.POWERPLATFORM.4.1v0.1
 #--
 # At this time we are unable to test for X because of Y
 tests[{
@@ -328,17 +328,17 @@ tests[{
     "ReportDetails" : NotCheckedDetails(PolicyId),
     "RequirementMet" : false
 }] {
-    PolicyId := "MS.POWERPLATFORM.4.1v1"
+    PolicyId := "MS.POWERPLATFORM.4.1v0.1"
     true
 }
 #--
 
 #
-# MS.POWERPLATFORM.5.1v1
+# MS.POWERPLATFORM.5.1v0.1
 #--
 #
 tests[{
-    "PolicyId" : "MS.POWERPLATFORM.5.1v1",
+    "PolicyId" : "MS.POWERPLATFORM.5.1v0.1",
     "Criticality" : "Should",
     "Commandlet" : ["Get-TenantSettings"],
     "ActualValue" : EnvironmentCreation.disablePortalsCreationByNonAdminUsers,

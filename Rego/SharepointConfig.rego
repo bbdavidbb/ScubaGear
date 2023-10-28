@@ -9,7 +9,7 @@ import data.report.utils.ReportDetailsString
 ###################
 
 #
-# MS.SHAREPOINT.1.1v1
+# MS.SHAREPOINT.1.1v0.1
 #--
 
 # SharingCapability == 0 Only People In Organization
@@ -18,7 +18,7 @@ import data.report.utils.ReportDetailsString
 # SharingCapability == 2 Anyone
 
 tests[{
-    "PolicyId" : "MS.SHAREPOINT.1.1v1",
+    "PolicyId" : "MS.SHAREPOINT.1.1v0.1",
     "Criticality" : "Should",
     "Commandlet" : ["Get-SPOTenant", "Get-PnPTenant"],
     "ActualValue" : [Policy.SharingCapability],
@@ -32,11 +32,11 @@ tests[{
 #--
 
 #
-# MS.SHAREPOINT.1.2v1
+# MS.SHAREPOINT.1.2v0.1
 #--
 
 tests[{
-    "PolicyId" : "MS.SHAREPOINT.1.2v1",
+    "PolicyId" : "MS.SHAREPOINT.1.2v0.1",
     "Criticality" : "Should",
     "Commandlet" : ["Get-SPOTenant", "Get-PnPTenant"],
     "ActualValue" : [Policy.OneDriveSharingCapability],
@@ -57,13 +57,13 @@ tests[{
     "ReportDetails" : NotCheckedDetails(PolicyId),
     "RequirementMet" : false
 }] {
-    PolicyId := "MS.SHAREPOINT.1.2v1"
+    PolicyId := "MS.SHAREPOINT.1.2v0.1"
     input.OneDrive_PnP_Flag
 }
 #--
 
 #
-# MS.SHAREPOINT.1.3v1
+# MS.SHAREPOINT.1.3v0.1
 #--
 
 # SharingDomainRestrictionMode == 0 Unchecked
@@ -90,7 +90,7 @@ Domainlist(Policy) := Description if {
 }
 
 tests[{
-    "PolicyId" : "MS.SHAREPOINT.1.3v1",
+    "PolicyId" : "MS.SHAREPOINT.1.3v0.1",
     "Criticality" : "Shall",
     "Commandlet" : ["Get-SPOTenant", "Get-PnPTenant"],
     "ActualValue" : [Policy.SharingDomainRestrictionMode, Policy.SharingCapability],
@@ -104,12 +104,12 @@ tests[{
 #--
 
 #
-# MS.SHAREPOINT.1.4v1
+# MS.SHAREPOINT.1.4v0.1
 #--
 
 
 tests[{
-    "PolicyId" : "MS.SHAREPOINT.1.4v1",
+    "PolicyId" : "MS.SHAREPOINT.1.4v0.1",
     "Criticality" : "Shall",
     "Commandlet" : ["Get-SPOTenant", "Get-PnPTenant"],
     "ActualValue" : [Policy.RequireAcceptingAccountMatchInvitedAccount, Policy.SharingCapability],
@@ -127,14 +127,14 @@ tests[{
 ###################
 
 #
-# MS.SHAREPOINT.2.1v1
+# MS.SHAREPOINT.2.1v0.1
 #--
 
 # DefaultSharingLinkType == 1 for Specific People
 # DefaultSharingLinkType == 2 for Only people in your organization
 
 tests[{
-    "PolicyId" : "MS.SHAREPOINT.2.1v1",
+    "PolicyId" : "MS.SHAREPOINT.2.1v0.1",
     "Criticality" : "Shall",
     "Commandlet" : ["Get-SPOTenant", "Get-PnPTenant"],
     "ActualValue" : [Policy.DefaultSharingLinkType],
@@ -147,14 +147,14 @@ tests[{
 #--
 
 #
-# MS.SHAREPOINT.2.2v1
+# MS.SHAREPOINT.2.2v0.1
 #--
 
 # SPO_tenant - DefaultLinkPermission
 # 1 view 2 edit
 
 tests[{
-    "PolicyId" : "MS.SHAREPOINT.2.2v1",
+    "PolicyId" : "MS.SHAREPOINT.2.2v0.1",
     "Criticality" : "Shall",
     "Commandlet" : ["Get-SPOTenant", "Get-PnPTenant"],
     "ActualValue" : [Policy.DefaultLinkPermission],
@@ -170,7 +170,7 @@ tests[{
 ###################
 
 #
-# MS.SHAREPOINT.3.1v1
+# MS.SHAREPOINT.3.1v0.1
 #--
 
 ExternalUserExpireInDays(Policy) := [ErrMsg, Status] if {
@@ -214,7 +214,7 @@ ExternalUserExpireInDays(Policy) := [ErrMsg, Status] if {
 }
 
 tests[{
-    "PolicyId" : "MS.SHAREPOINT.3.1v1",
+    "PolicyId" : "MS.SHAREPOINT.3.1v0.1",
     "Criticality" : "Should",
     "Commandlet" : ["Get-SPOTenant", "Get-PnPTenant"],
     "ActualValue" : [Policy.SharingCapability, Policy.RequireAnonymousLinksExpireInDays],
@@ -227,7 +227,7 @@ tests[{
 #--
 
 #
-# MS.SHAREPOINT.3.2v1
+# MS.SHAREPOINT.3.2v0.1
 
 FileAndFolderPermission(Policy) := Description if {
     Policy.FileAnonymousLinkType == 1
@@ -254,7 +254,7 @@ FileAndFolderPermission(Policy) := Description if {
 }
 
 tests[{
-    "PolicyId" : "MS.SHAREPOINT.3.2v1",
+    "PolicyId" : "MS.SHAREPOINT.3.2v0.1",
     "Criticality" : "Should",
     "Commandlet" : ["Get-SPOTenant", "Get-PnPTenant"],
     "ActualValue" : [Policy.FileAnonymousLinkType, Policy.FolderAnonymousLinkType],
@@ -275,13 +275,13 @@ tests[{
     "ReportDetails" : NotCheckedDetails(PolicyId),
     "RequirementMet" : false
 }] {
-    PolicyId := "MS.SHAREPOINT.3.2v1"
+    PolicyId := "MS.SHAREPOINT.3.2v0.1"
     input.OneDrive_PnP_Flag
 }
 #--
 
 #
-# MS.SHAREPOINT.3.3v1
+# MS.SHAREPOINT.3.3v0.1
 #--
 
 ExpirationTimersVerificationCode(Policy) := [ErrMsg, Status] if {
@@ -322,7 +322,7 @@ ExpirationTimersVerificationCode(Policy) := [ErrMsg, Status] if {
     Status := false
 }
 tests[{
-    "PolicyId" : "MS.SHAREPOINT.3.3v1",
+    "PolicyId" : "MS.SHAREPOINT.3.3v0.1",
     "Criticality" : "Should",
     "Commandlet" : ["Get-SPOTenant", "Get-PnPTenant"],
     "ActualValue" : [Policy.SharingCapability, Policy.EmailAttestationRequired, Policy.EmailAttestationReAuthDays],
@@ -338,7 +338,7 @@ tests[{
 ###################
 
 #
-# MS.SHAREPOINT.4.1v1
+# MS.SHAREPOINT.4.1v0.1
 #--
 
 # At this time we are unable to test for running custom scripts on personal sites
@@ -351,20 +351,20 @@ tests[{
     "ReportDetails" : NotCheckedDetails(PolicyId),
     "RequirementMet" : false
 }] {
-    PolicyId := "MS.SHAREPOINT.4.1v1"
+    PolicyId := "MS.SHAREPOINT.4.1v0.1"
     true
 }
 #--
 
 #
-# MS.SHAREPOINT.4.2v1
+# MS.SHAREPOINT.4.2v0.1
 #--
 
 # 1 == Allow users to run custom script on self-service created sites
 # 2 == Prevent users from running custom script on self-service created sites
 
 tests[{
-    "PolicyId" : "MS.SHAREPOINT.4.2v1",
+    "PolicyId" : "MS.SHAREPOINT.4.2v0.1",
     "Criticality" : "Shall",
     "Commandlet" : ["Get-SPOSite", "Get-PnPTenantSite"],
     "ActualValue" : [Policy.DenyAddAndCustomizePages],

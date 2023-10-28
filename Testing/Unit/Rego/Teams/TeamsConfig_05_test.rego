@@ -2,10 +2,10 @@ package teams
 import future.keywords
 
 #--
-# MS.TEAMS.5.1v1
+# MS.TEAMS.5.1v0.1
 #--
 test_DefaultCatalogAppsType_Correct_V1 if {
-    PolicyId := "MS.TEAMS.5.1v1"
+    PolicyId := "MS.TEAMS.5.1v0.1"
 
     Output := tests with input as {
         "app_policies": [
@@ -24,7 +24,7 @@ test_DefaultCatalogAppsType_Correct_V1 if {
 }
 
 test_DefaultCatalogAppsType_Correct_V2 if {
-    PolicyId := "MS.TEAMS.5.1v1"
+    PolicyId := "MS.TEAMS.5.1v0.1"
 
     Output := tests with input as {
         "app_policies": [
@@ -43,7 +43,7 @@ test_DefaultCatalogAppsType_Correct_V2 if {
 }
 
 test_DefaultCatalogAppsType_Incorrect_V1 if {
-    PolicyId := "MS.TEAMS.5.1v1"
+    PolicyId := "MS.TEAMS.5.1v0.1"
 
     Output := tests with input as {
         "app_policies": [
@@ -62,7 +62,7 @@ test_DefaultCatalogAppsType_Incorrect_V1 if {
 }
 
 test_DefaultCatalogAppsType_Incorrect_V2 if {
-    PolicyId := "MS.TEAMS.5.1v1"
+    PolicyId := "MS.TEAMS.5.1v0.1"
 
     Output := tests with input as {
         "app_policies": [
@@ -81,7 +81,7 @@ test_DefaultCatalogAppsType_Incorrect_V2 if {
 }
 
 test_DefaultCatalogAppsType_Multiple if {
-    PolicyId := "MS.TEAMS.5.1v1"
+    PolicyId := "MS.TEAMS.5.1v0.1"
 
     Output := tests with input as {
         "app_policies": [
@@ -111,10 +111,10 @@ test_DefaultCatalogAppsType_Multiple if {
 #--
 
 #--
-# MS.TEAMS.5.2v1
+# MS.TEAMS.5.2v0.1
 #--
 test_GlobalCatalogAppsType_Correct_V1 if {
-    PolicyId := "MS.TEAMS.5.2v1"
+    PolicyId := "MS.TEAMS.5.2v0.1"
 
     Output := tests with input as {
         "app_policies": [
@@ -133,7 +133,7 @@ test_GlobalCatalogAppsType_Correct_V1 if {
 }
 
 test_GlobalCatalogAppsType_Correct_V2 if {
-    PolicyId := "MS.TEAMS.5.2v1"
+    PolicyId := "MS.TEAMS.5.2v0.1"
 
     Output := tests with input as {
         "app_policies": [
@@ -152,7 +152,7 @@ test_GlobalCatalogAppsType_Correct_V2 if {
 }
 
 test_GlobalCatalogAppsType_Incorrect_V1 if {
-    PolicyId := "MS.TEAMS.5.2v1"
+    PolicyId := "MS.TEAMS.5.2v0.1"
 
     Output := tests with input as {
         "app_policies": [
@@ -171,7 +171,7 @@ test_GlobalCatalogAppsType_Incorrect_V1 if {
 }
 
 test_GlobalCatalogAppsType_Incorrect_V2 if {
-    PolicyId := "MS.TEAMS.5.2v1"
+    PolicyId := "MS.TEAMS.5.2v0.1"
 
     Output := tests with input as {
         "app_policies": [
@@ -190,7 +190,7 @@ test_GlobalCatalogAppsType_Incorrect_V2 if {
 }
 
 test_GlobalCatalogAppsType_Multiple if {
-    PolicyId := "MS.TEAMS.5.2v1"
+    PolicyId := "MS.TEAMS.5.2v0.1"
 
     Output := tests with input as {
         "app_policies": [
@@ -220,10 +220,10 @@ test_GlobalCatalogAppsType_Multiple if {
 #--
 
 #--
-# MS.TEAMS.5.3v1
+# MS.TEAMS.5.3v0.1
 #--
 test_PrivateCatalogAppsType_Correct_V1 if {
-    PolicyId := "MS.TEAMS.5.3v1"
+    PolicyId := "MS.TEAMS.5.3v0.1"
 
     Output := tests with input as {
         "app_policies": [
@@ -242,7 +242,7 @@ test_PrivateCatalogAppsType_Correct_V1 if {
 }
 
 test_PrivateCatalogAppsType_Correct_V2 if {
-    PolicyId := "MS.TEAMS.5.3v1"
+    PolicyId := "MS.TEAMS.5.3v0.1"
 
     Output := tests with input as {
         "app_policies": [
@@ -261,7 +261,7 @@ test_PrivateCatalogAppsType_Correct_V2 if {
 }
 
 test_PrivateCatalogAppsType_Incorrect_V1 if {
-    PolicyId := "MS.TEAMS.5.3v1"
+    PolicyId := "MS.TEAMS.5.3v0.1"
 
     Output := tests with input as {
         "app_policies": [
@@ -280,7 +280,7 @@ test_PrivateCatalogAppsType_Incorrect_V1 if {
 }
 
 test_PrivateCatalogAppsType_Incorrect_V2 if {
-    PolicyId := "MS.TEAMS.5.3v1"
+    PolicyId := "MS.TEAMS.5.3v0.1"
 
     Output := tests with input as {
         "app_policies": [
@@ -299,7 +299,7 @@ test_PrivateCatalogAppsType_Incorrect_V2 if {
 }
 
 test_PrivateCatalogAppsType_Multiple if {
-    PolicyId := "MS.TEAMS.5.3v1"
+    PolicyId := "MS.TEAMS.5.3v0.1"
 
     Output := tests with input as {
         "app_policies": [
