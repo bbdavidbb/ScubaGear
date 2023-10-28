@@ -57,10 +57,10 @@ forwarding rules to exfiltrate data to external recipients.
 
 ### Policies
 
-#### MS.EXO.1.1v0.1
+#### MS.EXO.1.1v1
 Automatic forwarding to external domains SHALL be disabled.
 
-<!--Policy: MS.EXO.1.1v0.1; Criticality: SHALL -->
+<!--Policy: MS.EXO.1.1v1; Criticality: SHALL -->
 - _Rationale:_ Adversaries can use automatic forwarding to gain
 persistent access to a victim's email. Disabling forwarding to
 external domains prevents this technique when the adversary is
@@ -80,7 +80,7 @@ internal forwarding.
 
 ### Implementation
 
-#### MS.EXO.1.1v0.1 instructions:
+#### MS.EXO.1.1v1 instructions:
 To disallow automatic forwarding to external domains:
 
 1.  Sign in to the **Exchange admin center**.
@@ -110,17 +110,17 @@ points.
 
 ### Policies
 
-#### MS.EXO.2.1v0.1
+#### MS.EXO.2.1v1
 A list of approved IP addresses for sending mail SHALL be maintained.
 
-<!--Policy: MS.EXO.2.1v0.1; Criticality: SHALL -->
+<!--Policy: MS.EXO.2.1v1; Criticality: SHALL -->
 - _Rationale:_ Failing to maintain an accurate list of authorized IP addresses may result in spoofed email messages or failure to deliver legitimate messages when SPF is enabled.  Maintaining such a list ensures that unauthorized servers sending spoofed messages can be detected, and permits message delivery from legitimate senders.
 - _Last modified:_ June 2023
 
-#### MS.EXO.2.2v0.1
+#### MS.EXO.2.2v1
 An SPF policy SHALL be published for each domain, designating only these addresses as approved senders.
 
-<!--Policy: MS.EXO.2.2v0.1; Criticality: SHALL -->
+<!--Policy: MS.EXO.2.2v1; Criticality: SHALL -->
 - _Rationale:_ An adversary may modify the `FROM` field
 of an email such that it appears to be a legitimate email sent by an
 agency, facilitating phishing attacks. Publishing an SPF policy for each agency domain mitigates forged `FROM` fields by providing a means for recipients to detect emails spoofed in this way.  SPF is required for federal, executive branch, departments and agencies by Binding Operational Directive 18-01, “Enhance Email and Web Security”.
@@ -147,12 +147,12 @@ agency, facilitating phishing attacks. Publishing an SPF policy for each agency 
 
 ### Implementation
 
-#### MS.EXO.2.1v0.1 instructions:
+#### MS.EXO.2.1v1 instructions:
 Identify any approved senders specific to your agency.
 Additionally, see [External DNS records required for SPF](https://learn.microsoft.com/en-us/microsoft-365/enterprise/external-domain-name-system-records?view=o365-worldwide#external-dns-records-required-for-spf) for
 inclusions required for Microsoft to send email on behalf of your domain.
 
-#### MS.EXO.2.2v0.1 instructions:
+#### MS.EXO.2.2v1 instructions:
 SPF is not configured through the Exchange admin center, but rather via
 DNS records hosted by the agency’s domain. Thus, the exact steps needed
 to set up SPF varies from agency to agency. See [Add or edit an SPF TXT record to help prevent email spam (Outlook, Exchange Online) \| Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider?view=o365-worldwide#add-or-edit-an-spf-txt-record-to-help-prevent-email-spam-outlook-exchange-online) for more details.
@@ -173,7 +173,7 @@ the IP addresses listed by the policy for "spf.protection.outlook.com" are
 the only approved senders for "example.onmicrosoft.com." These IPs can be determined
 via an additional SPF lookup, this time for "spf.protection.outlook.com." Ensure
 the IP addresses listed as approved senders for your domain are those identified for
-MS.EXO.2.1v10.1 See [SPF TXT record syntax for Microsoft 365 \| Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-365/security/office-365-security/email-authentication-anti-spoofing?view=o365-worldwide#spf-txt-record-syntax-for-microsoft-365) for a more in-depth discussion
+MS.EXO.2.1v11 See [SPF TXT record syntax for Microsoft 365 \| Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-365/security/office-365-security/email-authentication-anti-spoofing?view=o365-worldwide#spf-txt-record-syntax-for-microsoft-365) for a more in-depth discussion
 SPF record syntax.
 
 ## 3. DomainKeys Identified Mail
@@ -186,10 +186,10 @@ Exchange Online Protection (EOP) features include DKIM signing capabilities.
 
 ### Policies
 
-#### MS.EXO.3.1v0.1
+#### MS.EXO.3.1v1
 DKIM SHOULD be enabled for all domains.
 
-<!--Policy: MS.EXO.3.1v0.1; Criticality: SHOULD -->
+<!--Policy: MS.EXO.3.1v1; Criticality: SHOULD -->
 - _Rationale:_ An adversary may modify the `FROM` field
 of an email such that it appears to be a legitimate email sent by an
 agency, facilitating phishing attacks. Enabling DKIM is another means for
@@ -220,7 +220,7 @@ recipients to detect spoofed emails and verify the integrity of email content.
 
 ### Implementation
 
-#### MS.EXO.3.1v0.1 instructions:
+#### MS.EXO.3.1v1 instructions:
 1. To enable DKIM, follow the instructions listed on [Steps to Create,
 enable and disable DKIM from Microsoft 365 Defender portal \| Microsoft
 Learn](https://learn.microsoft.com/en-us/microsoft-365/security/office-365-security/email-authentication-dkim-configure?view=o365-worldwide#steps-to-create-enable-and-disable-dkim-from-microsoft-365-defender-portal).
@@ -234,10 +234,10 @@ sent from your domain that fail SPF and DKIM checks.
 
 ### Policies
 
-#### MS.EXO.4.1v0.1
+#### MS.EXO.4.1v1
 A DMARC policy SHALL be published for every second-level domain.
 
-<!--Policy: MS.EXO.4.1v0.1; Criticality: SHALL -->
+<!--Policy: MS.EXO.4.1v1; Criticality: SHALL -->
 - _Rationale:_ Without a DMARC policy available for each domain, recipients
 may improperly handle SPF and DKIM failures, possibly enabling spoofed
 emails to reach end users' mailboxes. By publishing DMARC records at the
@@ -245,19 +245,19 @@ second-level domain, the second-level domains and all subdomains will be
 protected.
 - _Last modified:_ June 2023
 
-#### MS.EXO.4.2v0.1
+#### MS.EXO.4.2v1
 The DMARC message rejection option SHALL be p=reject.
 
-<!--Policy: MS.EXO.4.2v0.1; Criticality: SHALL -->
+<!--Policy: MS.EXO.4.2v1; Criticality: SHALL -->
 - _Rationale:_ Of the three policy options (i.e., none, quarantine, and reject),
 reject provides the strongest protection. Reject is the level of protection
 required by BOD 18-01 for federal, executive branch, departments and agencies.
 - _Last modified:_ June 2023
 
-#### MS.EXO.4.3v0.1
+#### MS.EXO.4.3v1
 The DMARC point of contact for aggregate reports SHALL include `reports@dmarc.cyber.dhs.gov`.
 
-<!--Policy: MS.EXO.4.3v0.1; Criticality: SHALL -->
+<!--Policy: MS.EXO.4.3v1; Criticality: SHALL -->
 - _Rationale:_ Email spoofing attempts are not inherently visible to domain
 owners. DMARC provides a mechanism to receive reports of spoofing attempts.
 Including <reports@dmarc.cyber.dhs.gov> as a point of contact for these reports
@@ -268,10 +268,10 @@ branch, departments and agencies.
 - _Note:_ Only federal, executive branch, departments and agencies should
           include this email address in their DMARC record.
 
-#### MS.EXO.4.4v0.1
+#### MS.EXO.4.4v1
 An agency point of contact SHOULD be included for aggregate and failure reports.
 
-<!--Policy: MS.EXO.4.4v0.1; Criticality: SHOULD -->
+<!--Policy: MS.EXO.4.4v1; Criticality: SHOULD -->
 - _Rationale:_ Email spoofing attempts are not inherently visible to domain
 owners. DMARC provides a mechanism to receive reports of spoofing attempts.
 Including an agency point of contact gives the agency insight into attempts
@@ -301,7 +301,7 @@ to spoof their domains.
 
 ### Implementation
 
-#### MS.EXO.4.1v0.1 instructions:
+#### MS.EXO.4.1v1 instructions:
 DMARC is not configured through the Exchange admin center, but rather via
 DNS records hosted by the agency’s domain. As such, implementation varies
 depending on how an agency manages its DNS records. See [Form the DMARC TXT record for your domain \| Microsoft
@@ -328,15 +328,15 @@ SPF/DKIM checks are to be rejected and aggregate reports sent to
 reports@dmarc.cyber.dhs.gov and reports@example.com. Failure reports will be
 sent to reports@example.com.
 
-#### MS.EXO.4.2v0.1 instructions:
-See [MS.EXO.4.1v0.1 instructions](#msexo41v1-instructions) for an overview of how to publish and check a DMARC record. Ensure the record published includes `p=reject`.
+#### MS.EXO.4.2v1 instructions:
+See [MS.EXO.4.1v1 instructions](#msexo41v1-instructions) for an overview of how to publish and check a DMARC record. Ensure the record published includes `p=reject`.
 
-#### MS.EXO.4.3v0.1 instructions:
-See [MS.EXO.4.1v0.1 instructions](#msexo41v1-instructions) for an overview of how to publish and check a DMARC record. Ensure the record published includes <reports@dmarc.cyber.dhs.gov>
+#### MS.EXO.4.3v1 instructions:
+See [MS.EXO.4.1v1 instructions](#msexo41v1-instructions) for an overview of how to publish and check a DMARC record. Ensure the record published includes <reports@dmarc.cyber.dhs.gov>
 as one of the emails for the `rua` field.
 
-#### MS.EXO.4.4v0.1 instructions:
-See [MS.EXO.4.1v0.1 instructions](#msexo41v1-instructions) for an overview of how to publish and check a DMARC record. Ensure the record published includes a point of contact
+#### MS.EXO.4.4v1 instructions:
+See [MS.EXO.4.1v1 instructions](#msexo41v1-instructions) for an overview of how to publish and check a DMARC record. Ensure the record published includes a point of contact
 specific to your agency, in addition to <reports@dmarc.cyber.dhs.gov>
 as one of the emails for the `rua` field and only one or more agency-defined points
 of contact for the `ruf` field.
@@ -353,10 +353,10 @@ SMTP Auth needs to be enabled for any use case.
 
 ### Policies
 
-#### MS.EXO.5.1v0.1
+#### MS.EXO.5.1v1
 SMTP AUTH SHALL be disabled.
 
-<!--Policy: MS.EXO.5.1v0.1; Criticality: SHALL -->
+<!--Policy: MS.EXO.5.1v1; Criticality: SHALL -->
 - _Rationale:_ SMTP AUTH is not used or needed by modern email clients.
 Therefore, disabling it as the global default conforms to the principle of
 least functionality. SMTP AUTH is required for POP3 and IMAP4 clients. As
@@ -381,7 +381,7 @@ per-mailbox basis when necessary.
 
 ### Implementation
 
-#### MS.EXO.5.1v0.1 instructions:
+#### MS.EXO.5.1v1 instructions:
 
 To disable SMTP AUTH for the organization:
 
@@ -412,19 +412,19 @@ the following policies.
 
 ### Policies
 
-#### MS.EXO.6.1v0.1
+#### MS.EXO.6.1v1
 Contact folders SHALL NOT be shared with all domains.
 
-<!--Policy: MS.EXO.6.1v0.1; Criticality: SHALL -->
+<!--Policy: MS.EXO.6.1v1; Criticality: SHALL -->
 - _Rationale:_ Contact folders may contain information that should not be shared by default with all domains. Disabling sharing with all domains closes an avenue for data exfiltration while still allowing
 for specific legitimate use as needed.
 - _Last modified:_ June 2023
 - _Note:_ Contact folders MAY be shared with specific domains.
 
-#### MS.EXO.6.2v0.1
+#### MS.EXO.6.2v1
 Calendar details SHALL NOT be shared with all domains.
 
-<!--Policy: MS.EXO.6.2v0.1; Criticality: SHALL -->
+<!--Policy: MS.EXO.6.2v1; Criticality: SHALL -->
 - _Rationale:_ Calendar details may contain information that should not be shared by default with all domains. Disabling sharing with all domains closes an avenue for data exfiltration while still allowing
 for legitimate use as needed.
 - _Last modified:_ June 2023
@@ -447,7 +447,7 @@ for legitimate use as needed.
 
 ### Implementation
 
-#### MS.EXO.6.1v0.1 instructions:
+#### MS.EXO.6.1v1 instructions:
 To restrict sharing with all domains:
 
 1. Sign in to the **Exchange admin center**.
@@ -460,11 +460,11 @@ To restrict sharing with all domains:
 
 5. For all sharing rules under all existing policies, ensure **Sharing with all domains** is not selected.
 
-#### MS.EXO.6.2v0.1 instructions:
+#### MS.EXO.6.2v1 instructions:
 
 To restrict sharing calendar details with all domains:
 
-1. Refer to step 5 in [MS.EXO.6.1v0.1 instructions](#msexo61v1-instructions) to implement
+1. Refer to step 5 in [MS.EXO.6.1v1 instructions](#msexo61v1-instructions) to implement
 this policy.
 
 ## 7. External Sender Warnings
@@ -475,10 +475,10 @@ the subject line with “\[External\].”
 
 ### Policies
 
-#### MS.EXO.7.1v0.1
+#### MS.EXO.7.1v1
 External sender warnings SHALL be implemented.
 
-<!--Policy: MS.EXO.7.1v0.1; Criticality: SHALL -->
+<!--Policy: MS.EXO.7.1v1; Criticality: SHALL -->
 - _Rationale:_ Phishing is an ever-present threat. Alerting the user when
 an email originates from outside their organization can encourage them
 to exercise increased caution, especially if it is an email they would
@@ -504,7 +504,7 @@ have expected to be sent from an internal sender.
 
 ### Implementation
 
-#### MS.EXO.7.1v0.1 instructions:
+#### MS.EXO.7.1v1 instructions:
 To create a mail flow rule to produce external sender warnings:
 
 1.  Sign in to the **Exchange admin center**.
@@ -558,17 +558,17 @@ required, guidance for configuring Microsoft’s DLP solution can be found in fo
 
 ### Policies
 
-#### MS.EXO.8.1v0.1
+#### MS.EXO.8.1v1
 A DLP solution SHALL be used. The selected DLP solution SHOULD offer services comparable to the native DLP solution offered by Microsoft.
 
-<!--Policy: MS.EXO.8.1v0.1; Criticality: SHALL -->
+<!--Policy: MS.EXO.8.1v1; Criticality: SHALL -->
 - _Rationale:_ Users may inadvertently disclose sensitive information to unauthorized individuals. A capable DLP solution should detect the presence of sensitive information in Exchange Online and block access to authorized entities.
 - _Last modified:_ June 2023
 
-#### MS.EXO.8.2v0.1
+#### MS.EXO.8.2v1
 The DLP solution SHALL protect PII and sensitive information, as defined by the agency. At a minimum, sharing credit card numbers, Taxpayer Identification Numbers (TIN), and Social Security numbers (SSN) via email SHALL be restricted.
 
-<!--Policy: MS.EXO.8.2v0.1; Criticality: SHALL -->
+<!--Policy: MS.EXO.8.2v1; Criticality: SHALL -->
 - _Rationale:_ Users may inadvertently share sensitive information with others who should not have access to it. Data loss prevention policies provide a way for agencies to detect and prevent unauthorized disclosures.
 - _Last modified:_ June 2023
 
@@ -582,10 +582,10 @@ The DLP solution SHALL protect PII and sensitive information, as defined by the 
 
 ### Implementation
 
-#### MS.EXO.8.1v0.1 instructions
+#### MS.EXO.8.1v1 instructions
 Any product meeting the requirements outlined in this baseline policy may be used. If the agency uses Microsoft Defender, see the following implementation steps for [DLP](./defender.md#implementation-3) for additional guidance.
 
-#### MS.EXO.8.2v0.1 instructions
+#### MS.EXO.8.2v1 instructions
 Any product meeting the requirements outlined in this baseline policy may be used. If the agency uses Microsoft Defender, see the following implementation steps for [protecting PII](./defender.md#msdefender41v1-instructions) for additional guidance.
 
 ## 9. Attachment File Type
@@ -606,10 +606,10 @@ Microsoft Defender can be found in the follow section of the CISA M365 Security 
 
 ### Policies
 
-#### MS.EXO.9.1v0.1
+#### MS.EXO.9.1v1
 Emails SHALL be filtered by the file types of included attachments. The selected filtering solution SHOULD offer services comparable to Microsoft Defender's Common Attachment Filter.
 
-<!--Policy: MS.EXO.9.1v0.1; Criticality: SHALL -->
+<!--Policy: MS.EXO.9.1v1; Criticality: SHALL -->
 - _Rationale:_ Malicious attachments often take the form of click-to-run files.
 Sharing high risk file types, when necessary, is better left to a means other
 than email; the dangers of allowing them to be sent over email outweigh
@@ -617,20 +617,20 @@ any potential benefits. Filtering email attachments based on file types can
 prevent spreading malware distributed via click-to-run email attachments.
 - _Last modified:_ June 2023
 
-#### MS.EXO.9.2v0.1
+#### MS.EXO.9.2v1
 The attachment filter SHOULD attempt to determine the true file type and assess the file extension.
 
-<!--Policy: MS.EXO.9.2v0.1; Criticality: SHOULD -->
+<!--Policy: MS.EXO.9.2v1; Criticality: SHOULD -->
 - _Rationale:_ Users can change a file extension at the end of a
 file name (e.g., notepad.exe to notepad.txt) to obscure the actual file type.
 Performing checks to verify the file type and whether it matches the designated
 file extension can help detect instances where the file extension was changed.
 - _Last modified:_ June 2023
 
-#### MS.EXO.9.3v0.1
+#### MS.EXO.9.3v1
 Disallowed file types SHALL be determined and set. At a minimum, click-to-run files SHOULD be blocked (e.g., .exe, .cmd, and .vbe).
 
-<!--Policy: MS.EXO.9.3v0.1; Criticality: SHALL -->
+<!--Policy: MS.EXO.9.3v1; Criticality: SHALL -->
 - _Rationale:_ Malicious attachments often take the form of click-to-run files,
 though other file types can contain malicious content as well. As such,
 determining the full list of file types to block is left to each
@@ -647,21 +647,21 @@ organization, to be made in accordance with their risk tolerance.
 
 ### Implementation
 
-#### MS.EXO.9.1v0.1 instructions:
+#### MS.EXO.9.1v1 instructions:
 Any product meeting the requirements outlined in this baseline policy may be
 used. If the agency uses Microsoft Defender, see the following
 implementation steps for
 [enabling preset security policies](./defender.md#implementation), which
 include email filtering based on attachment file type.
 
-#### MS.EXO.9.2v0.1 instructions:
+#### MS.EXO.9.2v1 instructions:
 Any product meeting the requirements outlined in this baseline policy may be
 used. If the agency uses Microsoft Defender, see the following
 implementation steps for
 [enabling preset security policies](./defender.md#implementation), which
 attempt to determine the true file type and assess the file extension.
 
-#### MS.EXO.9.3v0.1 instructions:
+#### MS.EXO.9.3v1 instructions:
 Any product meeting the requirements outlined in this baseline policy may be
 used. If the agency uses Microsoft Defender, see the following
 implementation steps for
@@ -681,36 +681,36 @@ the solution selected by an agency should offer services comparable to
 those offered by Microsoft. If the agency uses Microsoft Defender to
 implement malware scanning, see the following policies of the CISA M365 Security Configuration Baseline for Defender for Office 365 for additional guidance.
 
-- [MS.DEFENDER.1.2v0.1 \| CISA M365 Security Configuration Baseline for Defender for Office 365](./defender.md#msdefender12v1)
+- [MS.DEFENDER.1.2v1 \| CISA M365 Security Configuration Baseline for Defender for Office 365](./defender.md#msdefender12v1)
   - All users SHALL be added to Exchange Online Protection in either the standard or strict preset security policy.
 
-- [MS.DEFENDER.1.3v0.1 \| CISA M365 Security Configuration Baseline for Defender for Office 365](./defender.md#msdefender13v1)
+- [MS.DEFENDER.1.3v1 \| CISA M365 Security Configuration Baseline for Defender for Office 365](./defender.md#msdefender13v1)
   - All users SHALL be added to Defender for Office 365 Protection in either the standard or strict preset security policy.
 
 ### Policies
 
-#### MS.EXO.10.1v0.1
+#### MS.EXO.10.1v1
 Emails SHALL be scanned for malware.
 
-<!--Policy: MS.EXO.10.1v0.1; Criticality: SHALL -->
+<!--Policy: MS.EXO.10.1v1; Criticality: SHALL -->
 - _Rationale:_ Email can be used as a mechanism for delivering malware.
 In many cases, malware can be detected through scanning, reducing
 the risk for end users.
 - _Last modified:_ June 2023
 
-#### MS.EXO.10.2v0.1
+#### MS.EXO.10.2v1
 Emails identified as containing malware SHALL be quarantined or dropped.
 
-<!--Policy: MS.EXO.10.2v0.1; Criticality: SHALL -->
+<!--Policy: MS.EXO.10.2v1; Criticality: SHALL -->
 - _Rationale:_ Email can be used as a mechanism for delivering malware.
 Preventing emails with known malware from reaching user mailboxes ensures
 users cannot interact with those emails.
 - _Last modified:_ June 2023
 
-#### MS.EXO.10.3v0.1
+#### MS.EXO.10.3v1
 Email scanning SHALL be capable of reviewing emails after delivery.
 
-<!--Policy: MS.EXO.10.3v0.1; Criticality: SHALL -->
+<!--Policy: MS.EXO.10.3v1; Criticality: SHALL -->
 - _Rationale:_ As known malware signatures are updated, it is possible
 for an email to be retroactively identified as containing malware after
 delivery. By scanning emails in cases like this, the number of emails
@@ -727,21 +727,21 @@ containing malware in any given user's mailbox can be reduced.
 
 ### Implementation
 
-#### MS.EXO.10.1v0.1 instructions:
+#### MS.EXO.10.1v1 instructions:
 Any product meeting the requirements outlined in this baseline policy may be
 used. If the agency uses Microsoft Defender, see the following
 implementation steps for
 [enabling preset security policies](./defender.md#implementation), which
 includes anti-malware protection.
 
-#### MS.EXO.10.2v0.1 instructions:
+#### MS.EXO.10.2v1 instructions:
 Any product meeting the requirements outlined in this baseline policy may be
 used. If the agency uses Microsoft Defender, see the following
 implementation steps for
 [enabling preset security policies](./defender.md#implementation), which
 includes anti-malware protection to quarantine malware in email.
 
-#### MS.EXO.10.3v0.1 instructions:
+#### MS.EXO.10.3v1 instructions:
 Any product meeting the requirements outlined in this baseline policy may be
 used. If the agency uses Microsoft Defender, see the following
 implementation steps for
@@ -769,7 +769,7 @@ policy group may be used. If the agency uses Exchange Online Protection
 Exchange Online mailboxes, see the following policy and section of the CISA
 M365 Security Configuration Baseline for Defender for Office 365.
 
-- [MS.DEFENDER.1.2v0.1 \| CISA M365 Security Configuration Baseline for Defender for Office 365](./defender.md#msdefender12v1).
+- [MS.DEFENDER.1.2v1 \| CISA M365 Security Configuration Baseline for Defender for Office 365](./defender.md#msdefender12v1).
   - All users SHALL be added to Exchange Online Protection in either the standard or strict preset security policy.
 
 EOP alone does not support impersonation protection, but this is provided through
@@ -779,30 +779,30 @@ Defender for Office 365. If using Defender for Office 365 for impersonation prot
 
 ### Policies
 
-#### MS.EXO.11.1v0.1
+#### MS.EXO.11.1v1
 Impersonation protection checks SHOULD be used.
 
-<!--Policy: MS.EXO.11.1v0.1; Criticality: SHOULD -->
+<!--Policy: MS.EXO.11.1v1; Criticality: SHOULD -->
 - _Rationale:_ Users might not be able to reliably identify phishing emails, especially
 if the `FROM` address is nearly indistinguishable from that of a known entity.
 By automatically identifying senders who appear to be impersonating known
 senders, the risk of a successful phishing attempt can be reduced.
 - _Last modified:_ June 2023
 
-#### MS.EXO.11.2v0.1
+#### MS.EXO.11.2v1
 User warnings, comparable to the user safety tips included with EOP, SHOULD be displayed.
 
-<!--Policy: MS.EXO.11.2v0.1; Criticality: SHOULD -->
+<!--Policy: MS.EXO.11.2v1; Criticality: SHOULD -->
 - _Rationale:_ Many tasks are better suited for automated processes, such as identifying
 unusual characters in the `FROM` address or identifying a first-time sender.
 User warnings can handle these tasks, reducing the burden on end users and the risk of
 successful phishing attempts.
 - _Last modified:_ June 2023
 
-#### MS.EXO.11.3v0.1
+#### MS.EXO.11.3v1
 The phishing protection solution SHOULD include an AI-based phishing detection tool comparable to EOP Mailbox Intelligence.
 
-<!--Policy: MS.EXO.11.3v0.1; Criticality: SHOULD -->
+<!--Policy: MS.EXO.11.3v1; Criticality: SHOULD -->
 - _Rationale:_ Phishing attacks can result in unauthorized data disclosure and unauthorized access. Using AI-based phishing detection tools to improve the detection rate of phishing attempts helps reduce the risk of successful phishing attacks.
 - _Last modified:_ June 2023
 
@@ -822,20 +822,20 @@ The phishing protection solution SHOULD include an AI-based phishing detection t
 
 ### Implementation
 
-#### MS.EXO.11.1v0.1 instructions:
+#### MS.EXO.11.1v1 instructions:
 Any product meeting the requirements outlined in this baseline policy may be
 used. If the agency uses Microsoft Defender, see the following
 implementation steps for
 [enabling impersonation protection](./defender.md#msdefender21v1-instructions).
 
-#### MS.EXO.11.2v0.1 instructions:
+#### MS.EXO.11.2v1 instructions:
 Any product meeting the requirements outlined in this baseline policy may be
 used. If the agency uses Microsoft Defender, see the following
 implementation steps for
 [enabling preset security policies](./defender.md#msdefender12v1) which
 includes user safety tips to warn users.
 
-#### MS.EXO.11.3v0.1 instructions:
+#### MS.EXO.11.3v1 instructions:
 Any product meeting the requirements outlined in this baseline policy may be
 used. If the agency uses Microsoft Defender, see the following
 implementation steps for
@@ -861,18 +861,18 @@ security mechanisms.
 
 ### Policies
 
-#### MS.EXO.12.1v0.1
+#### MS.EXO.12.1v1
 IP allow lists SHOULD NOT be created.
 
-<!--Policy: MS.EXO.12.1v0.1; Criticality: SHOULD -->
+<!--Policy: MS.EXO.12.1v1; Criticality: SHOULD -->
 - _Rationale:_ Messages sent from IP addresses on an allow list bypass important
 security mechanisms, including spam filtering and sender authentication checks.  Avoiding use of IP allow lists prevents potential threats from circumventing security mechanisms.
 - _Last modified:_ June 2023
 
-#### MS.EXO.12.2v0.1
+#### MS.EXO.12.2v1
 Safe lists SHOULD NOT be enabled.
 
-<!--Policy: MS.EXO.12.2v0.1; Criticality: SHOULD -->
+<!--Policy: MS.EXO.12.2v1; Criticality: SHOULD -->
 - _Rationale:_ Messages sent from allowed safe list addresses bypass important
 security mechanisms, including spam filtering and sender authentication checks.
 Avoiding use of safe lists prevents potential threats from circumventing
@@ -900,7 +900,7 @@ specific senders.
 
 ### Implementation
 
-#### MS.EXO.12.1v0.1 instructions:
+#### MS.EXO.12.1v1 instructions:
 To modify the connection filters, follow the instructions found on [Use
 the Microsoft 365 Defender portal to modify the default connection
 filter
@@ -923,7 +923,7 @@ policy](https://learn.microsoft.com/en-us/microsoft-365/security/office-365-secu
 
 8. Ensure **Turn on safe list** is not selected.
 
-#### MS.EXO.12.2v0.1 instructions:
+#### MS.EXO.12.2v1 instructions:
 
 1. Sign in to **Microsoft 365 Defender portal**.
 
@@ -954,10 +954,10 @@ this policy ensures it has not been inadvertently disabled.
 
 ### Policies
 
-#### MS.EXO.13.1v0.1
+#### MS.EXO.13.1v1
 Mailbox auditing SHALL be enabled.
 
-<!--Policy: MS.EXO.13.1v0.1; Criticality: SHALL -->
+<!--Policy: MS.EXO.13.1v1; Criticality: SHALL -->
 - _Rationale:_ Exchange online user accounts may be compromised or misused in some cases. Enabling mailbox auditing provides a valuable source of information to detect and respond to mailbox misuse.
 - _Last modified:_ June 2023
 
@@ -978,7 +978,7 @@ Mailbox auditing SHALL be enabled.
 
 ### Implementation
 
-#### MS.EXO.13.1v0.1 instructions:
+#### MS.EXO.13.1v1 instructions:
 
 Mailbox auditing can be managed from the Exchange Online PowerShell.
 Follow the instructions listed on [Manage mailbox auditing in Office
@@ -1014,31 +1014,31 @@ used. If the agency uses Microsoft Defender to meet this baseline policy
 group, see the following policy of the CISA M365 Security Configuration
 Baseline for Defender for Office 365.
 
-- [MS.DEFENDER.1.2v0.1 \| CISA M365 Security Configuration Baseline for Defender for Office 365](./defender.md#msdefender12v1)
+- [MS.DEFENDER.1.2v1 \| CISA M365 Security Configuration Baseline for Defender for Office 365](./defender.md#msdefender12v1)
   - All users SHALL be added to Exchange Online Protection in either the standard or strict preset security policy.
 
 ### Policies
 
-#### MS.EXO.14.1v0.1
+#### MS.EXO.14.1v1
 A spam filter SHALL be enabled. The filtering solution selected SHOULD offer services comparable to the native spam filtering offered by Microsoft.
 
-<!--Policy: MS.EXO.14.1v0.1; Criticality: SHALL -->
+<!--Policy: MS.EXO.14.1v1; Criticality: SHALL -->
 - _Rationale:_ Spam is a constant threat as junk mail can reduce user productivity, fill up mailboxes unnecessarily, and in some cases include malicious links or attachments.
 Filtering out spam reduces the workload burden on users, prevents filling up user mailboxes with junk mail, and reduces exposure to potentially malicious content.
 - _Last modified:_ June 2023
 
-#### MS.EXO.14.2v0.1
+#### MS.EXO.14.2v1
 Spam and high confidence spam SHALL be moved to either the junk email folder or the quarantine folder.
 
-<!--Policy: MS.EXO.14.2v0.1; Criticality: SHALL -->
+<!--Policy: MS.EXO.14.2v1; Criticality: SHALL -->
 - _Rationale:_ Spam is a constant threat as junk mail can reduce user productivity, fill up mailboxes unnecessarily, and in some cases include malicious links or attachments.
 Moving spam messages to a separate junk or quarantine folder helps users filter out spam while still giving them the ability to review messages, as needed, in case a message is filtered incorrectly.
 - _Last modified:_ June 2023
 
-#### MS.EXO.14.3v0.1
+#### MS.EXO.14.3v1
 Allowed domains SHALL NOT be added to inbound anti-spam protection policies.
 
-<!--Policy: MS.EXO.14.3v0.1; Criticality: SHALL -->
+<!--Policy: MS.EXO.14.3v1; Criticality: SHALL -->
 - _Rationale:_ Legitimate emails may be incorrectly filtered
 by spam protections. Adding allowed senders is an acceptable method of
 combating these false positives. Allowing an entire domain, especially
@@ -1057,7 +1057,7 @@ potentially unknown users to bypass spam protections.
 
 ### Implementation
 
-#### MS.EXO.14.1v0.1 instructions:
+#### MS.EXO.14.1v1 instructions:
 
 Any product meeting the requirements outlined in this baseline policy may be
 used. If the agency uses Microsoft Defender, see the following
@@ -1065,7 +1065,7 @@ implementation steps for
 [enabling preset security policies](./defender.md#msdefender12v1), which
 includes spam filtering.
 
-#### MS.EXO.14.2v0.1 instructions:
+#### MS.EXO.14.2v1 instructions:
 
 Any product meeting the requirements outlined in this baseline policy may be
 used. If the agency uses Microsoft Defender, see the following
@@ -1074,7 +1074,7 @@ implementation steps for
 includes spam filtering that moves high confidence spam to either the junk
  or quarantine folder.
 
-#### MS.EXO.14.3v0.1 instructions:
+#### MS.EXO.14.3v1 instructions:
 
 Any product meeting the requirements outlined in this baseline policy may be
 used. If the agency uses Microsoft Defender, see the following
@@ -1108,31 +1108,31 @@ Using Microsoft Defender is not strictly required for this purpose;
 any product fulfilling the requirements outlined in this baseline policy group may be used.
 If the agency uses Microsoft Defender for Office 365 to meet this baseline policy group, see the following policy of the CISA M365 Security Configuration Baseline for Defender for Office 365 for additional guidance.
 
-- [MS.DEFENDER.1.3v0.1 \| CISA M365 Security Configuration Baseline for Defender for Office 365](./defender.md#msdefender13v1).
+- [MS.DEFENDER.1.3v1 \| CISA M365 Security Configuration Baseline for Defender for Office 365](./defender.md#msdefender13v1).
   - All users SHALL be added to Defender for Office 365 Protection in either the standard or strict preset security policy.
 
 ### Policies
 
-#### MS.EXO.15.1v0.1
+#### MS.EXO.15.1v1
 URL comparison with a block-list SHOULD be enabled.
 
-<!--Policy: MS.EXO.15.1v0.1; Criticality: SHOULD -->
+<!--Policy: MS.EXO.15.1v1; Criticality: SHOULD -->
 - _Rationale:_ Users may be directed to malicious websites via links in email. Blocking access to known, malicious URLs can prevent users from accessing known malicious websites.
 - _Last modified:_ June 2023
 
-#### MS.EXO.15.2v0.1
+#### MS.EXO.15.2v1
 Direct download links SHOULD be scanned for malware.
 
-<!--Policy: MS.EXO.15.2v0.1; Criticality: SHOULD -->
+<!--Policy: MS.EXO.15.2v1; Criticality: SHOULD -->
 - _Rationale:_ URLs in emails may direct users to download and run malware.
 Scanning direct download links in real-time for known malware and blocking access can prevent
 users from infecting their devices.
 - _Last modified:_ June 2023
 
-#### MS.EXO.15.3v0.1
+#### MS.EXO.15.3v1
 User click tracking SHOULD be enabled.
 
-<!--Policy: MS.EXO.15.3v0.1; Criticality: SHOULD -->
+<!--Policy: MS.EXO.15.3v1; Criticality: SHOULD -->
 - _Rationale:_ Users may click on malicious links in emails, leading to compromise or unauthorized data disclosure. Enabling user click tracking lets agencies know if a malicious link may have been visited after the fact to help tailor a response to a potential incident.
 - _Last modified:_ June 2023
 
@@ -1146,7 +1146,7 @@ User click tracking SHOULD be enabled.
 
 ### Implementation
 
-#### MS.EXO.15.1v0.1 instructions:
+#### MS.EXO.15.1v1 instructions:
 
 Any product meeting the requirements outlined in this baseline policy may be
 used. If the agency uses Microsoft Defender for Office 365, see the following
@@ -1155,7 +1155,7 @@ implementation steps for
 includes Safe Links protections to scan URLs in email messages against a list
 of known, malicious links.
 
-#### MS.EXO.15.2v0.1 instructions:
+#### MS.EXO.15.2v1 instructions:
 
 Any product meeting the requirements outlined in this baseline policy may be
 used. If the agency uses Microsoft Defender for Office 365, see the following
@@ -1163,7 +1163,7 @@ implementation steps for
 [enabling preset security policies](./defender.md#msdefender13v1), which
 includes Safe Links protections to scan links to files for malware.
 
-#### MS.EXO.15.3v0.1 instructions:
+#### MS.EXO.15.3v1 instructions:
 
 Any product meeting the requirements outlined in this baseline policy may be
 used. If the agency uses Microsoft Defender for Office 365, see the following
@@ -1191,7 +1191,7 @@ for Defender for Office 365.
 
 ### Policies
 
-#### MS.EXO.16.1v0.1
+#### MS.EXO.16.1v1
 At a minimum, the following alerts SHALL be enabled:
 
   a. **Suspicious email sending patterns detected.**
@@ -1208,17 +1208,17 @@ At a minimum, the following alerts SHALL be enabled:
 
   g. **A potentially malicious URL click was detected.**
 
-<!--Policy: MS.EXO.16.1v0.1; Criticality: SHALL -->
+<!--Policy: MS.EXO.16.1v1; Criticality: SHALL -->
 - _Rationale:_ Potentially malicious or service impacting events may go
   undetected without a means of detecting these events.  Setting up a mechanism
   to alert administrators to the list of events above draws attention to them
   to ensure any impact to users and the agency are minimized.
 - _Last modified:_ June 2023
 
-#### MS.EXO.16.2v0.1
+#### MS.EXO.16.2v1
 The alerts SHOULD be sent to a monitored address or incorporated into a SIEM.
 
-<!--Policy: MS.EXO.16.2v0.1; Criticality: SHOULD -->
+<!--Policy: MS.EXO.16.2v1; Criticality: SHOULD -->
 - _Rationale:_ Suspicious or malicious events, if not resolved promptly, may
   have a greater impact to users and the agency.  Sending alerts to a
   monitored email address or security information and event management (SIEM)
@@ -1236,14 +1236,14 @@ The alerts SHOULD be sent to a monitored address or incorporated into a SIEM.
 
 ### Implementation
 
-#### MS.EXO.16.1v0.1 instructions:
+#### MS.EXO.16.1v1 instructions:
 
 Any product meeting the requirements outlined in this baseline policy may be
 used. If the agency uses Microsoft 365 alert policies, see the following implementation steps for
 [enabling alerts](./defender.md#msdefender51v1-instructions) for additional
 guidance.
 
-#### MS.EXO.16.2v0.1 instructions:
+#### MS.EXO.16.2v1 instructions:
 
 Any product meeting the requirements outlined in this baseline policy may be
 used. If the agency uses Microsoft 365 alert policies, see the following implementation steps to
@@ -1280,10 +1280,10 @@ Office 365.
 
 ### Policies
 
-#### MS.EXO.17.1v0.1
+#### MS.EXO.17.1v1
 Microsoft Purview Audit (Standard) logging SHALL be enabled.
 
-<!--Policy: MS.EXO.17.1v0.1; Criticality: SHALL -->
+<!--Policy: MS.EXO.17.1v1; Criticality: SHALL -->
 - _Rationale:_ Responding to incidents without detailed information about
 activities that took place slows response actions.  Enabling Microsoft
 Purview Audit (Standard) helps ensure agencies have visibility into user
@@ -1292,10 +1292,10 @@ government agencies by OMB M-21-31 (referred to therein by its former
 name, Unified Audit Logs).
 - _Last modified:_ June 2023
 
-#### MS.EXO.17.2v0.1
+#### MS.EXO.17.2v1
 Microsoft Purview Audit (Premium) logging SHALL be enabled.
 
-<!--Policy: MS.EXO.17.2v0.1; Criticality: SHALL -->
+<!--Policy: MS.EXO.17.2v1; Criticality: SHALL -->
 - _Rationale:_ Standard logging may not include relevant details necessary for
 visibility into user actions during an incident.  Enabling Microsoft Purview Audit
 (Premium) captures additional event types not included with Standard.
@@ -1308,10 +1308,10 @@ Furthermore, it is required for government agencies by OMB M-21-13 (referred to 
           Purview (Standard) may be sufficient for agencies to meet basic
           logging requirements.
 
-#### MS.EXO.17.3v0.1
+#### MS.EXO.17.3v1
 Audit logs SHALL be maintained for at least the minimum duration dictated by [OMB M-21-31 (Appendix C)](https://www.whitehouse.gov/wp-content/uploads/2021/08/M-21-31-Improving-the-Federal-Governments-Investigative-and-Remediation-Capabilities-Related-to-Cybersecurity-Incidents.pdf).
 
-<!--Policy: MS.EXO.17.3v0.1; Criticality: SHALL -->
+<!--Policy: MS.EXO.17.3v1; Criticality: SHALL -->
 - _Rationale:_ Audit logs may no longer be available when needed if they
 are not retained for a sufficient time.  Increased log retention time
 gives an agency the necessary visibility to investigate incidents that occurred
@@ -1337,17 +1337,17 @@ Audit Logs in the Cloud Azure log category.
 
 ### Implementation
 
-#### MS.EXO.17.1v0.1 instructions:
+#### MS.EXO.17.1v1 instructions:
 See the following implementation steps for enabling [Microsoft Purview
 (Standard)](./defender.md#msdefender61v1-instructions) for additional
 guidance.
 
-#### MS.EXO.17.1v0.1 instructions:
+#### MS.EXO.17.1v1 instructions:
 See the following implementation steps for enabling [Microsoft Purview
 (Premium)](./defender.md#msdefender62v1-instructions) for additional
 guidance.
 
-#### MS.EXO.17.1v0.1 instructions:
+#### MS.EXO.17.1v1 instructions:
 See the following implementation steps to
 [create an audit retention policy](./defender.md#msdefender62v1-instructions)
 for additional guidance.
