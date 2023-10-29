@@ -3,10 +3,10 @@ import future.keywords
 import data.report.utils.NotCheckedDetails
 
 #
-# MS.AAD.4.1v0.1
+# MS.AAD.4.1v1
 #--
 test_NotImplemented_Correct if {
-    PolicyId := "MS.AAD.4.1v0.1"
+    PolicyId := "MS.AAD.4.1v1"
 
     Output := tests with input as { }
 

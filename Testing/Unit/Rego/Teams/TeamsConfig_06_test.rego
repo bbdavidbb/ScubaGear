@@ -2,10 +2,10 @@ package teams
 import future.keywords
 
 #--
-# Policy MS.TEAMS.6.1v0.1
+# Policy MS.TEAMS.6.1v1
 #--
 test_3rdParty_Correct_V1 if {
-    PolicyId := "MS.TEAMS.6.1v0.1"
+    PolicyId := "MS.TEAMS.6.1v1"
 
     Output := tests with input as { }
 
@@ -17,10 +17,10 @@ test_3rdParty_Correct_V1 if {
 }
 
 #--
-# Policy MS.TEAMS.6.2v0.1
+# Policy MS.TEAMS.6.2v1
 #--
 test_3rdParty_Correct_V2 if {
-    PolicyId := "MS.TEAMS.6.2v0.1"
+    PolicyId := "MS.TEAMS.6.2v1"
 
     Output := tests with input as { }
 

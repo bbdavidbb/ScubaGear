@@ -2,10 +2,10 @@ package aad
 import future.keywords
 
 #
-# MS.AAD.5.1v0.1
+# MS.AAD.5.1v1
 #--
 test_AllowedToCreateApps_Correct if {
-    PolicyId := "MS.AAD.5.1v0.1"
+    PolicyId := "MS.AAD.5.1v1"
 
     Output := tests with input as {
         "authorization_policies" : [
@@ -26,7 +26,7 @@ test_AllowedToCreateApps_Correct if {
 }
 
 test_AllowedToCreateApps_Incorrect_V1 if {
-    PolicyId := "MS.AAD.5.1v0.1"
+    PolicyId := "MS.AAD.5.1v1"
 
     Output := tests with input as {
         "authorization_policies" : [
@@ -47,7 +47,7 @@ test_AllowedToCreateApps_Incorrect_V1 if {
 }
 
 test_AllowedToCreateApps_Incorrect_V2 if {
-    PolicyId := "MS.AAD.5.1v0.1"
+    PolicyId := "MS.AAD.5.1v1"
 
     Output := tests with input as {
         "authorization_policies" : [
@@ -75,10 +75,10 @@ test_AllowedToCreateApps_Incorrect_V2 if {
 #--
 
 #
-# MS.AAD.5.2v0.1
+# MS.AAD.5.2v1
 #--
 test_PermissionGrantPolicyIdsAssignedToDefaultUserRole_Correct if {
-    PolicyId := "MS.AAD.5.2v0.1"
+    PolicyId := "MS.AAD.5.2v1"
 
     Output := tests with input as {
         "authorization_policies" : [
@@ -97,7 +97,7 @@ test_PermissionGrantPolicyIdsAssignedToDefaultUserRole_Correct if {
 }
 
 test_PermissionGrantPolicyIdsAssignedToDefaultUserRole_Incorrect_V1 if {
-    PolicyId := "MS.AAD.5.2v0.1"
+    PolicyId := "MS.AAD.5.2v1"
 
     Output := tests with input as {
         "authorization_policies" : [
@@ -116,7 +116,7 @@ test_PermissionGrantPolicyIdsAssignedToDefaultUserRole_Incorrect_V1 if {
 }
 
 test_PermissionGrantPolicyIdsAssignedToDefaultUserRole_Incorrect_V2 if {
-    PolicyId := "MS.AAD.5.2v0.1"
+    PolicyId := "MS.AAD.5.2v1"
 
     Output := tests with input as {
         "authorization_policies" : [
@@ -140,10 +140,10 @@ test_PermissionGrantPolicyIdsAssignedToDefaultUserRole_Incorrect_V2 if {
 #--
 
 #
-# MS.AAD.5.3v0.1
+# MS.AAD.5.3v1
 #--
 test_IsEnabled_Correct if {
-    PolicyId := "MS.AAD.5.3v0.1"
+    PolicyId := "MS.AAD.5.3v1"
 
     Output := tests with input as {
         "admin_consent_policies" : [
@@ -162,7 +162,7 @@ test_IsEnabled_Correct if {
 }
 
 test_IsEnabled_Incorrect if {
-    PolicyId := "MS.AAD.5.3v0.1"
+    PolicyId := "MS.AAD.5.3v1"
 
     Output := tests with input as {
         "admin_consent_policies" : [
@@ -182,10 +182,10 @@ test_IsEnabled_Incorrect if {
 #--
 
 #
-# MS.AAD.5.4v0.1
+# MS.AAD.5.4v1
 #--
 test_Value_Correct_Lowercase if {
-    PolicyId := "MS.AAD.5.4v0.1"
+    PolicyId := "MS.AAD.5.4v1"
 
     Output := tests with input as {
         "directory_settings" : [
@@ -209,7 +209,7 @@ test_Value_Correct_Lowercase if {
 }
 
 test_Value_Correct_Uppercase if {
-    PolicyId := "MS.AAD.5.4v0.1"
+    PolicyId := "MS.AAD.5.4v1"
 
     Output := tests with input as {
         "directory_settings" : [
@@ -233,7 +233,7 @@ test_Value_Correct_Uppercase if {
 }
 
 test_Value_Incorrect_Lowercase if {
-    PolicyId := "MS.AAD.5.4v0.1"
+    PolicyId := "MS.AAD.5.4v1"
 
     Output := tests with input as {
         "directory_settings" : [
@@ -257,7 +257,7 @@ test_Value_Incorrect_Lowercase if {
 }
 
 test_Value_Incorrect_Uppercase if {
-    PolicyId := "MS.AAD.5.4v0.1"
+    PolicyId := "MS.AAD.5.4v1"
 
     Output := tests with input as {
         "directory_settings" : [

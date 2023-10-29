@@ -4,10 +4,10 @@ import data.report.utils.NotCheckedDetails
 
 
 #
-# MS.AAD.8.1v0.1
+# MS.AAD.8.1v1
 #--
 test_GuestUserRoleId_Correct_V1 if {
-    PolicyId := "MS.AAD.8.1v0.1"
+    PolicyId := "MS.AAD.8.1v1"
 
     Output := tests with input as {
         "authorization_policies" : [
@@ -26,7 +26,7 @@ test_GuestUserRoleId_Correct_V1 if {
 }
 
 test_GuestUserRoleId_Correct_V2 if {
-    PolicyId := "MS.AAD.8.1v0.1"
+    PolicyId := "MS.AAD.8.1v1"
 
     Output := tests with input as {
         "authorization_policies" : [
@@ -45,7 +45,7 @@ test_GuestUserRoleId_Correct_V2 if {
 }
 
 test_GuestUserRoleId_Incorrect_V1 if {
-    PolicyId := "MS.AAD.8.1v0.1"
+    PolicyId := "MS.AAD.8.1v1"
 
     Output := tests with input as {
         "authorization_policies" : [
@@ -64,7 +64,7 @@ test_GuestUserRoleId_Incorrect_V1 if {
 }
 
 test_GuestUserRoleId_Incorrect_V2 if {
-    PolicyId := "MS.AAD.8.1v0.1"
+    PolicyId := "MS.AAD.8.1v1"
 
     Output := tests with input as {
         "authorization_policies" : [
@@ -83,7 +83,7 @@ test_GuestUserRoleId_Incorrect_V2 if {
 }
 
 test_GuestUserRoleId_Incorrect_V3 if {
-    PolicyId := "MS.AAD.8.1v0.1"
+    PolicyId := "MS.AAD.8.1v1"
 
     Output := tests with input as {
         "authorization_policies" : [
@@ -106,10 +106,10 @@ test_GuestUserRoleId_Incorrect_V3 if {
 #--
 
 #
-# MS.AAD.8.2v0.1
+# MS.AAD.8.2v1
 #--
 test_AllowInvitesFrom_Correct if {
-    PolicyId := "MS.AAD.8.2v0.1"
+    PolicyId := "MS.AAD.8.2v1"
 
     Output := tests with input as {
         "authorization_policies" : [
@@ -128,7 +128,7 @@ test_AllowInvitesFrom_Correct if {
 }
 
 test_AllowInvitesFrom_Incorrect if {
-    PolicyId := "MS.AAD.8.2v0.1"
+    PolicyId := "MS.AAD.8.2v1"
 
     Output := tests with input as {
         "authorization_policies" : [
@@ -148,10 +148,10 @@ test_AllowInvitesFrom_Incorrect if {
 #--
 
 #
-# MS.AAD.8.3v0.1
+# MS.AAD.8.3v1
 #--
 test_NotImplemented_Correct if {
-    PolicyId := "MS.AAD.8.3v0.1"
+    PolicyId := "MS.AAD.8.3v1"
     Output := tests with input as { }
 
     RuleOutput := [Result | Result = Output[_]; Result.PolicyId == PolicyId]

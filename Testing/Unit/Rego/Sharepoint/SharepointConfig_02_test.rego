@@ -3,10 +3,10 @@ import future.keywords
 
 
 #
-# MS.SHAREPOINT.2.1v0.1
+# MS.SHAREPOINT.2.1v1
 #--
 test_DefaultSharingLinkType_Correct if {
-    PolicyId := "MS.SHAREPOINT.2.1v0.1"
+    PolicyId := "MS.SHAREPOINT.2.1v1"
 
     Output := tests with input as {
         "SPO_tenant": [
@@ -24,7 +24,7 @@ test_DefaultSharingLinkType_Correct if {
 }
 
 test_DefaultSharingLinkType_Incorrect if {
-    PolicyId := "MS.SHAREPOINT.2.1v0.1"
+    PolicyId := "MS.SHAREPOINT.2.1v1"
 
     Output := tests with input as {
         "SPO_tenant": [
@@ -43,10 +43,10 @@ test_DefaultSharingLinkType_Incorrect if {
 #--
 
 #
-# MS.SHAREPOINT.2.2v0.1
+# MS.SHAREPOINT.2.2v1
 #--
 test_DefaultLinkPermission_Correct if {
-    PolicyId := "MS.SHAREPOINT.2.2v0.1"
+    PolicyId := "MS.SHAREPOINT.2.2v1"
 
     Output := tests with input as {
         "SPO_tenant": [
@@ -64,7 +64,7 @@ test_DefaultLinkPermission_Correct if {
 }
 
 test_DefaultLinkPermission_Incorrect if {
-    PolicyId := "MS.SHAREPOINT.2.2v0.1"
+    PolicyId := "MS.SHAREPOINT.2.2v1"
 
     Output := tests with input as {
         "SPO_tenant": [

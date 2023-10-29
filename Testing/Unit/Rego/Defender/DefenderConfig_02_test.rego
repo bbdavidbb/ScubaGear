@@ -6,7 +6,7 @@ import future.keywords
 #--
 
 test_TargetedUsers_Correct_V1 if {
-    PolicyId := "MS.DEFENDER.2.1v0.1"
+    PolicyId := "MS.DEFENDER.2.1v1"
 
     Output := tests with input as {
         "anti_phish_policies": [
@@ -33,7 +33,7 @@ test_TargetedUsers_Correct_V1 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.2.1v0.1" : {
+                "MS.DEFENDER.2.1v1" : {
                     "SensitiveUsers" : [
                         "John Doe;jdoe@someemail.com",
                         "Jane Doe;jadoe@someemail.com"
@@ -51,7 +51,7 @@ test_TargetedUsers_Correct_V1 if {
 }
 
 test_TargetedUsers_Correct_V2 if {
-    PolicyId := "MS.DEFENDER.2.1v0.1"
+    PolicyId := "MS.DEFENDER.2.1v1"
 
     Output := tests with input as {
         "anti_phish_policies": [
@@ -78,7 +78,7 @@ test_TargetedUsers_Correct_V2 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.2.1v0.1" : {
+                "MS.DEFENDER.2.1v1" : {
                     "SensitiveUsers" : [
                         "John Doe;jdoe@someemail.com"
                     ]
@@ -95,7 +95,7 @@ test_TargetedUsers_Correct_V2 if {
 }
 
 test_TargetedUsers_Correct_V3 if {
-    PolicyId := "MS.DEFENDER.2.1v0.1"
+    PolicyId := "MS.DEFENDER.2.1v1"
 
     Output := tests with input as {
         "anti_phish_policies": [
@@ -122,7 +122,7 @@ test_TargetedUsers_Correct_V3 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.2.1v0.1" : {
+                "MS.DEFENDER.2.1v1" : {
                     "SensitiveUsers" : [
                         "John Doe;jdoe@someemail.com",
                         "Jane Doe;jadoe@someemail.com"
@@ -140,7 +140,7 @@ test_TargetedUsers_Correct_V3 if {
 }
 
 test_TargetedUsers_Incorrect_V1 if {
-    PolicyId := "MS.DEFENDER.2.1v0.1"
+    PolicyId := "MS.DEFENDER.2.1v1"
 
     Output := tests with input as {
         "anti_phish_policies": [
@@ -157,7 +157,7 @@ test_TargetedUsers_Incorrect_V1 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.2.1v0.1" : {
+                "MS.DEFENDER.2.1v1" : {
                     "SensitiveUsers" : [
                         "John Doe;jdoe@someemail.com",
                         "Jane Doe;jadoe@someemail.com"
@@ -175,7 +175,7 @@ test_TargetedUsers_Incorrect_V1 if {
 }
 
 test_TargetedUsers_Incorrect_V2 if {
-    PolicyId := "MS.DEFENDER.2.1v0.1"
+    PolicyId := "MS.DEFENDER.2.1v1"
 
     Output := tests with input as {
         "anti_phish_policies": [
@@ -192,7 +192,7 @@ test_TargetedUsers_Incorrect_V2 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.2.1v0.1" : {
+                "MS.DEFENDER.2.1v1" : {
                     "SensitiveUsers" : [
                         "John Doe;jdoe@someemail.com",
                         "Jane Doe;jadoe@someemail.com"
@@ -210,7 +210,7 @@ test_TargetedUsers_Incorrect_V2 if {
 }
 
 test_TargetedUsers_Incorrect_V3 if {
-    PolicyId := "MS.DEFENDER.2.1v0.1"
+    PolicyId := "MS.DEFENDER.2.1v1"
 
     Output := tests with input as {
         "anti_phish_policies": [
@@ -227,7 +227,7 @@ test_TargetedUsers_Incorrect_V3 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.2.1v0.1" : {
+                "MS.DEFENDER.2.1v1" : {
                     "SensitiveUsers" : [
                         "John Doe;jdoe@someemail.com",
                         "Jane Doe;jadoe@someemail.com"
@@ -245,7 +245,7 @@ test_TargetedUsers_Incorrect_V3 if {
 }
 
 test_TargetedUsers_Incorrect_V4 if {
-    PolicyId := "MS.DEFENDER.2.1v0.1"
+    PolicyId := "MS.DEFENDER.2.1v1"
 
     Output := tests with input as {
         "anti_phish_policies": [
@@ -272,7 +272,7 @@ test_TargetedUsers_Incorrect_V4 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.2.1v0.1" : {
+                "MS.DEFENDER.2.1v1" : {
                     "SensitiveUsers" : [
                         "John Doe;jdoe@someemail.com",
                         "Jane Doe;jadoe@someemail.com"
@@ -290,7 +290,7 @@ test_TargetedUsers_Incorrect_V4 if {
 }
 
 test_TargetedUsers_Incorrect_V5 if {
-    PolicyId := "MS.DEFENDER.2.1v0.1"
+    PolicyId := "MS.DEFENDER.2.1v1"
 
     Output := tests with input as {
         "anti_phish_policies": [
@@ -317,7 +317,7 @@ test_TargetedUsers_Incorrect_V5 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.2.1v0.1" : {
+                "MS.DEFENDER.2.1v1" : {
                     "SensitiveUsers" : [
                         "John Doe;jdoe@someemail.com",
                         "Jane Doe;jadoe@someemail.com"
@@ -335,7 +335,7 @@ test_TargetedUsers_Incorrect_V5 if {
 }
 
 test_TargetedUsers_Incorrect_V6 if {
-    PolicyId := "MS.DEFENDER.2.1v0.1"
+    PolicyId := "MS.DEFENDER.2.1v1"
 
     Output := tests with input as {
         "anti_phish_policies": [
@@ -361,7 +361,7 @@ test_TargetedUsers_Incorrect_V6 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.2.1v0.1" : {
+                "MS.DEFENDER.2.1v1" : {
                     "SensitiveUsers" : [
                         "John Doe;jdoe@someemail.com",
                         "Jane Doe;jadoe@someemail.com"
@@ -382,7 +382,7 @@ test_TargetedUsers_Incorrect_V6 if {
 # Policy 2
 #--
 test_AgencyDomains_Correct_V1 if {
-    PolicyId := "MS.DEFENDER.2.2v0.1"
+    PolicyId := "MS.DEFENDER.2.2v1"
 
     Output := tests with input as {
         "anti_phish_policies": [
@@ -409,7 +409,7 @@ test_AgencyDomains_Correct_V1 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.2.2v0.1" : {
+                "MS.DEFENDER.2.2v1" : {
                     "AgencyDomains" : [
                         "random.mail.example.com",
                         "random.example.com"
@@ -427,7 +427,7 @@ test_AgencyDomains_Correct_V1 if {
 }
 
 test_AgencyDomains_Correct_V2 if {
-    PolicyId := "MS.DEFENDER.2.2v0.1"
+    PolicyId := "MS.DEFENDER.2.2v1"
 
     Output := tests with input as {
         "anti_phish_policies": [
@@ -454,7 +454,7 @@ test_AgencyDomains_Correct_V2 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.2.2v0.1" : {
+                "MS.DEFENDER.2.2v1" : {
                     "AgencyDomains" : [
                         "random.mail.example.com"
                     ]
@@ -471,7 +471,7 @@ test_AgencyDomains_Correct_V2 if {
 }
 
 test_AgencyDomains_Incorrect_V1 if {
-    PolicyId := "MS.DEFENDER.2.2v0.1"
+    PolicyId := "MS.DEFENDER.2.2v1"
 
     Output := tests with input as {
         "anti_phish_policies": [
@@ -488,7 +488,7 @@ test_AgencyDomains_Incorrect_V1 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.2.2v0.1" : {
+                "MS.DEFENDER.2.2v1" : {
                     "AgencyDomains" : [
                         "random.mail.example.com",
                         "random.example.com"
@@ -506,7 +506,7 @@ test_AgencyDomains_Incorrect_V1 if {
 }
 
 test_AgencyDomains_Incorrect_V2 if {
-    PolicyId := "MS.DEFENDER.2.2v0.1"
+    PolicyId := "MS.DEFENDER.2.2v1"
 
     Output := tests with input as {
         "anti_phish_policies": [
@@ -523,7 +523,7 @@ test_AgencyDomains_Incorrect_V2 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.2.2v0.1" : {
+                "MS.DEFENDER.2.2v1" : {
                     "AgencyDomains" : [
                         "random.mail.example.com",
                         "random.example.com"
@@ -541,7 +541,7 @@ test_AgencyDomains_Incorrect_V2 if {
 }
 
 test_AgencyDomains_Incorrect_V3 if {
-    PolicyId := "MS.DEFENDER.2.2v0.1"
+    PolicyId := "MS.DEFENDER.2.2v1"
 
     Output := tests with input as {
         "anti_phish_policies": [
@@ -558,7 +558,7 @@ test_AgencyDomains_Incorrect_V3 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.2.2v0.1" : {
+                "MS.DEFENDER.2.2v1" : {
                     "AgencyDomains" : [
                         "random.mail.example.com",
                         "random.example.com"
@@ -576,7 +576,7 @@ test_AgencyDomains_Incorrect_V3 if {
 }
 
 test_AgencyDomains_Incorrect_V4 if {
-    PolicyId := "MS.DEFENDER.2.2v0.1"
+    PolicyId := "MS.DEFENDER.2.2v1"
 
     Output := tests with input as {
         "anti_phish_policies": [
@@ -603,7 +603,7 @@ test_AgencyDomains_Incorrect_V4 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.2.2v0.1" : {
+                "MS.DEFENDER.2.2v1" : {
                     "AgencyDomains" : [
                         "random.mail.example.com",
                         "random.example.com"
@@ -621,7 +621,7 @@ test_AgencyDomains_Incorrect_V4 if {
 }
 
 test_AgencyDomains_Incorrect_V5 if {
-    PolicyId := "MS.DEFENDER.2.2v0.1"
+    PolicyId := "MS.DEFENDER.2.2v1"
 
     Output := tests with input as {
         "anti_phish_policies": [
@@ -648,7 +648,7 @@ test_AgencyDomains_Incorrect_V5 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.2.2v0.1" : {
+                "MS.DEFENDER.2.2v1" : {
                     "AgencyDomains" : [
                         "random.mail.example.com",
                         "random.example.com"
@@ -666,7 +666,7 @@ test_AgencyDomains_Incorrect_V5 if {
 }
 
 test_AgencyDomains_Incorrect_V6 if {
-    PolicyId := "MS.DEFENDER.2.2v0.1"
+    PolicyId := "MS.DEFENDER.2.2v1"
 
     Output := tests with input as {
         "anti_phish_policies": [
@@ -692,7 +692,7 @@ test_AgencyDomains_Incorrect_V6 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.2.2v0.1" : {
+                "MS.DEFENDER.2.2v1" : {
                     "AgencyDomains" : [
                         "random.mail.example.com",
                         "random.example.com"
@@ -710,7 +710,7 @@ test_AgencyDomains_Incorrect_V6 if {
 }
 
 test_AgencyDomains_Incorrect_V7 if {
-    PolicyId := "MS.DEFENDER.2.2v0.1"
+    PolicyId := "MS.DEFENDER.2.2v1"
 
     Output := tests with input as {
         "anti_phish_policies": [
@@ -737,7 +737,7 @@ test_AgencyDomains_Incorrect_V7 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.2.2v0.1" : {
+                "MS.DEFENDER.2.2v1" : {
                 }
             }
         }
@@ -751,7 +751,7 @@ test_AgencyDomains_Incorrect_V7 if {
 }
 
 test_AgencyDomains_Incorrect_V8 if {
-    PolicyId := "MS.DEFENDER.2.2v0.1"
+    PolicyId := "MS.DEFENDER.2.2v1"
 
     Output := tests with input as {
         "anti_phish_policies": [
@@ -772,7 +772,7 @@ test_AgencyDomains_Incorrect_V8 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.2.2v0.1" : {
+                "MS.DEFENDER.2.2v1" : {
                 }
             }
         }
@@ -789,7 +789,7 @@ test_AgencyDomains_Incorrect_V8 if {
 # Policy 3
 #--
 test_CustomDomains_Correct_V1 if {
-    PolicyId := "MS.DEFENDER.2.3v0.1"
+    PolicyId := "MS.DEFENDER.2.3v1"
 
     Output := tests with input as {
         "anti_phish_policies": [
@@ -816,7 +816,7 @@ test_CustomDomains_Correct_V1 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.2.3v0.1" : {
+                "MS.DEFENDER.2.3v1" : {
                     "PartnerDomains" : [
                         "random.mail.example.com",
                         "random.example.com"
@@ -834,7 +834,7 @@ test_CustomDomains_Correct_V1 if {
 }
 
 test_CustomDomains_Correct_V2 if {
-    PolicyId := "MS.DEFENDER.2.3v0.1"
+    PolicyId := "MS.DEFENDER.2.3v1"
 
     Output := tests with input as {
         "anti_phish_policies": [
@@ -861,7 +861,7 @@ test_CustomDomains_Correct_V2 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.2.3v0.1" : {
+                "MS.DEFENDER.2.3v1" : {
                     "PartnerDomains" : [
                         "random.mail.example.com"
                     ]
@@ -878,7 +878,7 @@ test_CustomDomains_Correct_V2 if {
 }
 
 test_CustomDomains_Correct_V3 if {
-    PolicyId := "MS.DEFENDER.2.3v0.1"
+    PolicyId := "MS.DEFENDER.2.3v1"
 
     Output := tests with input as {
         "anti_phish_policies": [
@@ -905,7 +905,7 @@ test_CustomDomains_Correct_V3 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.2.3v0.1" : {
+                "MS.DEFENDER.2.3v1" : {
                     "PartnerDomains" : [
                         "random.mail.example.com",
                         "random.example.com"
@@ -923,7 +923,7 @@ test_CustomDomains_Correct_V3 if {
 }
 
 test_CustomDomains_Correct_V4 if {
-    PolicyId := "MS.DEFENDER.2.3v0.1"
+    PolicyId := "MS.DEFENDER.2.3v1"
 
     Output := tests with input as {
         "anti_phish_policies": [
@@ -944,7 +944,7 @@ test_CustomDomains_Correct_V4 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.2.3v0.1" : {
+                "MS.DEFENDER.2.3v1" : {
                 }
             }
         }
@@ -958,7 +958,7 @@ test_CustomDomains_Correct_V4 if {
 }
 
 test_CustomDomains_Incorrect_V1 if {
-    PolicyId := "MS.DEFENDER.2.3v0.1"
+    PolicyId := "MS.DEFENDER.2.3v1"
 
     Output := tests with input as {
         "anti_phish_policies": [
@@ -975,7 +975,7 @@ test_CustomDomains_Incorrect_V1 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.2.3v0.1" : {
+                "MS.DEFENDER.2.3v1" : {
                     "PartnerDomains" : [
                         "random.mail.example.com",
                         "random.example.com"
@@ -993,7 +993,7 @@ test_CustomDomains_Incorrect_V1 if {
 }
 
 test_CustomDomains_Incorrect_V2 if {
-    PolicyId := "MS.DEFENDER.2.3v0.1"
+    PolicyId := "MS.DEFENDER.2.3v1"
 
     Output := tests with input as {
         "anti_phish_policies": [
@@ -1010,7 +1010,7 @@ test_CustomDomains_Incorrect_V2 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.2.3v0.1" : {
+                "MS.DEFENDER.2.3v1" : {
                     "PartnerDomains" : [
                         "random.mail.example.com",
                         "random.example.com"
@@ -1028,7 +1028,7 @@ test_CustomDomains_Incorrect_V2 if {
 }
 
 test_CustomDomains_Incorrect_V3 if {
-    PolicyId := "MS.DEFENDER.2.3v0.1"
+    PolicyId := "MS.DEFENDER.2.3v1"
 
     Output := tests with input as {
         "anti_phish_policies": [
@@ -1045,7 +1045,7 @@ test_CustomDomains_Incorrect_V3 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.2.3v0.1" : {
+                "MS.DEFENDER.2.3v1" : {
                     "PartnerDomains" : [
                         "random.mail.example.com",
                         "random.example.com"
@@ -1063,7 +1063,7 @@ test_CustomDomains_Incorrect_V3 if {
 }
 
 test_CustomDomains_Incorrect_V4 if {
-    PolicyId := "MS.DEFENDER.2.3v0.1"
+    PolicyId := "MS.DEFENDER.2.3v1"
 
     Output := tests with input as {
         "anti_phish_policies": [
@@ -1090,7 +1090,7 @@ test_CustomDomains_Incorrect_V4 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.2.3v0.1" : {
+                "MS.DEFENDER.2.3v1" : {
                     "PartnerDomains" : [
                         "random.mail.example.com",
                         "random.example.com"
@@ -1108,7 +1108,7 @@ test_CustomDomains_Incorrect_V4 if {
 }
 
 test_CustomDomains_Incorrect_V5 if {
-    PolicyId := "MS.DEFENDER.2.3v0.1"
+    PolicyId := "MS.DEFENDER.2.3v1"
 
     Output := tests with input as {
         "anti_phish_policies": [
@@ -1135,7 +1135,7 @@ test_CustomDomains_Incorrect_V5 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.2.3v0.1" : {
+                "MS.DEFENDER.2.3v1" : {
                     "PartnerDomains" : [
                         "random.mail.example.com",
                         "random.example.com"
@@ -1153,7 +1153,7 @@ test_CustomDomains_Incorrect_V5 if {
 }
 
 test_CustomDomains_Incorrect_V6 if {
-    PolicyId := "MS.DEFENDER.2.3v0.1"
+    PolicyId := "MS.DEFENDER.2.3v1"
 
     Output := tests with input as {
         "anti_phish_policies": [
@@ -1179,7 +1179,7 @@ test_CustomDomains_Incorrect_V6 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.2.3v0.1" : {
+                "MS.DEFENDER.2.3v1" : {
                     "PartnerDomains" : [
                         "random.mail.example.com",
                         "random.example.com"
@@ -1197,7 +1197,7 @@ test_CustomDomains_Incorrect_V6 if {
 }
 
 test_CustomDomains_Incorrect_V7 if {
-    PolicyId := "MS.DEFENDER.2.3v0.1"
+    PolicyId := "MS.DEFENDER.2.3v1"
 
     Output := tests with input as {
         "anti_phish_policies": [
@@ -1224,7 +1224,7 @@ test_CustomDomains_Incorrect_V7 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.2.3v0.1" : {
+                "MS.DEFENDER.2.3v1" : {
                 }
             }
         }

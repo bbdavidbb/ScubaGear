@@ -5,7 +5,7 @@ import future.keywords
 # Policy 1
 #--
 test_Enabled_Correct_V1 if {
-    PolicyId := "MS.DEFENDER.1.1v0.1"
+    PolicyId := "MS.DEFENDER.1.1v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [
@@ -39,7 +39,7 @@ test_Enabled_Correct_V1 if {
 }
 
 test_Enabled_Correct_V2 if {
-    PolicyId := "MS.DEFENDER.1.1v0.1"
+    PolicyId := "MS.DEFENDER.1.1v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [
@@ -64,7 +64,7 @@ test_Enabled_Correct_V2 if {
 }
 
 test_Enabled_Correct_V3 if {
-    PolicyId := "MS.DEFENDER.1.1v0.1"
+    PolicyId := "MS.DEFENDER.1.1v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [],
@@ -89,7 +89,7 @@ test_Enabled_Correct_V3 if {
 }
 
 test_Enabled_Incorrect_V1 if {
-    PolicyId := "MS.DEFENDER.1.1v0.1"
+    PolicyId := "MS.DEFENDER.1.1v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [],
@@ -104,7 +104,7 @@ test_Enabled_Incorrect_V1 if {
 }
 
 test_Enabled_Incorrect_V2 if {
-    PolicyId := "MS.DEFENDER.1.1v0.1"
+    PolicyId := "MS.DEFENDER.1.1v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [
@@ -125,7 +125,7 @@ test_Enabled_Incorrect_V2 if {
 }
 
 test_Enabled_Incorrect_V3 if {
-    PolicyId := "MS.DEFENDER.1.1v0.1"
+    PolicyId := "MS.DEFENDER.1.1v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [
@@ -146,7 +146,7 @@ test_Enabled_Incorrect_V3 if {
 }
 
 test_Enabled_Incorrect_V4 if {
-    PolicyId := "MS.DEFENDER.1.1v0.1"
+    PolicyId := "MS.DEFENDER.1.1v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [
@@ -174,7 +174,7 @@ test_Enabled_Incorrect_V4 if {
 # Policy 2
 #--
 test_AllEOP_Correct_V1 if {
-    PolicyId := "MS.DEFENDER.1.2v0.1"
+    PolicyId := "MS.DEFENDER.1.2v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [
@@ -196,7 +196,7 @@ test_AllEOP_Correct_V1 if {
 }
 
 test_AllEOP_Correct_V2 if {
-    PolicyId := "MS.DEFENDER.1.2v0.1"
+    PolicyId := "MS.DEFENDER.1.2v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [
@@ -218,7 +218,7 @@ test_AllEOP_Correct_V2 if {
 }
 
 test_AllEOP_Correct_V3 if {
-    PolicyId := "MS.DEFENDER.1.2v0.1"
+    PolicyId := "MS.DEFENDER.1.2v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [
@@ -246,7 +246,7 @@ test_AllEOP_Correct_V3 if {
 }
 
 test_AllEOP_Incorrect_V1 if {
-    PolicyId := "MS.DEFENDER.1.2v0.1"
+    PolicyId := "MS.DEFENDER.1.2v1"
 
     Output := tests with input as {
         "protection_policy_rules" : []
@@ -260,7 +260,7 @@ test_AllEOP_Incorrect_V1 if {
 }
 
 test_AllEOP_Incorrect_V2 if {
-    PolicyId := "MS.DEFENDER.1.2v0.1"
+    PolicyId := "MS.DEFENDER.1.2v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [
@@ -282,7 +282,7 @@ test_AllEOP_Incorrect_V2 if {
 }
 
 test_AllEOP_Incorrect_V3 if {
-    PolicyId := "MS.DEFENDER.1.2v0.1"
+    PolicyId := "MS.DEFENDER.1.2v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [
@@ -314,7 +314,7 @@ test_AllEOP_Incorrect_V3 if {
 # Policy 3
 #--
 test_AllDefender_Correct_V1 if {
-    PolicyId := "MS.DEFENDER.1.3v0.1"
+    PolicyId := "MS.DEFENDER.1.3v1"
 
     Output := tests with input as {
         "atp_policy_rules" : [
@@ -336,7 +336,7 @@ test_AllDefender_Correct_V1 if {
 }
 
 test_AllDefender_Correct_V2 if {
-    PolicyId := "MS.DEFENDER.1.3v0.1"
+    PolicyId := "MS.DEFENDER.1.3v1"
 
     Output := tests with input as {
         "atp_policy_rules" : [
@@ -358,7 +358,7 @@ test_AllDefender_Correct_V2 if {
 }
 
 test_AllDefender_Correct_V3 if {
-    PolicyId := "MS.DEFENDER.1.3v0.1"
+    PolicyId := "MS.DEFENDER.1.3v1"
 
     Output := tests with input as {
         "atp_policy_rules" : [
@@ -386,7 +386,7 @@ test_AllDefender_Correct_V3 if {
 }
 
 test_AllDefender_Incorrect_V1 if {
-    PolicyId := "MS.DEFENDER.1.3v0.1"
+    PolicyId := "MS.DEFENDER.1.3v1"
 
     Output := tests with input as {
         "atp_policy_rules" : [],
@@ -401,7 +401,7 @@ test_AllDefender_Incorrect_V1 if {
 }
 
 test_AllDefender_Incorrect_V2 if {
-    PolicyId := "MS.DEFENDER.1.3v0.1"
+    PolicyId := "MS.DEFENDER.1.3v1"
 
     Output := tests with input as {
         "atp_policy_rules" : [
@@ -423,7 +423,7 @@ test_AllDefender_Incorrect_V2 if {
 }
 
 test_AllDefender_Incorrect_V3 if {
-    PolicyId := "MS.DEFENDER.1.3v0.1"
+    PolicyId := "MS.DEFENDER.1.3v1"
 
     Output := tests with input as {
         "atp_policy_rules" : [
@@ -451,7 +451,7 @@ test_AllDefender_Incorrect_V3 if {
 }
 
 test_AllDefender_Incorrect_V4 if {
-    PolicyId := "MS.DEFENDER.1.3v0.1"
+    PolicyId := "MS.DEFENDER.1.3v1"
 
     Output := tests with input as {
         "atp_policy_rules" : [],
@@ -469,7 +469,7 @@ test_AllDefender_Incorrect_V4 if {
 # Policy 4
 #--
 test_SensitiveEOP_Correct_V1 if {
-    PolicyId := "MS.DEFENDER.1.4v0.1"
+    PolicyId := "MS.DEFENDER.1.4v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [
@@ -488,7 +488,7 @@ test_SensitiveEOP_Correct_V1 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.4v0.1" : {
+                "MS.DEFENDER.1.4v1" : {
                     "SensitiveAccounts" : {
                         "IncludedUsers" : [],
                         "IncludedGroups" : [],
@@ -511,7 +511,7 @@ test_SensitiveEOP_Correct_V1 if {
 }
 
 test_SensitiveEOP_Correct_V2 if {
-    PolicyId := "MS.DEFENDER.1.4v0.1"
+    PolicyId := "MS.DEFENDER.1.4v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [
@@ -530,7 +530,7 @@ test_SensitiveEOP_Correct_V2 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.4v0.1" : {
+                "MS.DEFENDER.1.4v1" : {
                     "SensitiveAccounts" : {
                     }
                 }
@@ -547,7 +547,7 @@ test_SensitiveEOP_Correct_V2 if {
 }
 
 test_SensitiveEOP_Correct_V3 if {
-    PolicyId := "MS.DEFENDER.1.4v0.1"
+    PolicyId := "MS.DEFENDER.1.4v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [
@@ -570,7 +570,7 @@ test_SensitiveEOP_Correct_V3 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.4v0.1" : {
+                "MS.DEFENDER.1.4v1" : {
                     "SensitiveAccounts" : {
                         "IncludedUsers" : [
                             "johndoe@random.example.com"
@@ -590,7 +590,7 @@ test_SensitiveEOP_Correct_V3 if {
 }
 
 test_SensitiveEOP_Correct_V4 if {
-    PolicyId := "MS.DEFENDER.1.4v0.1"
+    PolicyId := "MS.DEFENDER.1.4v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [
@@ -614,7 +614,7 @@ test_SensitiveEOP_Correct_V4 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.4v0.1" : {
+                "MS.DEFENDER.1.4v1" : {
                     "SensitiveAccounts" : {
                         "IncludedUsers" : [
                             "johndoe@random.example.com",
@@ -635,7 +635,7 @@ test_SensitiveEOP_Correct_V4 if {
 }
 
 test_SensitiveEOP_Correct_V5 if {
-    PolicyId := "MS.DEFENDER.1.4v0.1"
+    PolicyId := "MS.DEFENDER.1.4v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [
@@ -658,7 +658,7 @@ test_SensitiveEOP_Correct_V5 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.4v0.1" : {
+                "MS.DEFENDER.1.4v1" : {
                     "SensitiveAccounts" : {
                         "ExcludedUsers" : [
                             "johndoe@random.example.com"
@@ -678,7 +678,7 @@ test_SensitiveEOP_Correct_V5 if {
 }
 
 test_SensitiveEOP_Correct_V6 if {
-    PolicyId := "MS.DEFENDER.1.4v0.1"
+    PolicyId := "MS.DEFENDER.1.4v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [
@@ -702,7 +702,7 @@ test_SensitiveEOP_Correct_V6 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.4v0.1" : {
+                "MS.DEFENDER.1.4v1" : {
                     "SensitiveAccounts" : {
                         "ExcludedUsers" : [
                             "johndoe@random.example.com",
@@ -723,7 +723,7 @@ test_SensitiveEOP_Correct_V6 if {
 }
 
 test_SensitiveEOP_Correct_V7 if {
-    PolicyId := "MS.DEFENDER.1.4v0.1"
+    PolicyId := "MS.DEFENDER.1.4v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [
@@ -746,7 +746,7 @@ test_SensitiveEOP_Correct_V7 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.4v0.1" : {
+                "MS.DEFENDER.1.4v1" : {
                     "SensitiveAccounts" : {
                         "IncludedGroups" : [
                             "Dune"
@@ -766,7 +766,7 @@ test_SensitiveEOP_Correct_V7 if {
 }
 
 test_SensitiveEOP_Correct_V8 if {
-    PolicyId := "MS.DEFENDER.1.4v0.1"
+    PolicyId := "MS.DEFENDER.1.4v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [
@@ -790,7 +790,7 @@ test_SensitiveEOP_Correct_V8 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.4v0.1" : {
+                "MS.DEFENDER.1.4v1" : {
                     "SensitiveAccounts" : {
                         "IncludedGroups" : [
                             "Dune",
@@ -811,7 +811,7 @@ test_SensitiveEOP_Correct_V8 if {
 }
 
 test_SensitiveEOP_Correct_V9 if {
-    PolicyId := "MS.DEFENDER.1.4v0.1"
+    PolicyId := "MS.DEFENDER.1.4v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [
@@ -834,7 +834,7 @@ test_SensitiveEOP_Correct_V9 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.4v0.1" : {
+                "MS.DEFENDER.1.4v1" : {
                     "SensitiveAccounts" : {
                         "ExcludedGroups" : [
                             "Dune"
@@ -854,7 +854,7 @@ test_SensitiveEOP_Correct_V9 if {
 }
 
 test_SensitiveEOP_Correct_V10 if {
-    PolicyId := "MS.DEFENDER.1.4v0.1"
+    PolicyId := "MS.DEFENDER.1.4v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [
@@ -878,7 +878,7 @@ test_SensitiveEOP_Correct_V10 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.4v0.1" : {
+                "MS.DEFENDER.1.4v1" : {
                     "SensitiveAccounts" : {
                         "ExcludedGroups" : [
                             "Dune",
@@ -899,7 +899,7 @@ test_SensitiveEOP_Correct_V10 if {
 }
 
 test_SensitiveEOP_Correct_V11 if {
-    PolicyId := "MS.DEFENDER.1.4v0.1"
+    PolicyId := "MS.DEFENDER.1.4v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [
@@ -922,7 +922,7 @@ test_SensitiveEOP_Correct_V11 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.4v0.1" : {
+                "MS.DEFENDER.1.4v1" : {
                     "SensitiveAccounts" : {
                         "IncludedDomains" : [
                             "random.mail.example.com"
@@ -942,7 +942,7 @@ test_SensitiveEOP_Correct_V11 if {
 }
 
 test_SensitiveEOP_Correct_V12 if {
-    PolicyId := "MS.DEFENDER.1.4v0.1"
+    PolicyId := "MS.DEFENDER.1.4v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [
@@ -966,7 +966,7 @@ test_SensitiveEOP_Correct_V12 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.4v0.1" : {
+                "MS.DEFENDER.1.4v1" : {
                     "SensitiveAccounts" : {
                         "IncludedDomains" : [
                             "random.mail.example.com",
@@ -987,7 +987,7 @@ test_SensitiveEOP_Correct_V12 if {
 }
 
 test_SensitiveEOP_Correct_V13 if {
-    PolicyId := "MS.DEFENDER.1.4v0.1"
+    PolicyId := "MS.DEFENDER.1.4v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [
@@ -1010,7 +1010,7 @@ test_SensitiveEOP_Correct_V13 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.4v0.1" : {
+                "MS.DEFENDER.1.4v1" : {
                     "SensitiveAccounts" : {
                         "ExcludedDomains" : [
                             "random.mail.example.com"
@@ -1030,7 +1030,7 @@ test_SensitiveEOP_Correct_V13 if {
 }
 
 test_SensitiveEOP_Correct_V14 if {
-    PolicyId := "MS.DEFENDER.1.4v0.1"
+    PolicyId := "MS.DEFENDER.1.4v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [
@@ -1054,7 +1054,7 @@ test_SensitiveEOP_Correct_V14 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.4v0.1" : {
+                "MS.DEFENDER.1.4v1" : {
                     "SensitiveAccounts" : {
                         "ExcludedDomains" : [
                             "random.mail.example.com",
@@ -1075,7 +1075,7 @@ test_SensitiveEOP_Correct_V14 if {
 }
 
 test_SensitiveEOP_Correct_V15 if {
-    PolicyId := "MS.DEFENDER.1.4v0.1"
+    PolicyId := "MS.DEFENDER.1.4v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [
@@ -1102,7 +1102,7 @@ test_SensitiveEOP_Correct_V15 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.4v0.1" : {
+                "MS.DEFENDER.1.4v1" : {
                     "SensitiveAccounts" : {
                         "IncludedUsers" : [
                             "johndoe@random.example.com"
@@ -1125,7 +1125,7 @@ test_SensitiveEOP_Correct_V15 if {
 }
 
 test_SensitiveEOP_Correct_V16 if {
-    PolicyId := "MS.DEFENDER.1.4v0.1"
+    PolicyId := "MS.DEFENDER.1.4v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [
@@ -1152,7 +1152,7 @@ test_SensitiveEOP_Correct_V16 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.4v0.1" : {
+                "MS.DEFENDER.1.4v1" : {
                     "SensitiveAccounts" : {
                         "IncludedGroups" : [
                             "Dune"
@@ -1175,7 +1175,7 @@ test_SensitiveEOP_Correct_V16 if {
 }
 
 test_SensitiveEOP_Correct_V17 if {
-    PolicyId := "MS.DEFENDER.1.4v0.1"
+    PolicyId := "MS.DEFENDER.1.4v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [
@@ -1202,7 +1202,7 @@ test_SensitiveEOP_Correct_V17 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.4v0.1" : {
+                "MS.DEFENDER.1.4v1" : {
                     "SensitiveAccounts" : {
                         "IncludedDomains" : [
                             "random.example.com"
@@ -1225,7 +1225,7 @@ test_SensitiveEOP_Correct_V17 if {
 }
 
 test_SensitiveEOP_Correct_V18 if {
-    PolicyId := "MS.DEFENDER.1.4v0.1"
+    PolicyId := "MS.DEFENDER.1.4v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [
@@ -1254,7 +1254,7 @@ test_SensitiveEOP_Correct_V18 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.4v0.1" : {
+                "MS.DEFENDER.1.4v1" : {
                     "SensitiveAccounts" : {
                         "IncludedUsers" : [
                             "johndoe@random.example.com"
@@ -1280,7 +1280,7 @@ test_SensitiveEOP_Correct_V18 if {
 }
 
 test_SensitiveEOP_Correct_V19 if {
-    PolicyId := "MS.DEFENDER.1.4v0.1"
+    PolicyId := "MS.DEFENDER.1.4v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [
@@ -1309,7 +1309,7 @@ test_SensitiveEOP_Correct_V19 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.4v0.1" : {
+                "MS.DEFENDER.1.4v1" : {
                     "SensitiveAccounts" : {
                         "IncludedUsers" : [
                             "johndoe@random.example.com"
@@ -1335,7 +1335,7 @@ test_SensitiveEOP_Correct_V19 if {
 }
 
 test_SensitiveEOP_Correct_V20 if {
-    PolicyId := "MS.DEFENDER.1.4v0.1"
+    PolicyId := "MS.DEFENDER.1.4v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [
@@ -1364,7 +1364,7 @@ test_SensitiveEOP_Correct_V20 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.4v0.1" : {
+                "MS.DEFENDER.1.4v1" : {
                     "SensitiveAccounts" : {
                         "IncludedUsers" : [
                             "johndoe@random.example.com"
@@ -1390,7 +1390,7 @@ test_SensitiveEOP_Correct_V20 if {
 }
 
 test_SensitiveEOP_Correct_V21 if {
-    PolicyId := "MS.DEFENDER.1.4v0.1"
+    PolicyId := "MS.DEFENDER.1.4v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [
@@ -1419,7 +1419,7 @@ test_SensitiveEOP_Correct_V21 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.4v0.1" : {
+                "MS.DEFENDER.1.4v1" : {
                     "SensitiveAccounts" : {
                         "IncludedUsers" : [
                             "johndoe@random.example.com"
@@ -1445,7 +1445,7 @@ test_SensitiveEOP_Correct_V21 if {
 }
 
 test_SensitiveEOP_Correct_V22 if {
-    PolicyId := "MS.DEFENDER.1.4v0.1"
+    PolicyId := "MS.DEFENDER.1.4v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [
@@ -1474,7 +1474,7 @@ test_SensitiveEOP_Correct_V22 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.4v0.1" : {
+                "MS.DEFENDER.1.4v1" : {
                     "SensitiveAccounts" : {
                         "IncludedGroups" : [
                             "Dune"
@@ -1500,7 +1500,7 @@ test_SensitiveEOP_Correct_V22 if {
 }
 
 test_SensitiveEOP_Correct_V23 if {
-    PolicyId := "MS.DEFENDER.1.4v0.1"
+    PolicyId := "MS.DEFENDER.1.4v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [
@@ -1529,7 +1529,7 @@ test_SensitiveEOP_Correct_V23 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.4v0.1" : {
+                "MS.DEFENDER.1.4v1" : {
                     "SensitiveAccounts" : {
                         "IncludedGroups" : [
                             "Dune"
@@ -1555,7 +1555,7 @@ test_SensitiveEOP_Correct_V23 if {
 }
 
 test_SensitiveEOP_Correct_V24 if {
-    PolicyId := "MS.DEFENDER.1.4v0.1"
+    PolicyId := "MS.DEFENDER.1.4v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [
@@ -1590,7 +1590,7 @@ test_SensitiveEOP_Correct_V24 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.4v0.1" : {
+                "MS.DEFENDER.1.4v1" : {
                     "SensitiveAccounts" : {
                         "IncludedUsers" : [
                             "johndoe@random.example.com"
@@ -1625,7 +1625,7 @@ test_SensitiveEOP_Correct_V24 if {
 }
 
 test_SensitiveEOP_Incorrect_V1 if {
-    PolicyId := "MS.DEFENDER.1.4v0.1"
+    PolicyId := "MS.DEFENDER.1.4v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [
@@ -1644,7 +1644,7 @@ test_SensitiveEOP_Incorrect_V1 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.4v0.1" : {
+                "MS.DEFENDER.1.4v1" : {
                     "SensitiveAccounts" : {
                     }
                 }
@@ -1661,7 +1661,7 @@ test_SensitiveEOP_Incorrect_V1 if {
 }
 
 test_SensitiveEOP_Incorrect_V1 if {
-    PolicyId := "MS.DEFENDER.1.4v0.1"
+    PolicyId := "MS.DEFENDER.1.4v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [
@@ -1680,7 +1680,7 @@ test_SensitiveEOP_Incorrect_V1 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.4v0.1" : {
+                "MS.DEFENDER.1.4v1" : {
                     "SensitiveAccounts" : {
                     }
                 }
@@ -1697,7 +1697,7 @@ test_SensitiveEOP_Incorrect_V1 if {
 }
 
 test_SensitiveEOP_Incorrect_V3 if {
-    PolicyId := "MS.DEFENDER.1.4v0.1"
+    PolicyId := "MS.DEFENDER.1.4v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [
@@ -1705,7 +1705,7 @@ test_SensitiveEOP_Incorrect_V3 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.4v0.1" : {
+                "MS.DEFENDER.1.4v1" : {
                     "SensitiveAccounts" : {
                     }
                 }
@@ -1722,7 +1722,7 @@ test_SensitiveEOP_Incorrect_V3 if {
 }
 
 test_SensitiveEOP_Incorrect_V4 if {
-    PolicyId := "MS.DEFENDER.1.4v0.1"
+    PolicyId := "MS.DEFENDER.1.4v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [
@@ -1745,7 +1745,7 @@ test_SensitiveEOP_Incorrect_V4 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.4v0.1" : {
+                "MS.DEFENDER.1.4v1" : {
                     "SensitiveAccounts" : {}
                 }
             }
@@ -1761,7 +1761,7 @@ test_SensitiveEOP_Incorrect_V4 if {
 }
 
 test_SensitiveEOP_Incorrect_V5 if {
-    PolicyId := "MS.DEFENDER.1.4v0.1"
+    PolicyId := "MS.DEFENDER.1.4v1"
 
     Output := tests with input as {
         "protection_policy_rules" : [
@@ -1784,7 +1784,7 @@ test_SensitiveEOP_Incorrect_V5 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.4v0.1" : {
+                "MS.DEFENDER.1.4v1" : {
                     "SensitiveAccounts" : {
                         "IncludedUsers" : [
                             "johndoe@random.example.com"
@@ -1823,7 +1823,7 @@ test_SensitiveEOP_Incorrect_V5 if {
 # Policy 5
 #--
 test_SensitiveATP_Correct_V1 if {
-    PolicyId := "MS.DEFENDER.1.5v0.1"
+    PolicyId := "MS.DEFENDER.1.5v1"
 
     Output := tests with input as {
         "atp_policy_rules" : [
@@ -1842,7 +1842,7 @@ test_SensitiveATP_Correct_V1 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.5v0.1" : {
+                "MS.DEFENDER.1.5v1" : {
                     "SensitiveAccounts" : {
                         "IncludedUsers" : [],
                         "IncludedGroups" : [],
@@ -1865,7 +1865,7 @@ test_SensitiveATP_Correct_V1 if {
 }
 
 test_SensitiveATP_Correct_V2 if {
-    PolicyId := "MS.DEFENDER.1.5v0.1"
+    PolicyId := "MS.DEFENDER.1.5v1"
 
     Output := tests with input as {
         "atp_policy_rules" : [
@@ -1884,7 +1884,7 @@ test_SensitiveATP_Correct_V2 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.5v0.1" : {
+                "MS.DEFENDER.1.5v1" : {
                     "SensitiveAccounts" : {
                     }
                 }
@@ -1901,7 +1901,7 @@ test_SensitiveATP_Correct_V2 if {
 }
 
 test_SensitiveATP_Correct_V3 if {
-    PolicyId := "MS.DEFENDER.1.5v0.1"
+    PolicyId := "MS.DEFENDER.1.5v1"
 
     Output := tests with input as {
         "atp_policy_rules" : [
@@ -1924,7 +1924,7 @@ test_SensitiveATP_Correct_V3 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.5v0.1" : {
+                "MS.DEFENDER.1.5v1" : {
                     "SensitiveAccounts" : {
                         "IncludedUsers" : [
                             "johndoe@random.example.com"
@@ -1944,7 +1944,7 @@ test_SensitiveATP_Correct_V3 if {
 }
 
 test_SensitiveATP_Correct_V4 if {
-    PolicyId := "MS.DEFENDER.1.5v0.1"
+    PolicyId := "MS.DEFENDER.1.5v1"
 
     Output := tests with input as {
         "atp_policy_rules" : [
@@ -1968,7 +1968,7 @@ test_SensitiveATP_Correct_V4 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.5v0.1" : {
+                "MS.DEFENDER.1.5v1" : {
                     "SensitiveAccounts" : {
                         "IncludedUsers" : [
                             "johndoe@random.example.com",
@@ -1989,7 +1989,7 @@ test_SensitiveATP_Correct_V4 if {
 }
 
 test_SensitiveATP_Correct_V5 if {
-    PolicyId := "MS.DEFENDER.1.5v0.1"
+    PolicyId := "MS.DEFENDER.1.5v1"
 
     Output := tests with input as {
         "atp_policy_rules" : [
@@ -2012,7 +2012,7 @@ test_SensitiveATP_Correct_V5 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.5v0.1" : {
+                "MS.DEFENDER.1.5v1" : {
                     "SensitiveAccounts" : {
                         "ExcludedUsers" : [
                             "johndoe@random.example.com"
@@ -2032,7 +2032,7 @@ test_SensitiveATP_Correct_V5 if {
 }
 
 test_SensitiveATP_Correct_V6 if {
-    PolicyId := "MS.DEFENDER.1.5v0.1"
+    PolicyId := "MS.DEFENDER.1.5v1"
 
     Output := tests with input as {
         "atp_policy_rules" : [
@@ -2056,7 +2056,7 @@ test_SensitiveATP_Correct_V6 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.5v0.1" : {
+                "MS.DEFENDER.1.5v1" : {
                     "SensitiveAccounts" : {
                         "ExcludedUsers" : [
                             "johndoe@random.example.com",
@@ -2077,7 +2077,7 @@ test_SensitiveATP_Correct_V6 if {
 }
 
 test_SensitiveATP_Correct_V7 if {
-    PolicyId := "MS.DEFENDER.1.5v0.1"
+    PolicyId := "MS.DEFENDER.1.5v1"
 
     Output := tests with input as {
         "atp_policy_rules" : [
@@ -2100,7 +2100,7 @@ test_SensitiveATP_Correct_V7 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.5v0.1" : {
+                "MS.DEFENDER.1.5v1" : {
                     "SensitiveAccounts" : {
                         "IncludedGroups" : [
                             "Dune"
@@ -2120,7 +2120,7 @@ test_SensitiveATP_Correct_V7 if {
 }
 
 test_SensitiveATP_Correct_V8 if {
-    PolicyId := "MS.DEFENDER.1.5v0.1"
+    PolicyId := "MS.DEFENDER.1.5v1"
 
     Output := tests with input as {
         "atp_policy_rules" : [
@@ -2144,7 +2144,7 @@ test_SensitiveATP_Correct_V8 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.5v0.1" : {
+                "MS.DEFENDER.1.5v1" : {
                     "SensitiveAccounts" : {
                         "IncludedGroups" : [
                             "Dune",
@@ -2165,7 +2165,7 @@ test_SensitiveATP_Correct_V8 if {
 }
 
 test_SensitiveATP_Correct_V9 if {
-    PolicyId := "MS.DEFENDER.1.5v0.1"
+    PolicyId := "MS.DEFENDER.1.5v1"
 
     Output := tests with input as {
         "atp_policy_rules" : [
@@ -2188,7 +2188,7 @@ test_SensitiveATP_Correct_V9 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.5v0.1" : {
+                "MS.DEFENDER.1.5v1" : {
                     "SensitiveAccounts" : {
                         "ExcludedGroups" : [
                             "Dune"
@@ -2208,7 +2208,7 @@ test_SensitiveATP_Correct_V9 if {
 }
 
 test_SensitiveATP_Correct_V10 if {
-    PolicyId := "MS.DEFENDER.1.5v0.1"
+    PolicyId := "MS.DEFENDER.1.5v1"
 
     Output := tests with input as {
         "atp_policy_rules" : [
@@ -2232,7 +2232,7 @@ test_SensitiveATP_Correct_V10 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.5v0.1" : {
+                "MS.DEFENDER.1.5v1" : {
                     "SensitiveAccounts" : {
                         "ExcludedGroups" : [
                             "Dune",
@@ -2253,7 +2253,7 @@ test_SensitiveATP_Correct_V10 if {
 }
 
 test_SensitiveATP_Correct_V11 if {
-    PolicyId := "MS.DEFENDER.1.5v0.1"
+    PolicyId := "MS.DEFENDER.1.5v1"
 
     Output := tests with input as {
         "atp_policy_rules" : [
@@ -2276,7 +2276,7 @@ test_SensitiveATP_Correct_V11 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.5v0.1" : {
+                "MS.DEFENDER.1.5v1" : {
                     "SensitiveAccounts" : {
                         "IncludedDomains" : [
                             "random.mail.example.com"
@@ -2296,7 +2296,7 @@ test_SensitiveATP_Correct_V11 if {
 }
 
 test_SensitiveATP_Correct_V12 if {
-    PolicyId := "MS.DEFENDER.1.5v0.1"
+    PolicyId := "MS.DEFENDER.1.5v1"
 
     Output := tests with input as {
         "atp_policy_rules" : [
@@ -2320,7 +2320,7 @@ test_SensitiveATP_Correct_V12 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.5v0.1" : {
+                "MS.DEFENDER.1.5v1" : {
                     "SensitiveAccounts" : {
                         "IncludedDomains" : [
                             "random.mail.example.com",
@@ -2341,7 +2341,7 @@ test_SensitiveATP_Correct_V12 if {
 }
 
 test_SensitiveATP_Correct_V13 if {
-    PolicyId := "MS.DEFENDER.1.5v0.1"
+    PolicyId := "MS.DEFENDER.1.5v1"
 
     Output := tests with input as {
         "atp_policy_rules" : [
@@ -2364,7 +2364,7 @@ test_SensitiveATP_Correct_V13 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.5v0.1" : {
+                "MS.DEFENDER.1.5v1" : {
                     "SensitiveAccounts" : {
                         "ExcludedDomains" : [
                             "random.mail.example.com"
@@ -2384,7 +2384,7 @@ test_SensitiveATP_Correct_V13 if {
 }
 
 test_SensitiveATP_Correct_V14 if {
-    PolicyId := "MS.DEFENDER.1.5v0.1"
+    PolicyId := "MS.DEFENDER.1.5v1"
 
     Output := tests with input as {
         "atp_policy_rules" : [
@@ -2408,7 +2408,7 @@ test_SensitiveATP_Correct_V14 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.5v0.1" : {
+                "MS.DEFENDER.1.5v1" : {
                     "SensitiveAccounts" : {
                         "ExcludedDomains" : [
                             "random.mail.example.com",
@@ -2429,7 +2429,7 @@ test_SensitiveATP_Correct_V14 if {
 }
 
 test_SensitiveATP_Correct_V15 if {
-    PolicyId := "MS.DEFENDER.1.5v0.1"
+    PolicyId := "MS.DEFENDER.1.5v1"
 
     Output := tests with input as {
         "atp_policy_rules" : [
@@ -2456,7 +2456,7 @@ test_SensitiveATP_Correct_V15 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.5v0.1" : {
+                "MS.DEFENDER.1.5v1" : {
                     "SensitiveAccounts" : {
                         "IncludedUsers" : [
                             "johndoe@random.example.com"
@@ -2479,7 +2479,7 @@ test_SensitiveATP_Correct_V15 if {
 }
 
 test_SensitiveATP_Correct_V16 if {
-    PolicyId := "MS.DEFENDER.1.5v0.1"
+    PolicyId := "MS.DEFENDER.1.5v1"
 
     Output := tests with input as {
         "atp_policy_rules" : [
@@ -2506,7 +2506,7 @@ test_SensitiveATP_Correct_V16 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.5v0.1" : {
+                "MS.DEFENDER.1.5v1" : {
                     "SensitiveAccounts" : {
                         "IncludedGroups" : [
                             "Dune"
@@ -2529,7 +2529,7 @@ test_SensitiveATP_Correct_V16 if {
 }
 
 test_SensitiveATP_Correct_V17 if {
-    PolicyId := "MS.DEFENDER.1.5v0.1"
+    PolicyId := "MS.DEFENDER.1.5v1"
 
     Output := tests with input as {
         "atp_policy_rules" : [
@@ -2556,7 +2556,7 @@ test_SensitiveATP_Correct_V17 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.5v0.1" : {
+                "MS.DEFENDER.1.5v1" : {
                     "SensitiveAccounts" : {
                         "IncludedDomains" : [
                             "random.example.com"
@@ -2579,7 +2579,7 @@ test_SensitiveATP_Correct_V17 if {
 }
 
 test_SensitiveATP_Correct_V18 if {
-    PolicyId := "MS.DEFENDER.1.5v0.1"
+    PolicyId := "MS.DEFENDER.1.5v1"
 
     Output := tests with input as {
         "atp_policy_rules" : [
@@ -2608,7 +2608,7 @@ test_SensitiveATP_Correct_V18 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.5v0.1" : {
+                "MS.DEFENDER.1.5v1" : {
                     "SensitiveAccounts" : {
                         "IncludedUsers" : [
                             "johndoe@random.example.com"
@@ -2634,7 +2634,7 @@ test_SensitiveATP_Correct_V18 if {
 }
 
 test_SensitiveATP_Correct_V19 if {
-    PolicyId := "MS.DEFENDER.1.5v0.1"
+    PolicyId := "MS.DEFENDER.1.5v1"
 
     Output := tests with input as {
         "atp_policy_rules" : [
@@ -2663,7 +2663,7 @@ test_SensitiveATP_Correct_V19 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.5v0.1" : {
+                "MS.DEFENDER.1.5v1" : {
                     "SensitiveAccounts" : {
                         "IncludedUsers" : [
                             "johndoe@random.example.com"
@@ -2689,7 +2689,7 @@ test_SensitiveATP_Correct_V19 if {
 }
 
 test_SensitiveATP_Correct_V20 if {
-    PolicyId := "MS.DEFENDER.1.5v0.1"
+    PolicyId := "MS.DEFENDER.1.5v1"
 
     Output := tests with input as {
         "atp_policy_rules" : [
@@ -2718,7 +2718,7 @@ test_SensitiveATP_Correct_V20 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.5v0.1" : {
+                "MS.DEFENDER.1.5v1" : {
                     "SensitiveAccounts" : {
                         "IncludedUsers" : [
                             "johndoe@random.example.com"
@@ -2744,7 +2744,7 @@ test_SensitiveATP_Correct_V20 if {
 }
 
 test_SensitiveATP_Correct_V21 if {
-    PolicyId := "MS.DEFENDER.1.5v0.1"
+    PolicyId := "MS.DEFENDER.1.5v1"
 
     Output := tests with input as {
         "atp_policy_rules" : [
@@ -2773,7 +2773,7 @@ test_SensitiveATP_Correct_V21 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.5v0.1" : {
+                "MS.DEFENDER.1.5v1" : {
                     "SensitiveAccounts" : {
                         "IncludedUsers" : [
                             "johndoe@random.example.com"
@@ -2799,7 +2799,7 @@ test_SensitiveATP_Correct_V21 if {
 }
 
 test_SensitiveATP_Correct_V22 if {
-    PolicyId := "MS.DEFENDER.1.5v0.1"
+    PolicyId := "MS.DEFENDER.1.5v1"
 
     Output := tests with input as {
         "atp_policy_rules" : [
@@ -2828,7 +2828,7 @@ test_SensitiveATP_Correct_V22 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.5v0.1" : {
+                "MS.DEFENDER.1.5v1" : {
                     "SensitiveAccounts" : {
                         "IncludedGroups" : [
                             "Dune"
@@ -2854,7 +2854,7 @@ test_SensitiveATP_Correct_V22 if {
 }
 
 test_SensitiveATP_Correct_V23 if {
-    PolicyId := "MS.DEFENDER.1.5v0.1"
+    PolicyId := "MS.DEFENDER.1.5v1"
 
     Output := tests with input as {
         "atp_policy_rules" : [
@@ -2883,7 +2883,7 @@ test_SensitiveATP_Correct_V23 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.5v0.1" : {
+                "MS.DEFENDER.1.5v1" : {
                     "SensitiveAccounts" : {
                         "IncludedGroups" : [
                             "Dune"
@@ -2909,7 +2909,7 @@ test_SensitiveATP_Correct_V23 if {
 }
 
 test_SensitiveATP_Correct_V24 if {
-    PolicyId := "MS.DEFENDER.1.5v0.1"
+    PolicyId := "MS.DEFENDER.1.5v1"
 
     Output := tests with input as {
         "atp_policy_rules" : [
@@ -2944,7 +2944,7 @@ test_SensitiveATP_Correct_V24 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.5v0.1" : {
+                "MS.DEFENDER.1.5v1" : {
                     "SensitiveAccounts" : {
                         "IncludedUsers" : [
                             "johndoe@random.example.com"
@@ -2979,7 +2979,7 @@ test_SensitiveATP_Correct_V24 if {
 }
 
 test_SensitiveATP_Incorrect_V1 if {
-    PolicyId := "MS.DEFENDER.1.5v0.1"
+    PolicyId := "MS.DEFENDER.1.5v1"
 
     Output := tests with input as {
         "atp_policy_rules" : [
@@ -2998,7 +2998,7 @@ test_SensitiveATP_Incorrect_V1 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.5v0.1" : {
+                "MS.DEFENDER.1.5v1" : {
                     "SensitiveAccounts" : {
                     }
                 }
@@ -3015,7 +3015,7 @@ test_SensitiveATP_Incorrect_V1 if {
 }
 
 test_SensitiveATP_Incorrect_V1 if {
-    PolicyId := "MS.DEFENDER.1.5v0.1"
+    PolicyId := "MS.DEFENDER.1.5v1"
 
     Output := tests with input as {
         "atp_policy_rules" : [
@@ -3034,7 +3034,7 @@ test_SensitiveATP_Incorrect_V1 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.5v0.1" : {
+                "MS.DEFENDER.1.5v1" : {
                     "SensitiveAccounts" : {
                     }
                 }
@@ -3051,7 +3051,7 @@ test_SensitiveATP_Incorrect_V1 if {
 }
 
 test_SensitiveATP_Incorrect_V3 if {
-    PolicyId := "MS.DEFENDER.1.5v0.1"
+    PolicyId := "MS.DEFENDER.1.5v1"
 
     Output := tests with input as {
         "atp_policy_rules" : [
@@ -3059,7 +3059,7 @@ test_SensitiveATP_Incorrect_V3 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.5v0.1" : {
+                "MS.DEFENDER.1.5v1" : {
                     "SensitiveAccounts" : {
                     }
                 }
@@ -3076,7 +3076,7 @@ test_SensitiveATP_Incorrect_V3 if {
 }
 
 test_SensitiveATP_Incorrect_V4 if {
-    PolicyId := "MS.DEFENDER.1.5v0.1"
+    PolicyId := "MS.DEFENDER.1.5v1"
 
     Output := tests with input as {
         "atp_policy_rules" : [
@@ -3099,7 +3099,7 @@ test_SensitiveATP_Incorrect_V4 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.5v0.1" : {
+                "MS.DEFENDER.1.5v1" : {
                     "SensitiveAccounts" : {}
                 }
             }
@@ -3115,7 +3115,7 @@ test_SensitiveATP_Incorrect_V4 if {
 }
 
 test_SensitiveATP_Incorrect_V5 if {
-    PolicyId := "MS.DEFENDER.1.5v0.1"
+    PolicyId := "MS.DEFENDER.1.5v1"
 
     Output := tests with input as {
         "atp_policy_rules" : [
@@ -3138,7 +3138,7 @@ test_SensitiveATP_Incorrect_V5 if {
         ],
         "scuba_config" : {
             "Defender" : {
-                "MS.DEFENDER.1.5v0.1" : {
+                "MS.DEFENDER.1.5v1" : {
                     "SensitiveAccounts" : {
                         "IncludedUsers" : [
                             "johndoe@random.example.com"

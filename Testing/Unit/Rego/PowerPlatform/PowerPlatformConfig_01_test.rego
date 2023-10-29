@@ -6,7 +6,7 @@ import future.keywords
 # Policy 1
 #--
 test_disableProductionEnvironmentCreationByNonAdminUsers_Correct if {
-    PolicyId := "MS.POWERPLATFORM.1.1v0.1"
+    PolicyId := "MS.POWERPLATFORM.1.1v1"
 
     Output := tests with input as {
         "environment_creation": [{
@@ -22,7 +22,7 @@ test_disableProductionEnvironmentCreationByNonAdminUsers_Correct if {
 }
 
 test_disableProductionEnvironmentCreationByNonAdminUsers_Incorrect if {
-    PolicyId := "MS.POWERPLATFORM.1.1v0.1"
+    PolicyId := "MS.POWERPLATFORM.1.1v1"
 
     Output := tests with input as {
         "environment_creation": [{
@@ -41,7 +41,7 @@ test_disableProductionEnvironmentCreationByNonAdminUsers_Incorrect if {
 # Policy 2
 #--
 test_disableTrialEnvironmentCreationByNonAdminUsers_Correct if {
-    PolicyId := "MS.POWERPLATFORM.1.2v0.1"
+    PolicyId := "MS.POWERPLATFORM.1.2v1"
 
     Output := tests with input as {
         "environment_creation": [{
@@ -57,7 +57,7 @@ test_disableTrialEnvironmentCreationByNonAdminUsers_Correct if {
 }
 
 test_disableTrialEnvironmentCreationByNonAdminUsers_Incorrect if {
-    PolicyId := "MS.POWERPLATFORM.1.2v0.1"
+    PolicyId := "MS.POWERPLATFORM.1.2v1"
 
     Output := tests with input as {
         "environment_creation": [{

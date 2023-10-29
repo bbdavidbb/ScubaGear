@@ -6,7 +6,7 @@ import data.report.utils.DefenderMirrorDetails
 # Policy 1
 #--
 test_3rdParty_Correct_V1 if {
-    PolicyId := "MS.EXO.16.1v0.1"
+    PolicyId := "MS.EXO.16.1v1"
 
     Output := tests with input as { }
 
@@ -21,7 +21,7 @@ test_3rdParty_Correct_V1 if {
 # Policy 2
 #--
 test_3rdParty_Correct_V2 if {
-    PolicyId := "MS.EXO.16.1v0.1"
+    PolicyId := "MS.EXO.16.1v1"
 
     Output := tests with input as { }
 

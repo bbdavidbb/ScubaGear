@@ -1,8 +1,8 @@
 import os
 import re
 
-CHARS_TO_REPLACE = 3 # n=1 for single numbers; replace with n=3 for decimals
-REPLACEMENT_VERSION ='1'
+VERSION_TO_REPLACE = 'v0.1'# n=1 for single numbers; replace with n=3 for decimals
+REPLACEMENT_VERSION ='v1'
 
 BASELINE_PATH = './baselines'
 REGO_PATH ='./Rego'
@@ -11,9 +11,8 @@ TEST_PATH ='./Testing'
 def replace_last_n_chars(match):
     """
     This is a hacky script that gets the job done
-    However, function must be modified manually
     """
-    return match.group()[:-CHARS_TO_REPLACE] + REPLACEMENT_VERSION  # Replace 'the string with' with the desired replacement character
+    return match.group().replace(VERSION_TO_REPLACE, REPLACEMENT_VERSION) # Replace 'the string with' with the desired replacement character
 
 def replace_version_number(file_path):
     """

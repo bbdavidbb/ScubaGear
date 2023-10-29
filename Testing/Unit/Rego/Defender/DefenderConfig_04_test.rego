@@ -8,7 +8,7 @@ import data.report.utils.NotCheckedDetails
 # Policy 1
 #--
 test_ContentContainsSensitiveInformation_Correct_V1 if {
-    PolicyId := "MS.DEFENDER.4.1v0.1"
+    PolicyId := "MS.DEFENDER.4.1v1"
 
     Output := tests with input as {
         "dlp_compliance_rules": [
@@ -49,7 +49,7 @@ test_ContentContainsSensitiveInformation_Correct_V1 if {
 }
 
 test_AdvancedRule_Correct_V2 if {
-    PolicyId := "MS.DEFENDER.4.1v0.1"
+    PolicyId := "MS.DEFENDER.4.1v1"
 
     Output := tests with input as {
         "dlp_compliance_rules": [
@@ -93,7 +93,7 @@ test_AdvancedRule_Correct_V2 if {
 }
 
 test_ContentContainsSensitiveInformation_Incorrect_V1 if {
-    PolicyId := "MS.DEFENDER.4.1v0.1"
+    PolicyId := "MS.DEFENDER.4.1v1"
 
     Output := tests with input as {
         "dlp_compliance_rules": [
@@ -133,7 +133,7 @@ test_ContentContainsSensitiveInformation_Incorrect_V1 if {
 }
 
 test_ContentContainsSensitiveInformation_Incorrect_V2 if {
-    PolicyId := "MS.DEFENDER.4.1v0.1"
+    PolicyId := "MS.DEFENDER.4.1v1"
 
     Output := tests with input as {
         "dlp_compliance_rules": [
@@ -173,7 +173,7 @@ test_ContentContainsSensitiveInformation_Incorrect_V2 if {
 }
 
 test_ContentContainsSensitiveInformation_Incorrect_V3 if {
-    PolicyId := "MS.DEFENDER.4.1v0.1"
+    PolicyId := "MS.DEFENDER.4.1v1"
 
     Output := tests with input as {
         "dlp_compliance_rules": [
@@ -213,7 +213,7 @@ test_ContentContainsSensitiveInformation_Incorrect_V3 if {
 }
 
 test_ContentContainsSensitiveInformation_Incorrect_V4 if {
-    PolicyId := "MS.DEFENDER.4.1v0.1"
+    PolicyId := "MS.DEFENDER.4.1v1"
 
     Output := tests with input as {
         "dlp_compliance_rules": [
@@ -250,7 +250,7 @@ test_ContentContainsSensitiveInformation_Incorrect_V4 if {
 }
 
 test_ContentContainsSensitiveInformation_Incorrect_V5 if {
-    PolicyId := "MS.DEFENDER.4.1v0.1"
+    PolicyId := "MS.DEFENDER.4.1v1"
 
     Output := tests with input as {
         "dlp_compliance_rules": [
@@ -291,7 +291,7 @@ test_ContentContainsSensitiveInformation_Incorrect_V5 if {
 }
 
 test_ContentContainsSensitiveInformation_Incorrect_V6 if {
-    PolicyId := "MS.DEFENDER.4.1v0.1"
+    PolicyId := "MS.DEFENDER.4.1v1"
 
     Output := tests with input as {
         "dlp_compliance_rules": [
@@ -335,7 +335,7 @@ test_ContentContainsSensitiveInformation_Incorrect_V6 if {
 # Policy 2
 #--
 test_Locations_Correct_V1 if {
-    PolicyId := "MS.DEFENDER.4.2v0.1"
+    PolicyId := "MS.DEFENDER.4.2v1"
 
     Output := tests with input as {
         "dlp_compliance_rules": [
@@ -382,7 +382,7 @@ test_Locations_Correct_V1 if {
 }
 
 test_Locations_Correct_V2 if {
-    PolicyId := "MS.DEFENDER.4.2v0.1"
+    PolicyId := "MS.DEFENDER.4.2v1"
 
     Output := tests with input as {
         "dlp_compliance_rules": [
@@ -427,7 +427,7 @@ test_Locations_Correct_V2 if {
 
 # Policy exists, but Exchange location is null
 test_Locations_Incorrect_V1 if {
-    PolicyId := "MS.DEFENDER.4.2v0.1"
+    PolicyId := "MS.DEFENDER.4.2v1"
 
     Output := tests with input as {
         "dlp_compliance_rules": [
@@ -475,7 +475,7 @@ test_Locations_Incorrect_V1 if {
 
 # Policy exists, but SharePoint is not included
 test_Locations_Incorrect_V2 if {
-    PolicyId := "MS.DEFENDER.4.2v0.1"
+    PolicyId := "MS.DEFENDER.4.2v1"
 
     Output := tests with input as {
         "dlp_compliance_rules": [
@@ -523,7 +523,7 @@ test_Locations_Incorrect_V2 if {
 
 # Policy exists, but OneDrive location not included
 test_Locations_Incorrect_V3 if {
-    PolicyId := "MS.DEFENDER.4.2v0.1"
+    PolicyId := "MS.DEFENDER.4.2v1"
 
     Output := tests with input as {
         "dlp_compliance_rules": [
@@ -571,7 +571,7 @@ test_Locations_Incorrect_V3 if {
 
 # Policy exists, but OneDrive location not included
 test_Locations_Incorrect_V4 if {
-    PolicyId := "MS.DEFENDER.4.2v0.1"
+    PolicyId := "MS.DEFENDER.4.2v1"
 
     Output := tests with input as {
         "dlp_compliance_rules": [
@@ -619,7 +619,7 @@ test_Locations_Incorrect_V4 if {
 
 # Policy exists, but Devices location not included
 test_Locations_Incorrect_V5 if {
-    PolicyId := "MS.DEFENDER.4.2v0.1"
+    PolicyId := "MS.DEFENDER.4.2v1"
 
     Output := tests with input as {
         "dlp_compliance_rules": [
@@ -667,7 +667,7 @@ test_Locations_Incorrect_V5 if {
 
 # Policy exists, but is not enabled
 test_Locations_Incorrect_V6 if {
-    PolicyId := "MS.DEFENDER.4.2v0.1"
+    PolicyId := "MS.DEFENDER.4.2v1"
 
     Output := tests with input as {
         "dlp_compliance_rules": [
@@ -715,7 +715,7 @@ test_Locations_Incorrect_V6 if {
 
 # Policy exists and is enabled, but block rules are disabled
 test_Locations_Incorrect_V7 if {
-    PolicyId := "MS.DEFENDER.4.2v0.1"
+    PolicyId := "MS.DEFENDER.4.2v1"
 
     Output := tests with input as {
         "dlp_compliance_rules": [
@@ -763,7 +763,7 @@ test_Locations_Incorrect_V7 if {
 
 # Policy exists but set to TestWithNotifications rather than Enable
 test_Locations_Incorrect_V8 if {
-    PolicyId := "MS.DEFENDER.4.2v0.1"
+    PolicyId := "MS.DEFENDER.4.2v1"
 
     Output := tests with input as {
         "dlp_compliance_rules": [
@@ -814,7 +814,7 @@ test_Locations_Incorrect_V8 if {
 
 # All sensitive rules present and blocking
 test_BlockAccess_Correct_V1 if {
-    PolicyId := "MS.DEFENDER.4.3v0.1"
+    PolicyId := "MS.DEFENDER.4.3v1"
 
     Output := tests with input as {
         "dlp_compliance_rules": [
@@ -856,7 +856,7 @@ test_BlockAccess_Correct_V1 if {
 
 # Sensitive rules present, but not blocking
 test_BlockAccess_Incorrect_V1 if {
-    PolicyId := "MS.DEFENDER.4.3v0.1"
+    PolicyId := "MS.DEFENDER.4.3v1"
 
     Output := tests with input as {
         "dlp_compliance_rules": [
@@ -898,7 +898,7 @@ test_BlockAccess_Incorrect_V1 if {
 
 # Sensitive rules present and blocking, but only to people outside org
 test_BlockAccess_Incorrect_V2 if {
-    PolicyId := "MS.DEFENDER.4.3v0.1"
+    PolicyId := "MS.DEFENDER.4.3v1"
 
     Output := tests with input as {
         "dlp_compliance_rules": [
@@ -940,7 +940,7 @@ test_BlockAccess_Incorrect_V2 if {
 
 # Sensitive rules present and blocking, but policy set to test
 test_BlockAccess_Incorrect_V3 if {
-    PolicyId := "MS.DEFENDER.4.3v0.1"
+    PolicyId := "MS.DEFENDER.4.3v1"
 
     Output := tests with input as {
         "dlp_compliance_rules": [
@@ -982,7 +982,7 @@ test_BlockAccess_Incorrect_V3 if {
 
 # All rules are blocking, but don't contain all sensitive types
 test_BlockAccess_Incorrect_V4 if {
-    PolicyId := "MS.DEFENDER.4.3v0.1"
+    PolicyId := "MS.DEFENDER.4.3v1"
 
     Output := tests with input as {
         "dlp_compliance_rules": [
@@ -1023,7 +1023,7 @@ test_BlockAccess_Incorrect_V4 if {
 
 # Multiple policies combined that contain all sensitive rules blocking
 test_BlockAccess_Incorrect_V5 if {
-    PolicyId := "MS.DEFENDER.4.3v0.1"
+    PolicyId := "MS.DEFENDER.4.3v1"
 
     Output := tests with input as {
         "dlp_compliance_rules": [
@@ -1085,7 +1085,7 @@ test_BlockAccess_Incorrect_V5 if {
 }
 
 test_BlockAccess_Incorrect_V6 if {
-    PolicyId := "MS.DEFENDER.4.3v0.1"
+    PolicyId := "MS.DEFENDER.4.3v1"
 
     Output := tests with input as {
         "dlp_compliance_rules": [
@@ -1131,7 +1131,7 @@ test_BlockAccess_Incorrect_V6 if {
 
 # Sensitive policy present, and set to notify site admin
 test_NotifyUser_Correct_V1 if {
-    PolicyId := "MS.DEFENDER.4.4v0.1"
+    PolicyId := "MS.DEFENDER.4.4v1"
 
     Output := tests with input as {
         "dlp_compliance_rules": [
@@ -1171,7 +1171,7 @@ test_NotifyUser_Correct_V1 if {
 
 # Sensitive policy present, and set to notify multiple users
 test_NotifyUser_Correct_V2 if {
-    PolicyId := "MS.DEFENDER.4.4v0.1"
+    PolicyId := "MS.DEFENDER.4.4v1"
 
     Output := tests with input as {
         "dlp_compliance_rules": [
@@ -1213,7 +1213,7 @@ test_NotifyUser_Correct_V2 if {
 
 # Sensitive policy not enabled
 test_NotifyUser_Incorrect_V1 if {
-    PolicyId := "MS.DEFENDER.4.4v0.1"
+    PolicyId := "MS.DEFENDER.4.4v1"
 
     Output := tests with input as {
         "dlp_compliance_rules": [
@@ -1255,7 +1255,7 @@ test_NotifyUser_Incorrect_V1 if {
 
 # Sensitive policy enabled, no users set to notify
 test_NotifyUser_Incorrect_V2 if {
-    PolicyId := "MS.DEFENDER.4.4v0.1"
+    PolicyId := "MS.DEFENDER.4.4v1"
 
     Output := tests with input as {
         "dlp_compliance_rules": [
@@ -1295,7 +1295,7 @@ test_NotifyUser_Incorrect_V2 if {
 # Policy 5
 #--
 test_NotImplemented_Correct_V1 if {
-    PolicyId := "MS.DEFENDER.4.5v0.1"
+    PolicyId := "MS.DEFENDER.4.5v1"
 
     Output := tests with input as { }
 
@@ -1310,7 +1310,7 @@ test_NotImplemented_Correct_V1 if {
 # Policy 6
 #--
 test_NotImplemented_Correct_V2 if {
-    PolicyId := "MS.DEFENDER.4.6v0.1"
+    PolicyId := "MS.DEFENDER.4.6v1"
 
     Output := tests with input as { }
 

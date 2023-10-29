@@ -4,10 +4,10 @@ import data.report.utils.NotCheckedDetails
 
 
 #
-# MS.AAD.6.1v0.1
+# MS.AAD.6.1v1
 #--
 test_NotImplemented_Correct if {
-    PolicyId := "MS.AAD.6.1v0.1"
+    PolicyId := "MS.AAD.6.1v1"
 
     Output := tests with input as { }
 

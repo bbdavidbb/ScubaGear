@@ -4,10 +4,10 @@ import data.report.utils.NotCheckedDetails
 
 
 #
-# MS.SHAREPOINT.4.1v0.1
+# MS.SHAREPOINT.4.1v1
 #--
 test_NotImplemented_Correct if {
-    PolicyId := "MS.SHAREPOINT.4.1v0.1"
+    PolicyId := "MS.SHAREPOINT.4.1v1"
 
     Output := tests with input as { }
 
@@ -20,10 +20,10 @@ test_NotImplemented_Correct if {
 #--
 
 #
-# MS.SHAREPOINT.4.2v0.1
+# MS.SHAREPOINT.4.2v1
 #--
 test_DenyAddAndCustomizePages_Correct if {
-    PolicyId := "MS.SHAREPOINT.4.2v0.1"
+    PolicyId := "MS.SHAREPOINT.4.2v1"
 
     Output := tests with input as {
         "SPO_site": [
@@ -41,7 +41,7 @@ test_DenyAddAndCustomizePages_Correct if {
 }
 
 test_DenyAddAndCustomizePages_Incorrect if {
-    PolicyId := "MS.SHAREPOINT.4.2v0.1"
+    PolicyId := "MS.SHAREPOINT.4.2v1"
 
     Output := tests with input as {
         "SPO_site": [

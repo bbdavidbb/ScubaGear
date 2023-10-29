@@ -6,7 +6,7 @@ import future.keywords
 # Policy 1
 #--
 test_Rdata_Correct if {
-    PolicyId := "MS.EXO.4.1v0.1"
+    PolicyId := "MS.EXO.4.1v1"
 
     Output := tests with input as {
         "dmarc_records":[
@@ -31,7 +31,7 @@ test_Rdata_Correct if {
 }
 
 test_Rdata_Incorrect if {
-    PolicyId := "MS.EXO.4.1v0.1"
+    PolicyId := "MS.EXO.4.1v1"
 
     Output := tests with input as {
         "dmarc_records":[
@@ -56,7 +56,7 @@ test_Rdata_Incorrect if {
 }
 
 test_Rdata_Incorrect_V2 if {
-    PolicyId := "MS.EXO.4.1v0.1"
+    PolicyId := "MS.EXO.4.1v1"
 
     Output := tests with input as {
         "dmarc_records":[
@@ -81,7 +81,7 @@ test_Rdata_Incorrect_V2 if {
 }
 
 test_Rdata_Incorrect_V3 if {
-    PolicyId := "MS.EXO.4.1v0.1"
+    PolicyId := "MS.EXO.4.1v1"
 
     Output := tests with input as {
         "dmarc_records": [
@@ -117,7 +117,7 @@ test_Rdata_Incorrect_V3 if {
 # Policy 2
 #--
 test_Rdata_Correct_V2 if {
-    PolicyId := "MS.EXO.4.2v0.1"
+    PolicyId := "MS.EXO.4.2v1"
 
     Output := tests with input as {
         "dmarc_records": [
@@ -142,7 +142,7 @@ test_Rdata_Correct_V2 if {
 }
 
 test_Rdata_Incorrect_V4 if {
-    PolicyId := "MS.EXO.4.2v0.1"
+    PolicyId := "MS.EXO.4.2v1"
 
     Output := tests with input as {
         "dmarc_records": [
@@ -167,7 +167,7 @@ test_Rdata_Incorrect_V4 if {
 }
 
 test_Rdata_Incorrect_V5 if {
-    PolicyId := "MS.EXO.4.2v0.1"
+    PolicyId := "MS.EXO.4.2v1"
 
     Output := tests with input as {
         "dmarc_records": [
@@ -195,7 +195,7 @@ test_Rdata_Incorrect_V5 if {
 # Policy 3
 #--
 test_DMARCReport_Correct_V1 if {
-    PolicyId := "MS.EXO.4.3v0.1"
+    PolicyId := "MS.EXO.4.3v1"
 
     Output := tests with input as {
         "dmarc_records": [
@@ -220,7 +220,7 @@ test_DMARCReport_Correct_V1 if {
 }
 
 test_DMARCReport_Incorrect_V1 if {
-    PolicyId := "MS.EXO.4.3v0.1"
+    PolicyId := "MS.EXO.4.3v1"
 
     Output := tests with input as {
         "dmarc_records": [
@@ -245,7 +245,7 @@ test_DMARCReport_Incorrect_V1 if {
 }
 
 test_DMARCReport_Incorrect_V2 if {
-    PolicyId := "MS.EXO.4.3v0.1"
+    PolicyId := "MS.EXO.4.3v1"
 
     Output := tests with input as {
         "dmarc_records": [
@@ -270,7 +270,7 @@ test_DMARCReport_Incorrect_V2 if {
 }
 
 test_DMARCReport_Incorrect_V3 if {
-    PolicyId := "MS.EXO.4.3v0.1"
+    PolicyId := "MS.EXO.4.3v1"
     # empty rdata
     Output := tests with input as {
         "dmarc_records": [
@@ -298,7 +298,7 @@ test_DMARCReport_Incorrect_V3 if {
 # Policy 4
 #--
 test_POC_Correct_V1 if {
-    PolicyId := "MS.EXO.4.4v0.1"
+    PolicyId := "MS.EXO.4.4v1"
     # 2 emails in rua= and 1 in ruf
     Output := tests with input as {
         "dmarc_records": [
@@ -323,7 +323,7 @@ test_POC_Correct_V1 if {
 }
 
 test_POC_Correct_V1 if {
-    PolicyId := "MS.EXO.4.4v0.1"
+    PolicyId := "MS.EXO.4.4v1"
     # 2+ emails in rua= and 1+ in ruf
     Output := tests with input as {
         "dmarc_records": [
@@ -348,7 +348,7 @@ test_POC_Correct_V1 if {
 }
 
 test_POC_Incorrect_V1 if {
-    PolicyId := "MS.EXO.4.4v0.1"
+    PolicyId := "MS.EXO.4.4v1"
     # Only 1 rua
     Output := tests with input as {
         "dmarc_records": [
@@ -373,7 +373,7 @@ test_POC_Incorrect_V1 if {
 }
 
 test_POC_Incorrect_V2 if {
-    PolicyId := "MS.EXO.4.4v0.1"
+    PolicyId := "MS.EXO.4.4v1"
     # Only 2 emails in rua no ruf
     Output := tests with input as {
         "dmarc_records": [
@@ -398,7 +398,7 @@ test_POC_Incorrect_V2 if {
 }
 
 test_POC_Incorrect_V3 if {
-    PolicyId := "MS.EXO.4.4v0.1"
+    PolicyId := "MS.EXO.4.4v1"
     # Only 1 ruf no rua
     Output := tests with input as {
         "dmarc_records": [
@@ -423,7 +423,7 @@ test_POC_Incorrect_V3 if {
 }
 
 test_POC_Incorrect_V4 if {
-    PolicyId := "MS.EXO.4.4v0.1"
+    PolicyId := "MS.EXO.4.4v1"
     # 2 domains 1 fails rua/ruf number
     Output := tests with input as {
         "dmarc_records": [
@@ -456,7 +456,7 @@ test_POC_Incorrect_V4 if {
 }
 
 test_POC_Incorrect_V5 if {
-    PolicyId := "MS.EXO.4.4v0.1"
+    PolicyId := "MS.EXO.4.4v1"
     # 2 domains 1 fails rua # of email policy requirement
     Output := tests with input as {
         "dmarc_records": [
@@ -489,7 +489,7 @@ test_POC_Incorrect_V5 if {
 }
 
 test_POC_Incorrect_V5 if {
-    PolicyId := "MS.EXO.4.4v0.1"
+    PolicyId := "MS.EXO.4.4v1"
     # 2 domains 1 domain failed DNS query. Empty rdata
     Output := tests with input as {
         "dmarc_records": [
